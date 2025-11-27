@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmed - Peapod Hotels</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .auth-container {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .auth-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 480px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+        }
+        .auth-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .auth-title {
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        .auth-message {
+            color: #718096;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .auth-button {
+            display: inline-block;
+            background: #48bb78;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .auth-button:hover {
+            background: #38a169;
+        }
+        .auth-note {
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+            color: #a0aec0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍐 Peapod Hotels</div>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-icon">✅</div>
+            <h1 class="auth-title">Email Confirmed!</h1>
+            <p class="auth-message">
+                Your email has been successfully verified.
+                You can now open the Peapod app on your iPhone to start exploring accommodations.
+            </p>
+            <a href="peapod://auth/callback" class="auth-button">Open Peapod App</a>
+            <p class="auth-note">
+                Don't have the app yet? Download it from the App Store.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peapod Hotels. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
