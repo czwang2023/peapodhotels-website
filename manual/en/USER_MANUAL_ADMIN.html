@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peapod User Manual - Admin Guide - Peapod Hotels</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manual.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍐 Peapod Hotels</div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../terms.html">Terms</a></li>
+                <li><a href="../../privacy.html">Privacy</a></li>
+                <li><a href="../../sms-terms.html">SMS Terms</a></li>
+                <li><a href="../../manual/en/index.html" class="active">APP Manual</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <a href="../cn/index.html" title="Switch language">
+                    <span class="lang-icon">🌐</span>
+                    <span>中文</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="manual-content">
+<h1 id="peapod-user-manual---admin-guide">Peapod User Manual - Admin Guide</h1>
+<p><strong>Version:</strong> 1.0.0 (CN Release) <strong>Last Updated:</strong> November 22, 2025 <strong>Platform:</strong> iOS (iPhone, iPad)</p>
+<p><strong>What’s New in CN Release 1.0:</strong> - ✅ <strong>Updated Fee Structure</strong> - Guests pay 0% service fee, Hosts pay tier-dependent fees - ✅ <strong>Host Tier Fees</strong> - Silver 13%, Gold 12.5%, Platinum 12%, Diamond 11.5% - ✅ <strong>Curator SLA Escalation</strong> - Admin receives alerts when curator SLAs are breached - ✅ <strong>Loyalty Restrictions</strong> - CN Release: Points for discounts only, no cash withdrawal</p>
+<p>← <a href="USER_MANUAL_TOP.html">Back to Index</a></p>
+<hr />
+<h2 id="for-admins">8. For Admins</h2>
+<h3 id="admin-overview">8.1 Admin Overview</h3>
+<p>As an admin, you: - 👥 <strong>Manage Users</strong> - View, search, message, suspend, or delete accounts - ⚙️ <strong>Configure App Settings</strong> - Loyalty programs, fees, feature flags - 📊 <strong>View Analytics</strong> - Platform-wide metrics and trends - 📋 <strong>View Reports</strong> - Platform health, API metrics, database usage - 🚨 <strong>Handle Issues</strong> - Disputes, violations, emergencies</p>
+<p><strong>Important:</strong> Admins do NOT create or edit listings. Only hosts create listings, curators approve them, and admins can view platform analytics.</p>
+<hr />
+<h3 id="admin-navigation-dashboard">8.2 Admin Navigation &amp; Dashboard</h3>
+<p><strong>Bottom Navigation (5 tabs):</strong> 1. <strong>Dashboard</strong> (📊 chart.bar.fill icon) - Platform overview and metrics 2. <strong>Users</strong> (👥 person.2.fill icon) - User management 3. <strong>Tickets</strong> (⚠️ exclamationmark.bubble.fill icon) - Bug reports &amp; feedback 4. <strong>Config</strong> (⚙️ gearshape.fill icon) - App configuration settings 5. <strong>Profile</strong> (👤 person icon) - Admin profile settings</p>
+<p><strong>Dashboard Overview:</strong></p>
+<p><strong>Location:</strong> Main tab → “Dashboard” (chart.bar.fill icon)</p>
+<p><strong>Dashboard Sections:</strong></p>
+<p><strong>Overview Metrics:</strong> - <strong>Total Users</strong> - Count by role (Guests, Hosts, Curators, Admins) - <strong>Active Listings</strong> - Live properties - <strong>Total Bookings</strong> - All-time and this month - <strong>Monthly Revenue</strong> - Platform revenue this month</p>
+<p><strong>Quick Actions:</strong> - User Management - Listing Management - Analytics - Reports</p>
+<p><strong>Recent Activity:</strong> - New user registrations - New listings submitted - New bookings - Issues reported</p>
+<hr />
+<h3 id="tickets-bug-reports-feedback">8.3 Tickets (Bug Reports &amp; Feedback)</h3>
+<p><strong>Access:</strong> Bottom nav → “Tickets” tab</p>
+<p><strong>Two Categories:</strong> 1. <strong>Bugs</strong> - User-reported bugs and issues 2. <strong>Feedbacks</strong> - User suggestions and feature requests</p>
+<p><strong>Bug Report Details:</strong> - <strong>Title</strong> - Issue description - <strong>Priority</strong> - Low/Medium/High/Critical (with color indicators) - <strong>Status</strong> - New/Unassigned/In Progress/Resolved/Closed - <strong>Reporter</strong> - User email who reported - <strong>Date</strong> - “X days ago” - <strong>Badge</strong> - “New” for unread reports</p>
+<p><strong>Actions:</strong> - Tap report to see full details - Assign to team member - Update status - Add notes/comments - Mark as resolved - Notify user of resolution</p>
+<p><strong>Feedback Management:</strong> - Similar to bug reports - Categories: Feature Request, UX Improvement, Other - Vote count (upvotes from other users) - Implementation status tracking</p>
+<hr />
+<h3 id="user-management">8.4 User Management</h3>
+<p><strong>Access:</strong> Admin Dashboard → “Users”</p>
+<p><strong>User List Shows:</strong> - Profile photo - Full name - Email - User role (Guest, Host, Curator, Admin) - Join date - Account status (Active, Suspended, Deleted) - Verification status</p>
+<p><strong>User Detail Page:</strong></p>
+<p>Access user details by tapping on any user from the list. View comprehensive information across multiple tabs: - Overview - Bookings (if guest) - Listings (if host) - Reviews - Messages - Payment History - Activity Log</p>
+<p><strong>Admin Actions:</strong> - Send message - Reset password - Suspend account (7/30 days or permanent) - Delete account</p>
+<p><strong>Send Message to User:</strong></p>
+<p>Send direct messages to users from their detail page. Users receive messages in their inbox.</p>
+<p><strong>Reset User Password:</strong></p>
+<p>Send password reset link to user’s email. Available from user detail page.</p>
+<p><strong>Suspend User:</strong></p>
+<p>Temporarily or permanently restrict user access. Options include: - <strong>Reasons:</strong> Violation of terms, Fraudulent activity, Spam, Safety concern, Other - <strong>Duration:</strong> 7 days, 30 days, 90 days, or Permanent - User cannot log in during suspension - User receives email notification - Include internal notes for admin records</p>
+<p><strong>Delete User:</strong></p>
+<p>Permanently delete user account. This action: - Cannot be undone - Requires email confirmation to prevent accidental deletion - Archives all user data - Removes user from platform permanently</p>
+<hr />
+<h3 id="app-configuration">8.5 App Configuration</h3>
+<p><strong>Access:</strong> Bottom navigation → <strong>Config</strong> tab (⚙️ gearshape.fill icon)</p>
+<p><strong>Configuration Categories (3 Tabs):</strong> 1. <strong>Loyalty</strong> - Guest/Host loyalty program settings 2. <strong>Referral</strong> - Referral program settings 3. <strong>Fees</strong> - Platform fees configuration</p>
+<hr />
+<h4 id="loyalty-program-configuration">8.5.1 Loyalty Program Configuration</h4>
+<p><strong>Access:</strong> Config tab → “Loyalty” sub-tab</p>
+<p><strong>Guest Loyalty Tiers:</strong></p>
+<p><strong>Guest Tier Configuration Table:</strong></p>
+<p>Based on <strong>Annual Spending</strong> (resets yearly):</p>
+<ul>
+<li><strong>Silver</strong> ($0+/year - Default)
+<ul>
+<li>Annual Spending Threshold: $0</li>
+<li>Reward Rate: 2% of booking value</li>
+<li>Perks: Standard support</li>
+</ul></li>
+<li><strong>Gold</strong> ($2,500+/year)
+<ul>
+<li>Annual Spending Threshold: $2,500</li>
+<li>Reward Rate: 3% of booking value</li>
+<li>Perks: Priority support, early access to promotions</li>
+</ul></li>
+<li><strong>Platinum</strong> ($5,000+/year)
+<ul>
+<li>Annual Spending Threshold: $5,000</li>
+<li>Reward Rate: 4% of booking value</li>
+<li>Perks: Premium support, exclusive deals, late checkout (when available)</li>
+</ul></li>
+<li><strong>Diamond</strong> ($10,000+/year)
+<ul>
+<li>Annual Spending Threshold: $10,000</li>
+<li>Reward Rate: 5% of booking value</li>
+<li>Perks: VIP support 24/7, guaranteed early access, complimentary upgrades, personal concierge</li>
+</ul></li>
+</ul>
+<p><strong>Editable Fields:</strong> - Annual spending threshold for each tier - Reward rate percentage (points earned on bookings) - Tier names - Tier benefits/perks - Max redemption percentage (default: 20% of booking cost)</p>
+<p><strong>Important Notes:</strong> - Tiers based on ANNUAL SPENDING, not total points - Points = 1% of booking value (base) × tier multiplier - Example: Gold tier guest spends $1,000 → Earns 3,000 points ($30 value) - Spending resets each year - Platform fee constant 15% for all tiers</p>
+<p><strong>CN Release 1.0 Loyalty Restrictions:</strong> &gt; ⚠️ <strong>IMPORTANT:</strong> For CN Release 1.0, loyalty points have restrictions: &gt; - Points can ONLY be used for <strong>booking discounts</strong> &gt; - <strong>Cash withdrawal is NOT available</strong> (no points-to-cash conversion) &gt; - Points cannot be transferred to other users &gt; - Points expire after 24 months of account inactivity</p>
+<hr />
+<p><strong>Host Loyalty Tiers:</strong></p>
+<p><strong>Host Tier Configuration Table:</strong></p>
+<p>Based on <strong>Annual Revenue</strong> (gross booking amount, resets yearly):</p>
+<ul>
+<li><strong>Silver</strong> ($0+/year - Default)
+<ul>
+<li>Annual Revenue Threshold: $0</li>
+<li>Reward Rate: 2.0% of gross bookings</li>
+<li>Perks: Standard support</li>
+</ul></li>
+<li><strong>Gold</strong> ($50,000+/year)
+<ul>
+<li>Annual Revenue Threshold: $50,000</li>
+<li>Reward Rate: 2.5% of gross bookings</li>
+<li>Perks: Priority support, featured listing placement</li>
+</ul></li>
+<li><strong>Platinum</strong> ($250,000+/year)
+<ul>
+<li>Annual Revenue Threshold: $250,000</li>
+<li>Reward Rate: 3.0% of gross bookings</li>
+<li>Perks: Premium support, exclusive webinars, early access to features</li>
+</ul></li>
+<li><strong>Diamond</strong> ($500,000+/year)
+<ul>
+<li>Annual Revenue Threshold: $500,000</li>
+<li>Reward Rate: 3.5% of gross bookings</li>
+<li>Perks: VIP support 24/7, personal account manager, custom marketing, guaranteed featured placements</li>
+</ul></li>
+</ul>
+<p><strong>Editable Fields:</strong> - Annual revenue threshold for each tier - Reward rate percentage (points earned on gross bookings) - Tier names - Tier benefits/perks</p>
+<p><strong>Important Notes:</strong> - Tiers based on ANNUAL REVENUE (gross booking amount before fees) - Points earned on gross bookings (what guests pay, not host payout) - Platform fee constant 15% for all tiers (base fee - rebates may reduce) - Points are a bonus, not a fee reduction - Hosts can redeem points for personal travel bookings</p>
+<p><strong>CN Release 1.0 Host Loyalty Restrictions:</strong> &gt; ⚠️ <strong>IMPORTANT:</strong> Same restrictions apply to host loyalty points: &gt; - Points can ONLY be used for <strong>booking discounts</strong> (when booking as guest) &gt; - <strong>Cash withdrawal is NOT available</strong> &gt; - Tier rebates reduce platform fee (separate from points)</p>
+<hr />
+<p><strong>Superhost Badge (Separate from Tiers):</strong></p>
+<p><strong>Superhost Configuration:</strong> - Minimum bookings: 10 (default) - Minimum rating: 4.8 stars (default) - Response rate: 90% within 24h (default) - Cancellation rate: &lt; 1% (default) - Review period: Last 12 months (default)</p>
+<p><strong>Note:</strong> Superhost is a quality badge, separate from loyalty tiers. Hosts can be Superhost AND have loyalty tier.</p>
+<hr />
+<h4 id="referral-program-configuration">8.5.2 Referral Program Configuration</h4>
+<p><strong>Access:</strong> Config tab → “Referral” sub-tab</p>
+<p><strong>Overview:</strong> Configure the guest referral system - how much commission guests earn when friends book, and customize the share message.</p>
+<p><strong>Configuration Sections:</strong></p>
+<p><strong>A. Guest Referrals Settings</strong></p>
+<p><strong>Commission Rate:</strong> - <strong>Label:</strong> “Commission Rate” - <strong>Default:</strong> 2.0% of booking amount - <strong>Range:</strong> 0% - 10% (recommended: 1-3%) - <strong>Example:</strong> 2% means referrer earns 200 points per $100 booking</p>
+<p><strong>Duration:</strong> - <strong>Label:</strong> “Referral Duration” - <strong>Default:</strong> 12 months - <strong>Range:</strong> 1-24 months - <strong>Description:</strong> How long referrer earns commission from referee’s bookings</p>
+<p><strong>Points Conversion:</strong> - <strong>Label:</strong> “Points to Dollar Rate” - <strong>Default:</strong> 100 (100 points = $1.00) - <strong>Fixed:</strong> Cannot change (maintains consistency)</p>
+<p><strong>B. Share Message Templates</strong></p>
+<p><strong>Share Link Template:</strong> - <strong>Label:</strong> “Share Link Template” - <strong>Default:</strong> <code>https://peapodhotels.com/join?ref={CODE}</code> - <strong>Placeholders:</strong> <code>{CODE}</code> - replaced with referral code - <strong>Example:</strong> <code>https://peapodhotels.com/join?ref=JOHN1234</code></p>
+<p><strong>Share Message Template:</strong> - <strong>Label:</strong> “Share Message Template” - <strong>Default:</strong> ``` Hey! I’m using Peapod to find amazing places to stay. Join me with my referral code {CODE} and start exploring!</p>
+<p>{LINK} ``<code>- **Placeholders:**   -</code>{CODE}<code>- User's referral code   -</code>{NAME}<code>- User's full name   -</code>{LINK}` - Generated invite link - <strong>Character Limit:</strong> 500 characters recommended - <strong>Multi-line:</strong> Supports line breaks</p>
+<p><strong>How Share Works:</strong> 1. Guest taps “Share” on Referral tab 2. App fetches templates from config 3. Replaces placeholders with actual values 4. Opens iOS share sheet 5. Guest shares via iMessage, WhatsApp, Email, etc.</p>
+<p><strong>Example Customizations:</strong></p>
+<p><strong>Aggressive Campaign (3%):</strong></p>
+<pre><code>Commission Rate: 3.0%
+Duration: 12 months
+Message: &quot;Get $30 for free! Use my code {CODE} and we both save!&quot;</code></pre>
+<p><strong>Conservative (1%):</strong></p>
+<pre><code>Commission Rate: 1.0%
+Duration: 6 months
+Message: &quot;I love Peapod! Join with {CODE}&quot;</code></pre>
+<p><strong>Important Notes:</strong> - Changes apply to ALL new referrals immediately - Existing referral relationships keep their original commission % - Share message changes affect all users immediately - Test changes with a guest account before announcing</p>
+<hr />
+<h4 id="fees-pricing-configuration">8.5.3 Fees &amp; Pricing Configuration</h4>
+<p><strong>Platform Fee Structure (CN Release 1.0):</strong></p>
+<blockquote>
+<p>⚠️ <strong>IMPORTANT:</strong> CN Release 1.0 uses a host-only fee model to attract guests.</p>
+</blockquote>
+<p><strong>Current Fee Structure:</strong></p>
+<table>
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 26%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Party</th>
+<th>Fee</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guest Service Fee</strong></td>
+<td><strong>0%</strong></td>
+<td>Guests pay NO platform fees</td>
+</tr>
+<tr>
+<td><strong>Host Platform Fee</strong></td>
+<td><strong>Tier-dependent</strong></td>
+<td>See tier table below</td>
+</tr>
+<tr>
+<td><strong>Minimum Booking Fee</strong></td>
+<td>$5 (flat rate)</td>
+<td>Applies to very small bookings</td>
+</tr>
+<tr>
+<td><strong>Payment Processing</strong></td>
+<td>2.9% + $0.30</td>
+<td>Stripe standard (absorbed by platform)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Host Tier Fees (CN Release 1.0):</strong></p>
+<p>Higher-tier hosts pay <strong>lower platform fees</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 33%" />
+<col style="width: 29%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Host Tier</th>
+<th>Annual Revenue</th>
+<th>Platform Fee</th>
+<th>Perks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Silver</strong></td>
+<td>$0+</td>
+<td><strong>13%</strong></td>
+<td>Standard support</td>
+</tr>
+<tr>
+<td><strong>Gold</strong></td>
+<td>$50,000+</td>
+<td><strong>12.5%</strong></td>
+<td>Priority support, featured placement</td>
+</tr>
+<tr>
+<td><strong>Platinum</strong></td>
+<td>$250,000+</td>
+<td><strong>12%</strong></td>
+<td>Premium support, webinars, early features</td>
+</tr>
+<tr>
+<td><strong>Diamond</strong></td>
+<td>$500,000+</td>
+<td><strong>11.5%</strong></td>
+<td>VIP 24/7, account manager, custom marketing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How Host Tier Fees Work:</strong> 1. Host completes booking, earns gross revenue 2. Platform fee applied based on host’s current tier 3. Host receives payout (booking minus tier fee) 4. Tier recalculated based on trailing 12-month revenue</p>
+<p><strong>Example Payouts by Tier ($1,000 booking):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Fee</th>
+<th>Payout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Silver</td>
+<td>13% ($130)</td>
+<td><strong>$870</strong></td>
+</tr>
+<tr>
+<td>Gold</td>
+<td>12.5% ($125)</td>
+<td><strong>$875</strong></td>
+</tr>
+<tr>
+<td>Platinum</td>
+<td>12% ($120)</td>
+<td><strong>$880</strong></td>
+</tr>
+<tr>
+<td>Diamond</td>
+<td>11.5% ($115)</td>
+<td><strong>$885</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Regional Pricing:</strong> - <strong>US Market:</strong> USD, Stripe payments - <strong>China Market:</strong> CNY, WeChat/Alipay (future) - <strong>Currency Conversion:</strong> Real-time rates + 2% markup</p>
+<p><strong>Editable Fields:</strong> - Guest service fee percentage (currently 0% for CN Release) - Host platform fee per tier (Silver 13%, Gold 12.5%, Platinum 12%, Diamond 11.5%) - Tier revenue thresholds ($0, $50k, $250k, $500k) - Minimum booking fee amount - Currency conversion markup - Regional pricing rules</p>
+<hr />
+<h4 id="feature-flags">8.5.4 Feature Flags</h4>
+<p><strong>Available Feature Flags:</strong> - <strong>Social Authentication:</strong> - Apple Sign In: ✅ Enabled - Phone Auth: ✅ Enabled (awaiting toll-free approval) - Google Sign In: ✅ Enabled - WeChat Sign In: ❌ Coming Q1 2026 - WhatsApp Sign In: ❌ Coming Q2 2026 - <strong>Search &amp; Discovery:</strong> - AI Search: ✅ Enabled - Saved Searches: ✅ Enabled - Price Alerts: ❌ Coming Q1 2026 - <strong>Payments:</strong> - Apple Pay: ✅ Enabled - Stripe Card: ✅ Enabled - WeChat Pay: ❌ Coming 2026 - Alipay: ❌ Coming 2026 - <strong>Loyalty:</strong> - Guest Loyalty: ✅ Enabled - Host Superhost: ✅ Enabled - Referral Program: ✅ Enabled - <strong>Notifications:</strong> - OneSignal Push: ✅ Enabled - Email Notifications: ✅ Enabled - SMS Notifications: ❌ Coming Q1 2026</p>
+<p><strong>Rollout Controls:</strong> - <strong>Beta Testing Mode:</strong> Enable for subset of users - <strong>Percentage Rollout:</strong> 0-100% of users - <strong>User Role Filter:</strong> Enable for specific roles only - <strong>Region Filter:</strong> Enable for specific regions only</p>
+<hr />
+<h4 id="other-configuration-coming-soon">8.5.5 Other Configuration (Coming Soon)</h4>
+<p><strong>Planned Configuration Sections:</strong> - <strong>Email Templates</strong> - Customize notification emails - <strong>Push Notification Templates</strong> - Customize push messages - <strong>Review Moderation</strong> - Auto-flag keywords, profanity filters - <strong>Search Ranking</strong> - Boost factors (rating, response time, etc.) - <strong>Cancellation Policies</strong> - Customize policy templates - <strong>House Rules Templates</strong> - Default rules for hosts - <strong>Safety &amp; Verification</strong> - ID verification requirements - <strong>Regional Settings</strong> - Language, currency, payment methods</p>
+<hr />
+<h3 id="analytics">8.6 Analytics</h3>
+<p><strong>Access:</strong> Admin Dashboard → “Analytics”</p>
+<p><strong>Platform Metrics:</strong> - <strong>User Growth</strong> - New users per day/week/month - <strong>Listing Growth</strong> - New listings added - <strong>Booking Volume</strong> - Bookings per day/week/month - <strong>Revenue</strong> - Platform fees collected - <strong>Occupancy Rate</strong> - % of nights booked - <strong>Average Booking Value</strong> - Mean booking total - <strong>Conversion Rate</strong> - % of searches that book</p>
+<p><strong>Charts Available:</strong> - User growth trend (line chart) - Revenue by month (bar chart) - Top locations (map) - Popular amenities (pie chart) - Booking sources (pie chart)</p>
+<p><strong>How to Use:</strong> Select date range, choose metrics to view, visualize data, and export to CSV for further analysis.</p>
+<hr />
+<h3 id="reports-platform-health">8.7 Reports &amp; Platform Health</h3>
+<p><strong>Access:</strong> Admin Dashboard → “Reports”</p>
+<p><strong>Report Categories:</strong></p>
+<h4 id="platform-health-metrics">8.7.1 Platform Health Metrics</h4>
+<ul>
+<li>Total users (breakdown by role)</li>
+<li>Active listings count</li>
+<li>Booking volume (daily/weekly/monthly)</li>
+<li>Platform revenue</li>
+<li>User growth trends</li>
+</ul>
+<p>Access through “Reports” → “Platform Health”, select date range, and export data as needed.</p>
+<h4 id="api-response-time">8.7.2 API Response Time</h4>
+<ul>
+<li>Average API response time</li>
+<li>Slowest endpoints</li>
+<li>Error rates</li>
+<li>Database query performance</li>
+</ul>
+<p>Monitor API performance through “Reports” → “API Performance” to identify bottlenecks.</p>
+<h4 id="database-usage">8.7.3 Database Usage</h4>
+<ul>
+<li>Database size</li>
+<li>Table sizes</li>
+<li>Query performance</li>
+<li>Index usage</li>
+<li>Connection pool status</li>
+</ul>
+<p>View database metrics through “Reports” → “Database” to monitor storage and connection health.</p>
+<hr />
+<h3 id="badge-management">8.8 Badge Management</h3>
+<p><strong>What Is Badge Management?</strong></p>
+<p>Admin interface to create, edit, approve, and revoke host quality badges and property feature badges. Ensures badge integrity and quality standards.</p>
+<p><strong>Access:</strong> Config tab → “Badges” section (or Admin Dashboard → Badge Management)</p>
+<p><strong>Badge Types:</strong> 1. <strong>Host Quality Badges</strong> - Performance-based (Superhost, Instant Reply, Top Host) 2. <strong>Property Feature Badges</strong> - Verified features (Sustainable Stay, Remote Work Ready, Pet-Friendly)</p>
+<hr />
+<h4 id="view-all-badges">8.8.1 View All Badges</h4>
+<p>Access badge management through Config → “Badge Management”. Two categories available:</p>
+<p><strong>Host Badges (Automated):</strong> - Superhost - Instant Reply - Experienced Host - New Host - Top Host</p>
+<p><strong>Property Badges (Require Verification):</strong> - Sustainable Stay - Remote Work Ready - Pet-Friendly Certified - Family-Friendly Certified - Luxury Stay</p>
+<p><strong>Badge Information Displayed:</strong> - Badge icon &amp; name - Type: Automated or Requires Verification - Status: Active / Inactive - Total awarded count - Pending applications count (for verification badges) - Actions: Edit / View Details / Deactivate</p>
+<hr />
+<h4 id="review-badge-applications">8.8.2 Review Badge Applications</h4>
+<p><strong>For Admin-Verified Badges (Sustainable, Remote Work, Luxury):</strong></p>
+<p>Review applications submitted by hosts for property badges. Each application includes: - Host name &amp; property name - Application date - Status: Pending Review / Approved / Rejected - Submitted documentation (photos and descriptions)</p>
+<p><strong>Review Process:</strong></p>
+<p>Review submitted photos and documentation to verify claims: - Check photo quality and authenticity - Verify features meet badge criteria - Look for red flags (stock photos, unclear images, missing documentation)</p>
+<p><strong>Decision Actions:</strong></p>
+<p><strong>Approve Badge:</strong> - Award badge to property - Badge appears on listing immediately - Host receives approval notification - Badge shows in search results</p>
+<p><strong>Request More Info:</strong> - Request additional documentation or clearer photos - Host receives feedback notification - Application status updates to “More Info Requested” - Host can resubmit improved documentation</p>
+<p><strong>Reject Badge:</strong> - Deny badge application - Select rejection reason (insufficient documentation, doesn’t meet standards, fake photos, doesn’t qualify) - Provide optional feedback message - Host receives rejection notification - Application archived (can reapply after 30 days)</p>
+<hr />
+<h4 id="revoke-badges">8.8.3 Revoke Badges</h4>
+<p><strong>When to Revoke:</strong> - Guest complaints about misrepresented features - Host removes feature (e.g., disconnects solar panels) - Property no longer meets criteria - Badge fraud detected</p>
+<p><strong>Revocation Process:</strong></p>
+<p>Search for the property with the badge in question. Review badge award details including: - Date awarded - Verification photos - Original documentation - Recent complaints or issues</p>
+<p><strong>Revoke the Badge:</strong> - Select revocation reason (feature no longer meets standards, misrepresentation, fraud, etc.) - Provide message to host explaining the revocation - Confirm revocation - Badge removed from listing immediately - Host receives notification - Property marked for re-verification if applicable</p>
+<hr />
+<h4 id="automated-badge-monitoring">8.8.4 Automated Badge Monitoring</h4>
+<p><strong>Superhost Auto-Review (Quarterly):</strong></p>
+<p><strong>What Happens:</strong> - System runs quarterly on Jan 1, Apr 1, Jul 1, Oct 1 - Checks all hosts against Superhost criteria: - 4.8+ rating - 90%+ response rate - &lt;1% cancellation rate - 10+ completed bookings in past 12 months - Awards badge to qualifying hosts - Removes badge from hosts who no longer qualify - Sends notifications to affected hosts</p>
+<p><strong>Admin Monitoring:</strong></p>
+<p>View automated review schedule and results through Badge Management → Superhost. Review includes: - Upcoming review date - Last review results (hosts awarded, hosts lost badge, reasons for loss) - Detailed change log</p>
+<p><strong>Manual Override:</strong> - Manually award Superhost to deserving hosts (edge cases) - Manually revoke for violations (fraud, major issues) - All overrides recorded in audit log</p>
+<hr />
+<h4 id="badge-statistics-reports">8.8.5 Badge Statistics &amp; Reports</h4>
+<p><strong>Badge Analytics Dashboard:</strong></p>
+<p>Access through Badge Management → Analytics tab. View key metrics: - <strong>Total Badges Awarded</strong>: Overall count - <strong>Superhost Count</strong>: Percentage of active hosts - <strong>Pending Applications</strong>: Current queue - <strong>Revocations</strong>: Recent removals</p>
+<p><strong>Badge Performance Metrics:</strong> - <strong>Click-through Rate</strong>: How often badges lead to listing views - <strong>Conversion Rate</strong>: Bookings from badge-labeled listings vs non-badge - <strong>Application Volume</strong>: Applications per badge type - <strong>Approval Rate</strong>: % of applications approved - <strong>Revocation Rate</strong>: % of badges revoked</p>
+<p><strong>Example Badge Report:</strong></p>
+<p>Sustainable Stay Badge metrics include: - Total awarded properties - Pending applications - Approval rate (approved/rejected/pending breakdown) - Revocation rate - Conversion lift (bookings vs non-certified) - Average pricing premium</p>
+<p><strong>Export Options:</strong> - CSV: Badge list with award dates - PDF: Monthly badge report - JSON: API data for external analytics</p>
+<hr />
+<h3 id="message-template-management">8.9 Message Template Management</h3>
+<p><strong>What Is Template Management?</strong></p>
+<p>Admin interface to manage the default message templates available to all hosts. Edit content, add new templates, or remove templates platform-wide.</p>
+<p><strong>Access:</strong> Config tab → “Message Templates” section</p>
+<hr />
+<h4 id="view-default-templates">8.9.1 View Default Templates</h4>
+<p>Access through Config → “Message Templates” to see 10 default templates: - Check-in Instructions (Detailed) - Check-in Instructions (Simple) - Early Check-in Request - House Rules Reminder - Quiet Hours Reminder - Local Recommendations - Transportation Tips - Thank You After Checkout - Issue Resolution - Pricing Breakdown Explanation</p>
+<p><strong>Template Information:</strong> - Name - Category (Check-in, Rules, Tips, General, Pricing) - Usage count (platform-wide) - Last modified date - Status: Active / Inactive - Actions: Edit / Preview / Deactivate / Delete</p>
+<hr />
+<h4 id="edit-default-template">8.9.2 Edit Default Template</h4>
+<p>Select any template to open the editor. Edit template fields: - <strong>Name</strong>: Template name (editable) - <strong>Category</strong>: Dropdown (Check-in, Rules, Tips, General, Pricing) - <strong>Content</strong>: Multiline text editor (500 char limit) - <strong>Variables</strong>: Available variables ({{guest_name}}, {{listing_title}}, etc.) - <strong>Usage Count</strong>: Platform-wide usage (read-only)</p>
+<p><strong>Editing Process:</strong> 1. Edit template content and name 2. Use “Insert Variable” to add dynamic placeholders 3. Preview template with sample data 4. Save changes 5. Updated template available to all hosts immediately</p>
+<p><strong>Important Notes:</strong> - Changes apply to all hosts platform-wide - Hosts who customized this template keep their custom version - Only affects default template (hosts can still edit individually)</p>
+<hr />
+<h4 id="create-new-default-template">8.9.3 Create New Default Template</h4>
+<p>Create new templates through Config → Message Templates → “+ New Template”</p>
+<p><strong>Template Creation:</strong> 1. Fill required fields: - <strong>Name</strong>: Template name - <strong>Category</strong>: Select category - <strong>Content</strong>: Template text with variables 2. Insert variables at cursor position using “Insert Variable” button 3. Preview template with sample data 4. Save template 5. New template immediately available to all hosts</p>
+<p><strong>Available Variables (25+):</strong> - Guest: {{guest_name}}, {{guest_full_name}}, {{guest_count}} - Property: {{listing_title}}, {{property_address}}, {{wifi_password}}, {{lockbox_code}} - Booking: {{check_in_date}}, {{check_in_time}}, {{check_out_date}}, {{nights}} - Host: {{host_name}}, {{host_phone}} - Pricing: {{nightly_rate}}, {{total_price}}, {{cleaning_fee}}</p>
+<hr />
+<h4 id="deactivatedelete-templates">8.9.4 Deactivate/Delete Templates</h4>
+<p><strong>Deactivate Template:</strong> - Hides template from host UI - Hosts can’t use it for new messages - Existing customized versions still work - Can be reactivated later - Use for: Seasonal templates, deprecated templates</p>
+<p><strong>Deactivation Process:</strong> Select template, tap “Deactivate”, confirm action. Template status changes to “Inactive” and hosts no longer see it in template picker.</p>
+<p><strong>Delete Template:</strong> - Permanently removes template - Hosts lose access (unless they customized it) - Cannot be undone - Use for: Redundant templates, policy violations</p>
+<p><strong>Deletion Process:</strong> Select template, tap “Delete”, type confirmation (“DELETE”), confirm. Template permanently removed from database.</p>
+<hr />
+<h4 id="template-usage-analytics">8.9.5 Template Usage Analytics</h4>
+<p>Access analytics through Config → Message Templates → Analytics</p>
+<p><strong>Usage Dashboard Metrics:</strong> - <strong>Most Used Template</strong>: Top template by usage count - <strong>Least Used</strong>: Templates with low usage - <strong>Total Template Sends</strong>: Messages sent (last 30 days) - <strong>Hosts Using Templates</strong>: Adoption rate percentage - <strong>Time Saved</strong>: Estimated efficiency gain</p>
+<p><strong>Template Performance:</strong></p>
+<p>View top templates ranked by usage: 1. Most popular templates (high usage) 2. Moderately used templates 3. Rarely used templates (candidates for removal)</p>
+<p><strong>Insights:</strong> - Identify popular templates (keep and improve) - Identify unused templates (consider removing) - Measure adoption rate (% of hosts using templates) - Calculate time savings (messages sent × avg time saved)</p>
+<hr />
+<h3 id="review-moderation">8.10 Review Moderation</h3>
+<p><strong>What Is Review Moderation?</strong></p>
+<p>Admin tools to review flagged content, moderate photo reviews, and maintain review quality standards.</p>
+<p><strong>Access:</strong> Admin Dashboard → “Review Moderation” or Config → “Reviews”</p>
+<hr />
+<h4 id="review-moderation-queue">8.10.1 Review Moderation Queue</h4>
+<p>Access through Admin → Review Moderation. Three queue tabs available: - <strong>Flagged Reviews</strong> - User-reported inappropriate content - <strong>Photo Reviews</strong> - New photo reviews awaiting approval - <strong>Spam Detection</strong> - Algorithmically flagged potential spam</p>
+<p><strong>Flagged Review Information:</strong> - Reviewer name &amp; avatar - Review text (full content) - Photos (if included) - Star rating - Property name &amp; host - Flag reason: “Inappropriate language” / “Fake review” / “Spam” / “Harassment” - Reporter: Who flagged it - Date flagged - Actions: Approve / Edit / Remove</p>
+<hr />
+<h4 id="moderate-flagged-reviews">8.10.2 Moderate Flagged Reviews</h4>
+<p>Review flagged content and take appropriate action based on community guidelines.</p>
+<p><strong>Approve (Keep) Review:</strong> - Review does not violate guidelines - Tap “Approve” button and confirm - Review remains published - Flag dismissed - Reporter notified of decision</p>
+<p><strong>Remove Review:</strong> - Review violates community guidelines (profanity, personal attacks, spam, off-topic) - Tap “Remove” button - Select violation type: - Profanity/Offensive language - Personal attacks/Harassment - Spam/Fake review - Off-topic content - Other (specify) - Confirm removal - Review deleted from listing - Reviewer and host notified</p>
+<p><strong>Edit Review (Remove Profanity):</strong> - Review contains minor profanity but otherwise valid feedback - Tap “Edit” button - Edit text to remove inappropriate content - Keep rest of review intact - Save edits - Edited review published - Reviewer notified - Original saved in moderation log</p>
+<hr />
+<h4 id="photo-review-moderation">8.10.3 Photo Review Moderation</h4>
+<p>Review photo submissions from guests to ensure quality and compliance with guidelines.</p>
+<p><strong>Review Photo Submissions:</strong></p>
+<p>Access “Photo Reviews” tab in moderation queue. Each submission shows: - Reviewer name - Property name - Star rating - Review text - Uploaded photos (up to 5)</p>
+<p><strong>Review Process:</strong></p>
+<p>Examine each photo for: - Quality (clear, well-lit, relevant) - Privacy (no identifiable people) - Appropriateness (no inappropriate content) - Authenticity (not stock photos) - Relevance (related to property)</p>
+<p><strong>Approve with Photo Removal:</strong></p>
+<p>If some photos violate guidelines: - Tap “Approve with Changes” - Select photos to remove - Provide reason (privacy violation, inappropriate content, etc.) - Approve review - Review published with approved photos only - Removed photos deleted - Reviewer notified</p>
+<p><strong>Photo Violation Types:</strong> - Identifiable people (privacy) - Inappropriate content (nudity, violence) - Unrelated to property (spam) - Stock photos (fake reviews) - Low quality (blurry, dark)</p>
+<hr />
+<h3 id="curator-sla-escalation-cn-release-1.0">8.11 Curator SLA Escalation (CN Release 1.0)</h3>
+<p><strong>What Is SLA Escalation?</strong></p>
+<p>When curators fail to meet Service Level Agreement targets, the system automatically escalates to Admin. This ensures hosts receive timely responses and platform quality is maintained.</p>
+<p><strong>Access:</strong> Admin Dashboard → “SLA Alerts” or Notifications → “Curator SLA”</p>
+<hr />
+<h4 id="sla-targets-reference">8.11.1 SLA Targets Reference</h4>
+<table>
+<thead>
+<tr>
+<th>Review Type</th>
+<th>Target Time</th>
+<th>Maximum Time</th>
+<th>Escalation Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>New Listing Approval</strong></td>
+<td>24 hours</td>
+<td>48 hours</td>
+<td>&gt; 48h unreviewed</td>
+</tr>
+<tr>
+<td><strong>Critical Edit Review</strong></td>
+<td>24 hours</td>
+<td>48 hours</td>
+<td>&gt; 48h unreviewed</td>
+</tr>
+<tr>
+<td><strong>Re-submission Review</strong></td>
+<td>24 hours</td>
+<td>48 hours</td>
+<td>&gt; 48h unreviewed</td>
+</tr>
+<tr>
+<td><strong>Safety/Abuse Reports</strong></td>
+<td>4 hours</td>
+<td>8 hours</td>
+<td>&gt; 8h unaddressed</td>
+</tr>
+<tr>
+<td><strong>Dispute Resolution</strong></td>
+<td>24 hours</td>
+<td>48 hours</td>
+<td>&gt; 48h unresolved</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="sla-escalation-alerts">8.11.2 SLA Escalation Alerts</h4>
+<p><strong>What You’ll See:</strong></p>
+<p>When SLA is breached, Admin receives: - 🚨 <strong>Push notification:</strong> “SLA Breach: [Curator Name] - [Review Type] pending 52 hours” - 📧 <strong>Email alert:</strong> Detailed breakdown with link to pending item - 📊 <strong>Dashboard badge:</strong> “X SLA Breaches” count</p>
+<p><strong>Alert Information:</strong> - Curator name and profile - Review type (New Listing, Critical Edit, Safety, etc.) - Time in queue (how long past SLA) - Listing/property details - Host name (who is affected)</p>
+<hr />
+<h4 id="admin-actions-on-sla-breach">8.11.3 Admin Actions on SLA Breach</h4>
+<p><strong>Option 1: Message Curator</strong> - Send message asking for status update - Curator may have valid reason (sick, emergency) - Set follow-up reminder</p>
+<p><strong>Option 2: Reassign Task</strong> - Move pending review to another curator - Original curator notified of reassignment - Task gets fresh SLA clock</p>
+<p><strong>Option 3: Admin Completes Review</strong> - Admin takes over and completes review directly - Used for urgent items or when no curator available - Logged in audit trail</p>
+<p><strong>Option 4: Extend SLA (with reason)</strong> - Grant temporary extension (e.g., +24 hours) - Requires documented reason - Host not notified (internal only)</p>
+<hr />
+<h4 id="sla-performance-dashboard">8.11.4 SLA Performance Dashboard</h4>
+<p><strong>Access:</strong> Admin Dashboard → “Curator Performance” → “SLA Compliance”</p>
+<p><strong>Metrics Displayed:</strong> - <strong>Overall SLA Compliance Rate:</strong> Platform-wide % (target: 95%+) - <strong>Breaches This Week:</strong> Count of SLA violations - <strong>Breaches This Month:</strong> Monthly total - <strong>Average Review Time:</strong> Platform-wide average</p>
+<p><strong>Per-Curator Breakdown:</strong> - Curator name - Total reviews this month - SLA compliance rate (%) - Breaches count - Average review time - Trend (improving/declining)</p>
+<p><strong>Example Dashboard:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Curator</th>
+<th>Reviews</th>
+<th>SLA Rate</th>
+<th>Breaches</th>
+<th>Avg Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah K.</td>
+<td>45</td>
+<td>98%</td>
+<td>1</td>
+<td>8.5h</td>
+</tr>
+<tr>
+<td>Mike L.</td>
+<td>38</td>
+<td>95%</td>
+<td>2</td>
+<td>14.2h</td>
+</tr>
+<tr>
+<td>Jane W.</td>
+<td>52</td>
+<td>100%</td>
+<td>0</td>
+<td>6.1h</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>135</strong></td>
+<td><strong>97.5%</strong></td>
+<td><strong>3</strong></td>
+<td><strong>9.6h</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="sla-breach-patterns-actions">8.11.5 SLA Breach Patterns &amp; Actions</h4>
+<p><strong>Identifying Problems:</strong> - Single breach: May be one-off (illness, emergency) - 3+ breaches/month: Pattern - requires discussion - Consistent breaches: Performance issue - may need training or removal</p>
+<p><strong>Recommended Actions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Breach Frequency</th>
+<th>Admin Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>First breach</strong></td>
+<td>Send friendly reminder</td>
+</tr>
+<tr>
+<td><strong>2-3 breaches/month</strong></td>
+<td>Schedule 1-on-1 discussion</td>
+</tr>
+<tr>
+<td><strong>4+ breaches/month</strong></td>
+<td>Performance improvement plan</td>
+</tr>
+<tr>
+<td><strong>Continued breaches</strong></td>
+<td>Consider role reassignment or removal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Documentation:</strong> - All SLA breaches logged automatically - Admin actions recorded in audit trail - Curator receives copy of any formal actions</p>
+<hr />
+<h3 id="profile-settings">8.12 Profile &amp; Settings</h3>
+<p>For common profile and account features, see the <strong><a href="USER_MANUAL_TOP.md#common-features-all-roles">Common Features</a></strong> section in the main index:</p>
+<ul>
+<li><strong><a href="USER_MANUAL_TOP.md#profile-management">Profile Management</a></strong> - View and edit your profile, profile tabs</li>
+<li><strong><a href="USER_MANUAL_TOP.md#messaging-system">Messaging System</a></strong> - How to send and receive messages</li>
+<li><strong><a href="USER_MANUAL_TOP.md#notification-settings">Notification Settings</a></strong> - Configure alerts and notifications</li>
+<li><strong><a href="USER_MANUAL_TOP.md#account-settings">Account Settings</a></strong> - Email, password, 2FA, security</li>
+<li><strong><a href="USER_MANUAL_TOP.md#region--language-settings">Region &amp; Language</a></strong> - Language, currency, time zone</li>
+<li><strong><a href="USER_MANUAL_TOP.md#privacy-settings">Privacy Settings</a></strong> - Visibility, data download, account deletion</li>
+<li><strong><a href="USER_MANUAL_TOP.md#help--support">Help &amp; Support</a></strong> - Get help, contact support, report problems</li>
+<li><strong><a href="USER_MANUAL_TOP.md#sign-out">Sign Out</a></strong> - How to sign out</li>
+</ul>
+<p><strong>Admin-Specific Profile Features:</strong></p>
+<p><strong>Admin Stats:</strong> - Total users managed - Active tickets resolved - Platform health score (0-100%) - Admin actions this month</p>
+<p><strong>Profile Tabs:</strong></p>
+<p><strong>About Tab:</strong> - Bio/description - Role: Platform Administrator - Contact information - Admin permissions level</p>
+<p><strong>Activity Tab:</strong> - Recent admin actions - User management history - Configuration changes - Ticket resolutions</p>
+<p><strong>Notification Preferences:</strong></p>
+<p>Admins can configure specific alerts for: - New user registrations (push/email) - Critical platform alerts (push/email/SMS) - Security incidents (immediate push/SMS) - Weekly platform summary (email only) - Daily ticket digest (email only) - User suspension requests (push/email)</p>
+<p><strong>Notification Channels:</strong> - <strong>Push</strong>: In-app notifications (immediate) - <strong>Email</strong>: Digest or immediate - <strong>SMS</strong>: Critical alerts only (requires phone verification)</p>
+<p>Access via Profile → Settings → Notifications</p>
+<hr />
+<h4 id="issue-tracking">8.7.4 Issue Tracking</h4>
+<p>Track and resolve user-reported issues: - User reports (guests reporting hosts, vice versa) - Listing reports (safety issues, inaccuracies) - Review reports (inappropriate content) - Message reports (spam, harassment)</p>
+<p><strong>Issue Resolution Process:</strong> Access “Reports” → “Issues” to view unresolved issues. For each issue: 1. Review evidence (screenshots, messages) 2. Take appropriate action: - Dismiss (no action needed) - Warn user - Remove content - Suspend user 3. Write resolution note 4. Mark as resolved 5. Reporter receives notification</p>
+<h4 id="export-user-data">8.7.5 Export User Data</h4>
+<p>Export various data types for analysis or GDPR compliance: - All user data - Booking history - Listings data - Analytics</p>
+<p>Access through “Reports” → “Data Export”, select data type and date range, generate export, and download CSV file.</p>
+<h4 id="monthly-reports">8.7.6 Monthly Reports</h4>
+<p>Automated monthly platform summaries including: - Revenue reports - User growth reports - Booking trends - Performance metrics</p>
+<p>Access through “Reports” → “Monthly Reports”, select month/year, view comprehensive report, and download as PDF or CSV.</p>
+<hr />
+<hr />
+<p>← <a href="USER_MANUAL_TOP.html">Back to Index</a> | <a href="USER_MANUAL_CURATOR.html">← Curator Guide</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peapod Hotels. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../../terms.html">Terms</a>
+                <a href="../../privacy.html">Privacy</a>
+                <a href="../../sms-terms.html">SMS Terms</a>
+                <a href="../../manual/en/index.html">APP Manual</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

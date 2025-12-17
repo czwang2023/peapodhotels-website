@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peapod 用户手册 - 房东指南 - Peapod Hotels</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manual.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍐 Peapod Hotels</div>
+            <ul class="nav-links">
+                <li><a href="../../index-zh.html">首页</a></li>
+                <li><a href="../../terms-zh.html">服务条款</a></li>
+                <li><a href="../../privacy-zh.html">隐私政策</a></li>
+                <li><a href="../../sms-terms-zh.html">短信条款</a></li>
+                <li><a href="../../manual/cn/index.html" class="active">APP手册</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <a href="../en/index.html" title="Switch language">
+                    <span class="lang-icon">🌐</span>
+                    <span>EN</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="manual-content">
+<h1 id="peapod-用户手册---房东指南">Peapod 用户手册 - 房东指南</h1>
+<p><strong>版本：</strong> 0.18.8（Slice V - 多单元支持） <strong>最后更新：</strong> 2025年11月30日 <strong>平台：</strong> iOS（iPhone、iPad）</p>
+<p>← <a href="USER_MANUAL_TOP.html">返回目录</a></p>
+<p><strong>👥 关于本手册：</strong></p>
+<p>本手册涵盖<strong>房东</strong>（房源所有者）和<strong>联合房东</strong>（管理日常运营的团队成员）。</p>
+<p><strong>联合房东角色（中国版1.0已启用）：</strong> 联合房东已全面启用，负责大部分房源管理职责，包括房客沟通、预订管理、日历更新、房源维护和协调清洁。他们可以访问所有运营功能以确保日常运营顺畅。</p>
+<p><strong>联合房东权限：</strong> - ✅ 编辑房源（描述、照片、设施、规则） - ✅ 为指定房源与房客沟通 - ✅ 更新日历和可用性 - ✅ 查看和管理预订 - ✅ 与保洁员协调 - ✅ 报告问题</p>
+<p><strong>联合房东限制：</strong> 联合房东不能更改价格、访问收款/财务信息、邀请其他团队成员或删除房源。这些仍然是房东专属功能。</p>
+<hr />
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#51-导航">5.1 导航</a> - 仪表板、房源、预订、消息、个人资料标签</li>
+<li><a href="#52-创建与编辑房源仅限房东">5.2 创建与编辑房源</a> - 房源基础、位置、价格、照片、可用性、设施、规则 + 编辑功能 + <strong>新功能：酒店/青旅房型/床型（5.2.13）</strong></li>
+<li><a href="#53-房源审核与批准流程仅限房东">5.3 房源审核与批准流程</a> - 审核员审核、批准状态</li>
+<li><a href="#54-处理预订请求">5.4 处理预订请求</a> - 接受/拒绝、即时预订、修改</li>
+<li><a href="#55-团队管理仅限房东">5.5 团队管理</a> - 邀请联合房东/保洁员、管理角色、权限</li>
+<li><a href="#56-房客沟通与评价">5.6 房客沟通与评价</a> - 消息模板 + 评价与评分</li>
+<li><a href="#57-收入与忠诚度仅限房东">5.7 收入与忠诚度</a> - 收入、提款、税务信息 + 忠诚度等级与奖励</li>
+<li><a href="#58-房东资源">5.8 房东资源</a>
+<ul>
+<li><a href="#581-清洁任务管理">5.8.1 清洁任务管理</a></li>
+<li><a href="#582-房东与房源徽章">5.8.2 房东与房源徽章</a></li>
+<li><a href="#583-房东表现与超级房东状态">5.8.3 房东表现与超级房东状态</a></li>
+<li><a href="#584-支持与帮助">5.8.4 支持与帮助</a></li>
+</ul></li>
+</ul>
+<h3 id="附录">附录</h3>
+<ul>
+<li><a href="#附录a智能定价详情">附录A：智能定价详情</a></li>
+<li><a href="#附录b联合房东高级主题">附录B：联合房东高级主题</a></li>
+<li><a href="#附录c徽章详情">附录C：徽章详情</a></li>
+<li><a href="#附录dai房源优化器即将推出">附录D：AI房源优化器</a></li>
+<li><a href="#附录e智能分配算法">附录E：智能分配算法</a></li>
+<li><a href="#附录f故障排除">附录F：故障排除</a></li>
+<li><a href="#附录g最佳实践">附录G：最佳实践</a></li>
+<li><a href="#附录h自动重新安排详情">附录H：自动重新安排详情</a></li>
+<li><a href="#附录i消息模板参考">附录I：消息模板参考</a></li>
+</ul>
+<hr />
+<h2 id="房东与联合房东">5. 房东与联合房东</h2>
+<blockquote>
+<p><strong>语言设置:</strong> 首次在中国区使用时默认显示简体中文，用户可在登录页面右上角切换至 English 界面。</p>
+</blockquote>
+<h3 id="导航">5.1 导航</h3>
+<p>房东界面使用5标签底部导航栏。每个标签提供关键房东功能的访问。</p>
+<h4 id="仪表板标签">5.1.1 仪表板标签</h4>
+<p>一目了然的绩效概览。监控收入、预订和入住率趋势。</p>
+<p><strong>关键指标（顶部卡片）：</strong> - <strong>已收款项</strong> - 已转入您银行账户的总金额（已完成） - <strong>待收入</strong> - 房客入住后等待收款的金额（绿色 = 等待收款） - <strong>本月总预订</strong> - 已确认预订数量 - <strong>本月当前入住率</strong> - 已预订晚数百分比</p>
+<p><strong>收入概览图表：</strong> - 按月显示收入的柱状图 - 查看最近6个月收入 - Y轴显示美元金额（$0k-$4k范围） - 悬停/点击柱状图查看精确金额</p>
+<p><strong>入住率部分：</strong> - <strong>本月</strong> - 当月入住率百分比（红色指示器） - <strong>下月</strong> - 下月入住率百分比（灰色指示器） - 点击”查看日历”查看详细可用性</p>
+<p align="center">
+<img src="../screens/cn/Host/dashboard.png" width="300">
+</p>
+<h4 id="房源标签">5.1.2 房源标签</h4>
+<p>在一个屏幕上管理所有房源。创建新房源、编辑现有房源并监控状态。</p>
+<p><strong>搜索与筛选：</strong> - 搜索栏：“搜索房源…” - 按名称查找房源 - 筛选标签： - <strong>全部 (14)</strong> - 所有房源，无论状态 - <strong>活跃 (13)</strong> - 房客可见的上线房源 - <strong>您暂停的 (1)</strong> - 您临时禁用的房源 - 计数器显示每个类别的房源总数 - 标签下方文字：“显示Y个房源中的X个”</p>
+<p><strong>房源卡片显示：</strong> - 房源照片缩略图（左侧） - 房源标题（粗体，大字） - 每晚价格（绿色，如”$300/晚”） - 位置（城市、州，灰色） - 星级评分和评价数（如”5.0 (4)“） - 状态徽章（右侧）： - 绿色”活跃” - 上线且可预订 - 蓝色”您暂停的” - 临时禁用 - 三点菜单（⋯）- 快速操作：编辑、团队成员、管理任务、激活、删除</p>
+<p><strong>创建新房源：</strong> - 点击”+“按钮（右上角）开始房源创建流程</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_view.png" width="300">
+</p>
+<h4 id="预订标签">5.1.3 预订标签</h4>
+<p>查看和管理所有房源的预订。追踪入住、收款和房客信息。</p>
+<p><strong>搜索与筛选：</strong> - 搜索栏：“搜索预订…” - 按房客姓名、房源或确认号查找 - 筛选标签： - <strong>待处理</strong> - 等待您批准（如非即时预订） - <strong>即将到来</strong> - 未来已确认预订 - <strong>今天</strong> - 今天入住或退房的预订 - <strong>全部</strong> - 完整预订历史</p>
+<p><strong>预订卡片显示：</strong> - 房源照片缩略图（左侧） - 房源名称（粗体） - 房客姓名（灰色文字，如”房客：John Peapod”） - 状态徽章（绿色”已确认”、黄色”待处理”等） - <strong>入住</strong>日期和<strong>退房</strong>日期 - <strong>房客</strong>数量 - <strong>收款</strong>金额（绿色，如”$661”） - <strong>确认号</strong>（预订ID） - 三点菜单（⋯）- 操作（查看详情、联系房客、修改、取消）</p>
+<p><strong>刷新：</strong> - 点击刷新图标（右上角）更新预订状态</p>
+<p align="center">
+<img src="../screens/cn/Host/bookings_view.png" width="300">
+</p>
+<h4 id="消息标签">5.1.4 消息标签</h4>
+<p>与房客沟通预订事宜。按房源和预订日期组织查看所有对话。</p>
+<p><strong>搜索：</strong> - 搜索栏：“搜索消息” - 按房客姓名或房源查找对话</p>
+<p><strong>对话列表：</strong> - 房客头像（左侧，圆形） - 房源名称（粗体，如”Mission Bay海滨公寓”） - 预订日期（灰色，如”(10月14-16日)“） - 最后消息预览（灰色，截断） - 时间戳（右侧，如”1小时前”、“2天前”） - 未读指示器（如有未读则显示数量徽章）</p>
+<p><strong>撰写新消息：</strong> - 点击铅笔图标（右上角）开始新对话</p>
+<p><strong>消息组织：</strong> - 最近对话在顶部 - 按房源分组 - 显示预订上下文便于参考</p>
+<p align="center">
+<img src="../screens/cn/Host/messages_view.png" width="300">
+</p>
+<h4 id="个人资料标签">5.1.5 个人资料标签</h4>
+<p>您的账户设置、偏好和收款配置。在房东和房客角色之间切换。</p>
+<p><strong>个人资料头部：</strong> - 头像（圆形，点击更改） - 姓名（如”Jennifer Host”） - 角色徽章（如”房东 👑“带皇冠图标） - <strong>切换角色</strong>按钮（蓝色）- 在房东和房客视图之间切换 - 统计显示： - <strong>行程</strong> - 作为房客的总预订 - <strong>评价</strong> - 收到的评价数 - <strong>会员年数</strong> - 账户年龄</p>
+<p><strong>账户设置：</strong> - <strong>账户</strong> - 邮箱、密码和安全设置 - <strong>偏好设置</strong> - 语言、地区、货币等 - <strong>通知</strong> - 邮件、短信和推送通知偏好 - <strong>隐私与法律</strong> - 隐私设置、数据导出、条款与政策 - <strong>房东收款</strong> - 设置收款和查看收入 - <strong>帮助中心</strong> - 获取帮助和联系客服</p>
+<p><strong>退出登录：</strong> - 底部红色”退出登录”按钮</p>
+<p><strong>通知：</strong> - 铃铛图标（右上角）- 查看通知历史</p>
+<p align="center">
+<img src="../screens/cn/Host/profile_view.png" width="300">
+</p>
+<h3 id="创建与编辑房源">5.2 创建与编辑房源</h3>
+<p>房源编辑器使用8格导航网格，您可以按任意顺序跳转各部分。每个完成的部分显示绿色勾号。随时点击右上角”预览”预览您的房源。</p>
+<p><strong>创建新房源 [仅限房东]：</strong> 1. 房源标签 → “+”按钮 → 打开编辑器 2. 完成全部8个部分（房源基础、位置、价格、照片、可用性、设施、预订规则、房屋规则） 3. 进度仅自动保存到您的设备（不在服务器上） 4. 预览 → “提交审核”发送给审核员批准</p>
+<p><strong>编辑现有房源：</strong> 1. 房源标签 → 点击房源 → 三点菜单（⋯）→ “编辑房源” 2. 相同的8格编辑器，预填数据 3. 修改 → 预览 → 保存 4. 更改自动分类（详见5.3.3节）： - <strong>关键</strong>（卧室、浴室、最大房客数、房源类型、主要设施）→ 上线前需审核员批准 - <strong>自动批准</strong>（照片、价格、描述、入住说明等）→ 立即上线，无需审核</p>
+<p><strong>创建前准备：</strong> - 您拥有或有权出租该房源 - 房源符合当地法规和安全要求 - 您有房源的高质量照片 - 您可以向房客提供入住说明</p>
+<h4 id="房源基础">5.2.1 房源基础</h4>
+<p>本部分涵盖向潜在房客描述您房源的基本详情。</p>
+<p><strong>房源标题</strong>（建议40-100字符） - 创建描述性、可搜索的标题，突出房源最佳特色 - 字段下方显示字符计数器（40/100） - 示例：“La Jolla Cove附近的海滨公寓”、“带城市景观的舒适市中心工作室” - 提示：包含位置、房源类型和主要设施</p>
+<p><strong>房源类型</strong> - 点击下拉菜单选择可用类型： - <strong>单单元类型</strong>（预订整个房源）： - <strong>独栋房屋</strong> - 带私人入口的整栋房屋 - <strong>公寓</strong> - 整套公寓 - <strong>客房</strong> - 住宅内的私人房间 - <strong>多单元类型</strong>（预订房型/床型）： - <strong>酒店</strong> - 酒店或汽车旅馆房间（见<a href="#5213-管理房型仅限酒店青旅精品酒店度假村">5.2.13 管理房型</a>） - <strong>青旅</strong> - 青旅床位或共享住宿（见<a href="#5213-管理房型仅限酒店青旅精品酒店度假村">5.2.13 管理床型</a>） - <strong>精品酒店</strong> - 精品或小型酒店（见<a href="#5213-管理房型仅限酒店青旅精品酒店度假村">5.2.13 管理房型</a>） - <strong>度假村</strong> - 带多种房型的度假村（见<a href="#5213-管理房型仅限酒店青旅精品酒店度假村">5.2.13 管理房型</a>） - 这帮助房客按房源类型筛选搜索结果 - 每种类型在选择器中显示唯一图标 - <strong>注意：</strong> 酒店、青旅、精品酒店和度假村在发布前需要至少一个房型/床型</p>
+<p><strong>描述</strong>（91-1000字符） - 撰写房源的详细描述 - 字段下方显示字符计数器（91/1000） - 描述空间、设施、社区和独特之处 - 使用清晰段落提高可读性 - 绿色计数器表示长度足够（91+字符）</p>
+<p><strong>最大房客数</strong> - 使用 +/- 按钮设置容量（1-20位房客） - 计数器显示当前数量 - 考虑睡眠安排和公共区域空间 - 影响搜索可见性和定价</p>
+<p><strong>房间和床位</strong> - <strong>卧室：</strong> 私人卧室数量（0-10） - 工作室公寓选择0（“任意”） - <strong>浴室：</strong> 浴室数量，以0.5为增量（0.5-10.0） - 0.5 = 半浴室（马桶+水槽，无淋浴） - 1.0 = 全浴室（马桶+水槽+淋浴/浴缸） - <strong>床位：</strong> 总床位数（1-20） - 计算房客可以使用的所有睡眠表面</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_create_property_basics.png" width="300">
+</p>
+<h4 id="位置">5.2.2 位置</h4>
+<p>输入您房源的地址和社区信息。地址验证确保地图显示的坐标准确。</p>
+<p><strong>地址</strong> - 街道地址（必填） - 公寓、套房等（可选）- 添加单元号或建筑详情 - 城市、州、邮编（必填） - 所有字段通过地址验证自动填充</p>
+<p><strong>验证地址按钮</strong> - 点击”验证地址”确认位置 - 系统根据地图服务检查地址 - 成功：绿色勾号”✓ 地址已验证（坐标已设置）” - 如验证失败：检查并更正地址组件 - 坐标（经纬度）自动设置用于地图显示</p>
+<p><strong>社区</strong>（必填） - 描述社区、附近景点和交通 - 帮助房客了解该地区的特色 - 提及到热门目的地的步行距离 - 如相关，包含停车可用性 - 此字段显示在您的房源页面上</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_create_location.png" width="300">
+</p>
+<h4 id="价格">5.2.3 价格</h4>
+<p>设置每晚房价和可选费用。价格以美元为单位，向房客显示透明明细。</p>
+<p><strong>每晚基础价格</strong>（必填） - 费用前的每晚房价 - 输入美元金额（如200） - 这是您每晚的收入（减去平台费） - 房源创建后可通过日历按季节调整</p>
+<p><strong>清洁费（可选）</strong> - 每次预订收取的一次性费用（非每晚） - 涵盖深度清洁、洗涤、补充 - 输入美元金额（如50） - 建议：根据房源大小$50-150 - 在房客价格明细中单独显示</p>
+<p><strong>房客支付：</strong> - 基础价格（每晚价格 × 晚数） - + 清洁费 - + 任何适用税费</p>
+<p><strong>您收到：</strong> - 基础价格 × 晚数 - + 清洁费 - - 平台费（15% - 等级百分比）</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_create_price.png" width="300">
+</p>
+<h4 id="照片">5.2.4 照片</h4>
+<p>上传房源的高质量图片。照片是预订决策的首要因素。</p>
+<p><strong>添加房源照片</strong> - 点击”添加更多”从设备选择照片 - 每张照片上传时显示”新”徽章 - 最少：5张照片（建议：10-20张） - 最大文件大小：每张10MB - 支持格式：JPG、PNG</p>
+<p><strong>照片提示：</strong> - 使用自然光（打开窗帘，白天拍摄） - 展示房客可以使用的所有房间 - 包括浴室、厨房、睡眠区域 - 捕捉独特功能和设施 - 从角落拍照展示完整房间 - 第一张照片是封面 - 要精心选择！</p>
+<p><strong>重新排序照片：</strong> - 拖动照片重新排序 - 第一张照片显示在搜索结果中 - 按顺序排列其余照片讲述故事（入口 → 起居区 → 卧室 → 户外空间）</p>
+<p><strong>添加视频（可选）</strong> - 粘贴YouTube或其他视频URL或ID - 视频为房客提供虚拟导览 - 展示房源布局和氛围 - 每个房源最多1个视频</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_create_photos.png" width="300">
+</p>
+<h4 id="可用性">5.2.5 可用性</h4>
+<p>在创建房源时设置屏蔽日期。高级日历功能（自定义定价、周期规则）在创建房源后可用。</p>
+<p><strong>屏蔽日期</strong> - “选择您房源不可用的日期” - 注意：“日历功能将在创建房源后可用”</p>
+<p><strong>房源创建后：</strong> - 带日期选择器的完整日历 - 屏蔽特定日期或日期范围 - 设置节假日/旺季的自定义定价 - 配置最短/最长入住要求 - 设置提前预订窗口 - 添加周期可用性规则</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_create_availability.png" width="300">
+</p>
+<h4 id="设施与无障碍">5.2.6 设施与无障碍</h4>
+<p>选择您房源提供的所有设施和无障碍功能。准确选择可提高搜索匹配度，帮助房客找到满足其需求的房源。</p>
+<p><strong>您提供什么设施？</strong></p>
+<p>已选设施显示粉色背景和红色勾号： - WiFi - 厨房 - 洗衣机 - 烘干机 - 电视 - 阳台 - 花园 - 停车位</p>
+<p>未选设施显示灰色背景： - 空调 - 暖气 - 泳池 - 热水浴缸 - 健身房 - 壁炉 - 洗碗机 - 洗衣房 - 熨斗</p>
+<p><strong>无障碍功能</strong></p>
+<p>选择所有适用的无障碍功能，使您的房源更方便有行动、听力或视力需求的房客：</p>
+<p>可用选项： - <strong>无台阶入口</strong> - 主入口无楼梯 - <strong>宽门</strong> - 32英寸以上，轮椅可通过 - <strong>无障碍浴室</strong> - 滚入式淋浴或无障碍浴缸 - <strong>扶手</strong> - 浴室和其他区域 - <strong>电梯</strong> - 建筑有电梯 - <strong>轮椅无障碍</strong> - 全程轮椅可通行 - <strong>听力无障碍</strong> - 视觉警报、门铃指示器 - <strong>视觉辅助</strong> - 盲文、高对比度标识 - <strong>允许服务动物</strong> - 欢迎服务动物</p>
+<p><strong>注意：</strong> 设施和无障碍选项从数据库加载 - 随着新选项添加到平台，列表会自动更新。</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_create_amenities.png" width="300"> <img src="../screens/cn/Host/listings_create_accessibility.png" width="300">
+</p>
+<h4 id="预订规则">5.2.7 预订规则</h4>
+<p>配置取消政策、即时预订设置和最短入住要求。</p>
+<p><strong>最短入住晚数</strong> - 设置最短预订长度（默认：3晚） - 使用 +/- 按钮调整（1-30晚） - 较长的最短入住减少周转但可能限制预订 - 房源创建后可按日期范围调整</p>
+<p><strong>取消政策</strong> - 点击下拉菜单选择政策（示例显示”灵活”） - <strong>灵活：</strong> 入住前24小时全额退款，之后50% - <strong>中等：</strong> 入住前5天全额退款，2-5天50%退款，2天内不退款 - <strong>严格：</strong> 入住前14天全额退款，7-14天50%退款，7天内不退款 - 政策在预订前向房客显示</p>
+<p><strong>重要退款规则：</strong> - <strong>清洁费和税费：</strong> 如果房客在入住前取消，始终100%退款（无需清洁，不适用税费） - <strong>基础价格（住宿费）：</strong> 根据取消政策百分比（基于时间100%/50%/0%） - <strong>服务费：</strong> 灵活/中等政策可退，严格政策不可退</p>
+<p><strong>示例（中等政策，房客入住前3天取消）：</strong> - 基础价格$200 → 50% = $100退款 - 清洁费$50 → 100% = $50退款 ✅ - 税费$20 → 100% = $20退款 ✅ - 服务费$28 → 100% = $28退款（中等允许） - <strong>总退款：$198</strong>（房客支付$298）</p>
+<p><strong>预订偏好</strong></p>
+<p><strong>即时预订</strong>（开关） - 启用时：房客可以不经房东批准直接预订 - 支付自动授权 - 更快预订，更少手动工作 - 默认：关闭（示例显示为开启）</p>
+<p><strong>允许即时预订的条件：</strong>（要求满足所有选定条件） - <strong>所有人</strong> - 无限制（不推荐） - <strong>已验证房客</strong> - 政府证件已上传并验证 - <strong>回头客</strong> - 之前在平台预订过 - <strong>好评房客（&gt;4.5）</strong> - 要求高房客评分</p>
+<p><strong>自助入住</strong>（开关） - 启用时：房客可以不与您见面自行入住 - 需要下方详细的入住说明</p>
+<p><strong>自助入住说明</strong>（如启用自助入住则必填） - 提供逐步入住说明 - 包括密码箱位置和密码、钥匙位置或智能锁说明 - 示例：“密码将在入住日期前发送” - 说明在到达前24小时自动发送给房客</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_create_booking_rules.png" width="300">
+</p>
+<h4 id="房屋规则">5.2.8 房屋规则</h4>
+<p>设置入住/退房时间和房源规则以设定房客期望。</p>
+<p><strong>入住时间 / 退房时间</strong> - 默认：入住下午2:00，退房上午11:00 - 点击时间使用时间选择器更改 - 允许房客之间的清洁缓冲时间 - 在预订确认中向房客显示</p>
+<p><strong>房屋规则</strong></p>
+<p>切换每条规则开/关： - <strong>允许吸烟</strong> - 关闭以禁止室内吸烟 - <strong>允许宠物</strong> - 关闭以禁止宠物 - <strong>允许派对/活动</strong> - 关闭以禁止聚会 - 默认：全部关闭（禁止）</p>
+<p><strong>安静时间</strong>（开关） - 启用以强制安静时段 - <strong>开始时间：</strong> 安静时间开始（默认：晚上11:00） - <strong>结束时间：</strong> 安静时间结束（默认：早上8:00） - 显示在房源页面的房屋规则中</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_create_house_rules.png" width="300">
+</p>
+<h4 id="编辑价格与智能定价">5.2.9 编辑价格与智能定价</h4>
+<p>创建房源后，更新定价并访问智能定价功能。</p>
+<p><strong>基本价格更新：</strong> 更新每晚房价和清洁费（字段详情见5.2.3节）</p>
+<p><strong>智能定价与折扣：</strong> 点击”管理智能定价”按钮访问：</p>
+<p><strong>时长折扣：</strong> 鼓励长住 - 7+晚：10%折扣（用垃圾桶图标编辑/删除） - 30+晚：20%折扣 - 用+按钮添加自定义时长层级</p>
+<p><strong>临时优惠：</strong> 铂金/钻石忠诚会员专属 - 创建当日优惠 - 设置折扣百分比和可用性</p>
+<p><strong>季节性与动态定价：</strong> 为特定日期/范围添加价格调整（节假日、旺季）</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_edit_price.png" width="300"> <img src="../screens/cn/Host/listings_edit_price_smartPricing.png" width="300">
+</p>
+<h4 id="编辑可用性">5.2.10 编辑可用性</h4>
+<p>完整的日历管理，包括日期屏蔽、导入/导出和周期规则。</p>
+<p><strong>屏蔽日期：</strong> 点击日期 → “屏蔽”按钮 → 可选添加原因（内部备注）</p>
+<p><strong>取消屏蔽日期：</strong> 点击已屏蔽日期（粉色/红色）→ “取消屏蔽”按钮</p>
+<p><strong>操作按钮：</strong> - <strong>导入日历：</strong> 与外部日历同步（Airbnb、VRBO） - <strong>周期规则：</strong> 设置自动屏蔽模式 - <strong>导出日历：</strong> 与其他平台共享可用性</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_edit_availability.png" width="300">
+</p>
+<h4 id="编辑照片与视频">5.2.11 编辑照片与视频</h4>
+<p>管理房源照片和视频导览。</p>
+<p><strong>照片：</strong> 点击X删除，拖动重新排序（第一张=封面），点击”添加更多”上传新照片（每张最大10MB）</p>
+<p><strong>视频：</strong> 粘贴YouTube URL → 视频显示在轮播首位，带播放按钮和徽章。可提高30%+预订转化率。</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_edit_photo_video.png" width="300">
+</p>
+<h4 id="预览与提交">5.2.12 预览与提交</h4>
+<p><strong>预览：</strong> 点击”预览”（右上角）在提交前查看房客视图</p>
+<p><strong>保存行为：</strong> - <strong>创建新房源：</strong> 更改仅自动保存到您的设备（不在服务器上）。准备好后点击”提交审核”发送给审核员。 - <strong>编辑活跃房源：</strong> 更改自动分类： - <strong>关键更改</strong>（卧室、浴室、容量、房源类型、主要设施）：保存但在审核员批准前对房客不可见（24小时审核） - <strong>自动批准更改</strong>（照片、标题、描述、价格、WiFi密码、入住说明、日历）：立即生效，无需审核</p>
+<p>详见5.3.3节了解两级审核系统的完整详情。</p>
+<h4 id="管理房型仅限酒店青旅精品酒店度假村">5.2.13 管理房型（仅限酒店/青旅/精品酒店/度假村）</h4>
+<p><strong>新功能（Slice V）：</strong> 酒店、青旅、精品酒店和度假村可以定义多个房型或床型，每个都有自己的定价、容量、设施和可用性。</p>
+<p><strong>术语：</strong> - <strong>酒店/精品酒店/度假村</strong> → “房型”（如标准房、豪华套房、海景别墅） - <strong>青旅</strong> → “床型”（如4床混合宿舍上铺、女生宿舍单床）</p>
+<p><strong>⚠️ 发布要求：</strong> 多单元房源类型（酒店、青旅、精品酒店、度假村）<strong>在至少有一个活跃房型/床型之前不能发布</strong>。如果您尝试在没有房型的情况下提交，会看到验证错误。</p>
+<hr />
+<p><strong>为什么房型/床型重要：</strong></p>
+<p>与房客预订整个房源的度假租赁不同，酒店和青旅： - 提供不同类型的多个单元 - 允许同一日期的多个预订 - 按房型/床型追踪容量 - 允许不同住宿有不同定价</p>
+<hr />
+<p><strong>访问房型/床型管理：</strong></p>
+<ol type="1">
+<li>前往<strong>房源</strong>标签</li>
+<li>点击您的酒店或青旅房源</li>
+<li>滚动到<strong>“房型”</strong>（酒店）或<strong>“床型”</strong>（青旅）部分</li>
+<li>点击<strong>“管理类型”</strong>打开管理界面</li>
+</ol>
+<hr />
+<p><strong>A. 创建房型/床型：</strong></p>
+<p><strong>必填字段：</strong> - <strong>类型名称</strong> - 描述性名称（如”海景豪华大床房”） - <strong>总单元数</strong> - 您有多少个此房型/床型（如10间豪华房） - <strong>每单元最大房客</strong> - 每房间/床位最大入住人数（如每房间2位房客） - <strong>每晚基础价格</strong> - 此特定类型的每晚房价</p>
+<p><strong>可选字段：</strong> - <strong>描述</strong> - 此房型/床型的详细描述 - <strong>设施</strong> - 房型特定设施（WiFi、空调、独立卫浴等） - <strong>照片</strong> - 此房型/床型特定的照片</p>
+<p><strong>创建步骤：</strong> 1. 点击<strong>“+ 添加房型”</strong>（或”+ 添加床型”） 2. 输入类型名称 3. 设置可用总单元数 4. 设置每单元最大房客 5. 输入每晚基础价格 6. 添加描述和设施（可选） 7. 上传房型/床型特定照片（可选） 8. 点击<strong>“保存”</strong></p>
+<hr />
+<p><strong>B. 编辑房型/床型：</strong></p>
+<ol type="1">
+<li>点击房型/床型卡片</li>
+<li>修改任何字段</li>
+<li>点击<strong>“保存更改”</strong></li>
+</ol>
+<p><strong>可编辑内容：</strong> - 类型名称 - 总单元数（增加容量） - 每单元最大房客 - 每晚价格 - 描述 - 设施 - 照片</p>
+<p><strong>注意：</strong> 如果有活跃预订，不能将总单元数减少到低于当前活跃预订数。</p>
+<hr />
+<p><strong>C. 可用性和容量：</strong></p>
+<p><strong>容量如何运作：</strong> - 每个房型/床型有自己的容量（总单元数） - 多位房客可以在同一日期预订相同类型 - 系统自动追踪预订vs总单元数 - 数据库级别防止超额预订</p>
+<p><strong>示例：</strong></p>
+<pre><code>豪华大床房：总共5个单元
+- 预订1：房客A预订1间（12月1-3日）→ 剩余4间
+- 预订2：房客B预订2间（12月1-3日）→ 剩余2间
+- 预订3：房客C尝试预订3间（12月1-3日）→ 被阻止（仅2间可用）</code></pre>
+<p><strong>查看可用性：</strong> - 每个房型/床型显示所选日期的当前可用性 - 颜色指示器：绿色（可用）、黄色（有限）、红色（已满） - 点击”查看日历”查看详细可用性</p>
+<hr />
+<p><strong>D. 停用/删除房型/床型：</strong></p>
+<p><strong>停用（临时）：</strong> 1. 点击房型/床型 2. 关闭<strong>“活跃”</strong>开关 3. 该类型不再接受新预订 4. 现有预订保持有效 5. 可随时重新激活</p>
+<p><strong>删除（永久）：</strong> 1. 点击房型/床型 2. 点击<strong>“删除”</strong>按钮 3. 确认删除 4. <strong>注意：</strong> 如果有活跃预订则不能删除</p>
+<hr />
+<p><strong>E. 酒店/青旅最佳实践：</strong></p>
+<ol type="1">
+<li><strong>使用清晰名称</strong> - “带阳台的豪华大床房”比”A房间”更好</li>
+<li><strong>添加房型特定照片</strong> - 展示每种房型的独特功能</li>
+<li><strong>战略性定价</strong> - 高端房间应反映其设施</li>
+<li><strong>监控可用性</strong> - 旺季定期检查容量</li>
+<li><strong>保持描述更新</strong> - 准确的设施列表减少房客投诉</li>
+</ol>
+<p><strong>常见房型示例（酒店）：</strong> - 标准双床房 - 豪华大床房 - 带客厅的套房 - 家庭房（2张大床） - 无障碍房</p>
+<p><strong>常见床型示例（青旅）：</strong> - 4床混合宿舍上铺 - 6床女生宿舍上铺 - 8床混合宿舍单床 - 私人单人间 - 私人双人间</p>
+<hr />
+<p><strong>F. 理解设施与搜索影响：</strong></p>
+<p><strong>两种类型的设施：</strong></p>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 33%" />
+<col style="width: 22%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>设施类型</th>
+<th>在哪里设置</th>
+<th>适用于</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>共享设施</strong></td>
+<td>房源编辑器 → 设施</td>
+<td>所有房型/床型</td>
+<td>泳池、健身房、餐厅、大堂WiFi</td>
+</tr>
+<tr>
+<td><strong>房型设施</strong></td>
+<td>房型编辑器</td>
+<td>仅特定房型</td>
+<td>阳台、迷你吧、独立卫浴、室内保险箱</td>
+</tr>
+</tbody>
+</table>
+<p><strong>组合设施在搜索中如何工作：</strong></p>
+<p>当房客使用设施筛选搜索时，系统检查：</p>
+<pre><code>组合设施 = 共享设施 ∪ 房型设施</code></pre>
+<p><strong>示例：</strong> - 您酒店的<strong>共享设施：</strong> WiFi、泳池、健身房、餐厅 - <strong>豪华房</strong>设施：阳台、迷你吧 - <strong>标准房</strong>设施：（无）</p>
+<p><strong>豪华房</strong>组合 = WiFi、泳池、健身房、餐厅、阳台、迷你吧 <strong>标准房</strong>组合 = WiFi、泳池、健身房、餐厅</p>
+<p><strong>搜索影响：</strong> - 房客搜索”WiFi + 泳池” → 两种房型都匹配 ✅ - 房客搜索”WiFi + 阳台” → 仅豪华房匹配 ✅ - 房客搜索”厨房” → 都不匹配 ❌</p>
+<p><strong>重要：</strong> 如果房客筛选的设施仅在某些房型中存在，您的房源将仅显示那些匹配的房型作为选项。</p>
+<p><strong>设施最佳实践：</strong> 1. 将全房源范围的设施添加到<strong>共享设施</strong>（房源编辑器） 2. 将房型特定设施添加到每个<strong>房型</strong> 3. 不要重复 - 如果泳池是共享的，不要添加到每个房型 4. 要准确 - 房客期望您列出的内容</p>
+<hr />
+<p><strong>G. 房客如何在搜索中看到您的房源：</strong></p>
+<p>对于多单元房源，搜索结果显示： - <strong>房源卡片</strong>每个房源一个条目 - <strong>“从<span class="math inline">$X/房间"**或**"从$</span>X/床位”</strong> - 最便宜匹配房型 - <strong>主房型名称</strong> - 如”标准双床房” - <strong>共享徽章</strong> - 超级房东、即时预订等</p>
+<p><strong>什么决定主房型：</strong> 1. 必须匹配房客的所有筛选（价格、房客、床位、设施） 2. 必须在所选日期可用 3. 匹配类型中最便宜的显示</p>
+<p><strong>示例：</strong> 房客搜索：$100-$200，2位房客，WiFi</p>
+<p>您的酒店有： - 标准房：$120，2位房客，WiFi ✅ 匹配 - 豪华套房：$180，4位房客，WiFi ✅ 匹配 - 行政套房：$350，4位房客，WiFi ❌ 超出价格筛选</p>
+<p><strong>结果：</strong> 您的房源显示为”从$120/房间 — 标准房”</p>
+<hr />
+<p><strong>H. 查看房型预订：</strong></p>
+<p>在<strong>预订</strong>标签中，酒店/青旅预订显示： - 房源名称 - <strong>房型/床型名称</strong>（如”豪华大床房”） - <strong>预订单元数</strong>（如”2间房”） - 房客姓名和日期 - 总收款</p>
+<p><strong>预订详情显示：</strong> - 房型及描述 - 预订的房间/床位数 - 每单元和总价明细 - 分配的单元号（如使用单独单元）</p>
+<hr />
+<h3 id="房源审核与批准流程-仅限房东">5.3 房源审核与批准流程 [仅限房东]</h3>
+<p>了解房源状态和编辑如何被审核有助于您有效管理房源。</p>
+<hr />
+<h4 id="房源状态">5.3.1 房源状态</h4>
+<p>您房源的状态决定房客是否可以看到和预订。</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 25%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr>
+<th>状态</th>
+<th>含义</th>
+<th>房客可见？</th>
+<th>可预订？</th>
+<th>您的操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>待审核</strong></td>
+<td>新房源已提交，等待审核员批准</td>
+<td>❌ 否</td>
+<td>❌ 否</td>
+<td>等待审核员审核（24-48小时）</td>
+</tr>
+<tr>
+<td><strong>请求修改</strong></td>
+<td>审核员退回要求修改</td>
+<td>❌ 否</td>
+<td>❌ 否</td>
+<td>进行请求的修改，然后立即重新提交</td>
+</tr>
+<tr>
+<td><strong>活跃</strong></td>
+<td>已批准并在平台上线</td>
+<td>✅ 是</td>
+<td>✅ 是</td>
+<td>管理预订，可随时暂停</td>
+</tr>
+<tr>
+<td><strong>活跃（待审核编辑）</strong></td>
+<td>活跃房源有关键编辑等待审核员批准</td>
+<td>✅ 是（显示旧批准数据）</td>
+<td>✅ 是</td>
+<td>等待审核员审核您的更改</td>
+</tr>
+<tr>
+<td><strong>您暂停的</strong></td>
+<td>您临时禁用了它</td>
+<td>❌ 否</td>
+<td>❌ 否</td>
+<td>准备好时取消暂停（无需重新审核）</td>
+</tr>
+<tr>
+<td><strong>审核员暂停的</strong></td>
+<td>审核员发现上线房源问题</td>
+<td>❌ 否</td>
+<td>❌ 否</td>
+<td>修复问题，然后重新提交审核</td>
+</tr>
+<tr>
+<td><strong>已拒绝</strong></td>
+<td>审核员永久封锁此房源</td>
+<td>❌ 否</td>
+<td>❌ 否</td>
+<td>修复问题并立即重新提交，或通过聊天申诉</td>
+</tr>
+<tr>
+<td><strong>已归档</strong></td>
+<td>您永久移除了它</td>
+<td>❌ 否</td>
+<td>❌ 否</td>
+<td>无法恢复</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重要说明：</strong></p>
+<p><strong>无草稿状态：</strong> 您正在创建的房源仅自动保存在您的设备上。一旦提交，房源立即在我们系统中创建，状态为”待审核”。您不能将部分房源保存到服务器。</p>
+<p><strong>有待审核编辑的活跃房源：</strong> 当您编辑活跃房源的关键信息时（见下方5.3.3节），您的房源<strong>保持活跃和可预订</strong>。房客继续看到旧的审核员批准的信息，直到您的更改被审核和批准。这保护房客免受看到未验证的更改。</p>
+<hr />
+<h4 id="新房源提交工作流程">5.3.2 新房源提交工作流程</h4>
+<p><strong>创建您的第一个房源：</strong></p>
+<ol type="1">
+<li><p><strong>开始创建：</strong> 在编辑器中开始填写房源详情</p>
+<ul>
+<li>进度仅自动保存到您的设备</li>
+<li>对审核员或房客还不可见</li>
+<li>可以退出并返回继续编辑</li>
+</ul></li>
+<li><p><strong>提交审核：</strong> 完成后点击”提交审核”</p>
+<ul>
+<li>房源在我们系统中创建</li>
+<li>状态：<strong>待审核</strong></li>
+<li>进入审核员审核队列</li>
+<li>您将收到通知（邮件+推送）</li>
+</ul></li>
+<li><p><strong>审核员审核（24-48小时）：</strong></p>
+<p><strong>选项A：批准</strong></p>
+<ul>
+<li>状态变为<strong>活跃</strong></li>
+<li>房源立即上线</li>
+<li>在搜索结果中可见</li>
+<li>房客可以预订</li>
+</ul>
+<p><strong>选项B：请求修改</strong></p>
+<ul>
+<li>状态变为<strong>请求修改</strong></li>
+<li>您收到具体反馈：
+<ul>
+<li>照片质量差（太暗、模糊、不够）</li>
+<li>描述不完整（太短、缺少细节）</li>
+<li>设施缺失或不准确</li>
+<li>定价似乎不正确</li>
+<li>缺少必需文件</li>
+</ul></li>
+<li><strong>您的操作：</strong> 进行修改，然后立即重新提交</li>
+<li>审核员在24小时内重新审核</li>
+</ul>
+<p><strong>选项C：拒绝</strong></p>
+<ul>
+<li>状态变为<strong>已拒绝</strong></li>
+<li>审核员发现根本问题：
+<ul>
+<li>欺诈（盗用照片、房源不存在）</li>
+<li>非法活动或不安全结构</li>
+<li>政策违规（歧视性语言、禁止用途）</li>
+<li>重复（同一房源已上线）</li>
+<li>不可用（房源已售/不可用）</li>
+<li>错误平台（商业房源在住宅平台上）</li>
+</ul></li>
+<li><strong>您的操作：</strong> 修复问题并立即重新提交，或如认为有误通过聊天申诉</li>
+</ul></li>
+</ol>
+<hr />
+<h4 id="编辑活跃房源两级审核系统">5.3.3 编辑活跃房源：两级审核系统</h4>
+<p>一旦您的房源活跃，编辑分为两类。这平衡了您的自主权和质量控制。</p>
+<p><strong>🔴 关键更改（需要审核员重新批准）</strong></p>
+<p>这些从根本上定义房客预订的内容。更改需要审核员批准后才能上线。</p>
+<p><strong>示例：</strong> - 房源类型（独栋房屋 → 公寓） - 卧室数量 - 浴室数量 - 最大房客容量 - 位置/地址 - 主要设施（泳池、热水浴缸、停车、空调/暖气、厨房、洗衣机/烘干机、无障碍功能）</p>
+<p><strong>发生什么：</strong> 1. 您进行更改并保存 2. 您的房源<strong>保持活跃</strong>和<strong>可预订</strong> 3. <strong>房客看到：</strong> 旧的批准信息（如”2卧室”） 4. <strong>您看到：</strong> “活跃 ⏳ 1个待审核编辑（关键）”及详情 5. 审核员在24小时内审核 6. <strong>如果批准：</strong> 更改立即上线，房客现在看到新信息 7. <strong>如果拒绝：</strong> 房源保持旧信息，您看到拒绝原因并可立即重新提交</p>
+<p><strong>重要：</strong> 如果房客在待审核期间预订，他们基于旧的批准信息预订（如2卧室）。您必须履行房客预订的内容。</p>
+<hr />
+<p><strong>✅ 自动批准更改（立即上线）</strong></p>
+<p>所有其他不从根本上改变房客预订内容的更改。更新立即上线，无需审核员审核。</p>
+<p><strong>示例：</strong> - 照片/视频 - 标题更改 - 描述更改 - 价格更改（任何金额） - 清洁费调整 - 取消政策更改 - 最短/最长入住要求 - 次要设施添加/移除 - WiFi密码 - 门禁码/入住说明 - 本地推荐 - 社区指南 - 停车说明 - 垃圾/回收信息 - 日历可用性屏蔽/取消屏蔽</p>
+<p><strong>发生什么：</strong> 1. 您进行更改并保存 2. 更改<strong>立即</strong>上线 3. 房源保持<strong>活跃</strong> 4. <strong>房客看到：</strong> 新信息立即可见 5. 无需审核员审核</p>
+<hr />
+<h4 id="您在房源标签中看到的内容">5.3.4 您在房源标签中看到的内容</h4>
+<p><strong>活跃房源（无待审核编辑）：</strong></p>
+<pre><code>海滨别墅
+$200/晚 · 圣地亚哥, CA
+⭐ 4.9 (12)                    [活跃] ✅</code></pre>
+<p><strong>有待审核关键编辑的活跃房源：</strong></p>
+<pre><code>市中心阁楼
+$250/晚 · 圣地亚哥, CA
+⭐ 5.0 (8)                     [活跃] ✅
+
+⏳ 1个待审核编辑
+• 关键：卧室更改（2 → 3）</code></pre>
+<p><strong>等待批准的新房源：</strong></p>
+<pre><code>新湖景别墅
+$300/晚 · 太浩湖, CA
+暂无评价      [待审核] ⏳
+
+已提交11月8日 · 预计24-48小时内审核</code></pre>
+<p><strong>退回要求修改的房源：</strong></p>
+<pre><code>城市公寓
+$180/晚 · 圣地亚哥, CA
+暂无评价      [请求修改] ✏️
+
+⚠️ 审核员请求更改：
+• 添加更多照片（至少需要5张）
+• 修复描述（太短）
+[修复并重新提交]</code></pre>
+<hr />
+<h4 id="管理活跃房源">5.3.5 管理活跃房源</h4>
+<p>批准后，您有完全控制权：</p>
+<p><strong>自行暂停：</strong> - 需要休息？点击”暂停房源”临时禁用 - 房源对房客不可见且不可预订 - 状态：<strong>您暂停的</strong> - 随时取消暂停，无需重新审核</p>
+<p><strong>审核员暂停：</strong> - 如果审核员发现您上线房源的问题，他们会暂停并消息您 - 状态：<strong>审核员暂停的</strong> - 修复问题并重新提交快速重新审核 - 审核员在24小时内重新审核</p>
+<p><strong>归档：</strong> - 永久移除房源 - 状态：<strong>已归档</strong> - 无法撤销或恢复 - 预订历史保留用于税务记录</p>
+<h3 id="处理预订请求">5.4 处理预订请求</h3>
+<p>房东和联合房东都可以批准或拒绝预订请求。</p>
+<h4 id="接收预订通知">5.4.1 接收预订通知</h4>
+<p><strong>即时预订：</strong></p>
+<p>如果启用即时预订，房客可以不经您批准直接预订： - 支付自动授权 - 预订立即确认 - 无需24小时响应窗口 - 您仍然控制定价和日历</p>
+<p><strong>配置：</strong> 即时预订在创建房源时配置（见5.2.7预订规则）或之后在房源编辑器 → “预订设置”中编辑</p>
+<p><strong>非即时预订（申请预订）：</strong></p>
+<p>当房客申请预订时（即时预订禁用）： 1. 推送通知发送到您的设备 2. 发送邮件通知 3. 预订出现在”预订”标签中，状态为”待处理” 4. 您有24小时回复</p>
+<h4 id="查看预订">5.4.2 查看预订</h4>
+<p>访问所有预订，包括在预订标签中等待您批准的预订。按状态筛选以专注于需要关注的内容。</p>
+<p><strong>搜索与筛选：</strong> - 搜索栏：“搜索预订…” - 按房客姓名、房源或确认号查找 - 筛选标签： - <strong>待处理</strong> - 等待您批准的请求（需要在24小时内操作） - <strong>即将到来</strong> - 未来已确认预订 - <strong>今天</strong> - 今天入住或退房的预订 - <strong>全部</strong> - 所有状态的完整预订历史</p>
+<p><strong>预订卡片显示：</strong> - 房源照片缩略图（左侧） - 房源标题（粗体，如”迷人的海滩小屋，步行即到海洋”或”Mission Bay海滨公寓”） - 房客姓名（灰色文字，如”房客：John Peapod”） - 状态徽章： - 橙色”待处理” - 等待您批准（需要在24小时内操作） - 橙色”支付待处理” - 房客支付尚未授权 - 绿色”已确认” - 预订已确认并已收款 - <strong>入住</strong>日期（如”11月20日”或”11月11日”） - <strong>退房</strong>日期（如”11月22日”或”11月14日”） - <strong>房客</strong>数量（如”1”） - <strong>收款</strong>金额（绿色，如”$486”或”$661”） - <strong>确认号</strong>（预订ID，如”8ca66d49”或”47102220”） - 三点菜单（⋯）- 操作（查看详情、联系房客、待处理的接受/拒绝，或已确认的修改/取消）</p>
+<p><strong>谁看到什么：</strong> - <strong>房东：</strong> 所有自有房源的所有预订 - <strong>联合房东：</strong> 仅指定房源的预订</p>
+<p align="center">
+<img src="../screens/cn/Host/bookings_pending.png" width="300"> <img src="../screens/cn/Host/bookings_upcoming.png" width="300">
+</p>
+<h4 id="批准或拒绝预订请求">5.4.3 批准或拒绝预订请求</h4>
+<p><strong>当房客申请预订时：</strong> 1. 房客提交预订请求 2. 您收到通知 3. 查看房客资料、评价和消息 4. 您有24小时回复</p>
+<p><strong>接受或拒绝的两种方式：</strong></p>
+<p><strong>方法1：从预订列表</strong> - 点击预订卡片上的三点菜单（⋯） - 从菜单中选择”接受”或”拒绝”</p>
+<p><strong>方法2：从预订详情（推荐）</strong> 1. 点击预订卡片打开完整详情 2. 查看所有信息： - <strong>房客信息：</strong> 姓名、头像、房客数量 - <strong>支付详情：</strong> 每晚房价明细、清洁费、服务费、税费、总计 - <strong>您的收款：</strong> 您将收到的金额（绿色显示） - <strong>支付状态：</strong> 已支付指示器（勾号） - <strong>取消政策：</strong> 政策类型和退款条款 3. 点击底部”批准”（绿色按钮）或”拒绝”（红色按钮）</p>
+<p><strong>批准后：</strong> - 房客立即扣款 - 预订已确认 - 您在入住后收到收款 - 日历自动更新</p>
+<p><strong>拒绝后：</strong> - 房客收到通知（不扣款） - 预订请求取消 - 日历日期释放用于新预订</p>
+<p align="center">
+<img src="../screens/cn/Host/bookings_pending_details.png" width="300">
+</p>
+<p><strong>注意：</strong> 高级预订修改功能包括自动重新安排，详见<a href="#附录h自动重新安排详情">附录H：自动重新安排详情</a>。</p>
+<h3 id="团队管理-仅限房东">5.5 团队管理 [仅限房东]</h3>
+<p><strong>团队角色：</strong> - <strong>房东</strong> - 完全控制，包括定价和收款 - <strong>联合房东</strong> - 管理房源、回复房客、编辑详情（定价除外） - <strong>保洁员</strong> - 查看/完成清洁任务、管理可用性</p>
+<p><strong>功能：</strong> 邮件邀请、基于角色的权限、消息归属、自动分配清洁任务、分析筛选、活动日志</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_team_members.png" width="300">
+</p>
+<h4 id="邀请团队成员-仅限房东">5.5.1 邀请团队成员 [仅限房东]</h4>
+<ol type="1">
+<li>房源 → “团队成员”标签 → “邀请成员”</li>
+<li>输入邮箱（必须有Peapod账户）、选择角色（联合房东/保洁员）、添加可选消息</li>
+<li>点击”发送邀请” - 受邀者收到邮件，状态显示”待处理”直到接受</li>
+<li>在团队标签中跟踪 - 如需要可重发或取消</li>
+</ol>
+<p align="center">
+<img src="../screens/cn/Host/listings_invite_member.png" width="300">
+</p>
+<h4 id="查看团队成员-仅限房东">5.5.2 查看团队成员 [仅限房东]</h4>
+<p><strong>团队列表显示：</strong> - <strong>房东：</strong> 皇冠（👑），金色徽章 - <strong>联合房东：</strong> 人像（👤），蓝色徽章 - <strong>保洁员：</strong> 闪光（✨），绿色徽章</p>
+<p>显示姓名、头像、邮箱、添加日期、状态（活跃/待处理）。按角色筛选，按日期或姓名排序。</p>
+<h4 id="编辑或移除团队成员-仅限房东">5.5.3 编辑或移除团队成员 [仅限房东]</h4>
+<p><strong>编辑：</strong> 点击成员 → “编辑角色” → 更改联合房东/保洁员 → “保存” → 成员收到通知</p>
+<p><strong>移除：</strong> 点击成员 → “从团队移除” → 确认 → 立即失去访问权限，成员收到通知</p>
+<p><strong>说明：</strong> 只有房东可以移除成员。您不能移除自己。移除保洁员会取消任务，移除联合房东会移除消息归属。</p>
+<h4 id="成为联合房东-联合房东">5.5.4 成为联合房东 [联合房东]</h4>
+<ol type="1">
+<li>查收邮件（主题：“您已被邀请在Peapod上联合管理”）- 包含房源详情和链接</li>
+<li>点击”接受邀请” → 打开应用（必须有相同邮箱的账户）</li>
+<li>房源出现在”房源”标签中，带联合房东徽章（👤蓝色）- 授予编辑权限（定价除外）</li>
+</ol>
+<h4 id="保洁员角色与任务管理-仅限房东">5.5.5 保洁员角色与任务管理 [仅限房东]</h4>
+<p><strong>可以做：</strong> 查看/完成任务、上传照片、报告问题、查看房源详情、设置不可用日期</p>
+<p><strong>任务仪表板：</strong> 即将到来、今天、过去 - 按房源筛选</p>
+<p><strong>无法访问：</strong> 房客消息、预订详情、定价、收款信息、房源编辑器</p>
+<p align="center">
+<img src="../screens/cn/Host/listings_invite_member.png" width="300">
+</p>
+<h4 id="按团队成员的分析与表现-仅限房东">5.5.6 按团队成员的分析与表现 [仅限房东]</h4>
+<p>跟踪团队成员表现：响应时间、消息数量、预订转化率、房客满意度、活动日志（全部可按团队成员筛选）</p>
+<h4 id="角色徽章与视觉指示器">5.5.7 角色徽章与视觉指示器</h4>
+<ul>
+<li><strong>房东：</strong> 皇冠（👑），金色 - 完全控制，接收收款</li>
+<li><strong>联合房东：</strong> 人像（👤），蓝色 - 管理房源，无定价权限</li>
+<li><strong>保洁员：</strong> 闪光（✨），绿色 - 仅任务管理</li>
+</ul>
+<p><strong>出现在：</strong> 团队列表、消息（“由[联合房东] 👤发送”）、活动日志、房源列表、分析仪表板</p>
+<h4 id="房源活动日志">5.5.8 房源活动日志</h4>
+<p><strong>记录：</strong> 房源编辑、日历更改、发送的消息、预订状态、团队更改、完成的任务、评价回复、设置更新</p>
+<p>详见<a href="#附录b联合房东高级主题">附录B：联合房东高级主题</a>了解最佳实践。</p>
+<h3 id="房客沟通与评价">5.6 房客沟通与评价</h3>
+<h4 id="消息模板">5.6.1 消息模板</h4>
+<p><strong>[联合房东说明]：</strong> 完全访问模板，消息显示”由[您的姓名]发送”</p>
+<p>预写模板带变量替换（<code>{{guest_name}}</code>、<code>{{listing_title}}</code>等），用于入住说明、房屋规则、推荐、定价、常见问题。</p>
+<p><strong>功能：</strong> 10个默认模板、使用跟踪、一键快速发送、可自定义、按类别组织</p>
+<p align="center">
+<img src="../screens/cn/Host/messages_view.png" width="300">
+</p>
+<p>详见<a href="#附录i消息模板参考">附录I：消息模板参考</a>了解完整文档。</p>
+<h4 id="评价与评分">5.6.2 评价与评分</h4>
+<p><strong>接收房客评价：</strong></p>
+<p align="center">
+<img src="../screens/cn/Host/host_reviews.png" width="300">
+</p>
+<p><strong>回复评价 [仅限房东]：</strong> - <strong>应该：</strong> 感谢房客、建设性地回应问题、保持专业 - <strong>不应该：</strong> 争论、要求更改评价、分享个人联系信息</p>
+<p><strong>评价房客 [仅限房东]：</strong> 退房后开放，14天后关闭。评价在双方都提交或14天后发布。</p>
+<h3 id="收入与忠诚度-仅限房东">5.7 收入与忠诚度 [仅限房东]</h3>
+<h4 id="收入如何运作中国版1.0">5.7.1 收入如何运作（中国版1.0）</h4>
+<blockquote>
+<p><strong>中国费用模式：</strong> 详见<a href="#附录j房东费用与等级计划中国版10">附录J：房东费用与等级计划</a>了解完整详情。</p>
+</blockquote>
+<ul>
+<li><strong>房客支付：</strong> 基础价格 + 清洁费 + 税费（无服务费 - 房客0%）</li>
+<li><strong>您收到：</strong> 基础价格 + 清洁费 - 房东平台费（按等级：11.5% - 13%）</li>
+<li><strong>平台保留：</strong> 仅房东平台费</li>
+</ul>
+<p><strong>房东平台费公式：</strong></p>
+<pre><code>房东费用 = 平台费率 (15%) - 等级折扣率 (2% - 3.5%)</code></pre>
+<p><strong>示例（金牌等级房东）：</strong> $200/晚 × 3晚 = $600 + $50清洁费 = $650小计 - 房客支付：$650 + 税费（无服务费） - 房东费用：12.5%（15% - 2.5%）= $81.25 - 您收到：<strong>$568.75</strong></p>
+<h4 id="收款时间表">5.7.2 收款时间表</h4>
+<p>入住后24小时释放，3-5个工作日到账。方式：银行转账、PayPal、Stripe Connect（默认）。</p>
+<p align="center">
+<img src="../screens/cn/Host/earnings_dashboard.png" width="300">
+</p>
+<h4 id="查看收入">5.7.3 查看收入</h4>
+<p align="center">
+<img src="../screens/cn/Host/payout_details.png" width="300">
+</p>
+<h4 id="税务信息">5.7.4 税务信息</h4>
+<p>您申报收入。美国房东年收入&gt;$600收到1099表格。下载：“收入” → “税务文件”</p>
+<h4 id="房东忠诚度计划">5.7.5 房东忠诚度计划</h4>
+<p>基于预订总收入（费用前）赚取积分，入住后计入。兑换旅行折扣。永不过期。100积分 = $1美元。</p>
+<p><strong>忠诚度等级：</strong></p>
+<p align="center">
+<img src="../screens/cn/Host/host_loyalty.png" width="300">
+</p>
+<p><strong>等级（年收入，每年重置）：</strong> | 等级 | 年收入 | 积分率 | 平台费 | |——|——–|——–|——–| | 银牌 | $0+ | 2.0% | 13.0%（15% - 2%） | | 金牌 | $50k+ | 2.5% | 12.5%（15% - 2.5%） | | 铂金 | $250k+ | 3.0% | 12.0%（15% - 3%） | | 钻石 | $500k+ | 3.5% | 11.5%（15% - 3.5%） |</p>
+<p><strong>按等级主要福利：</strong> - <strong>银牌：</strong> 标准客服支持 - <strong>金牌：</strong> 优先客服支持、精选展示 - <strong>铂金：</strong> 高级客服支持、网络研讨会、抢先体验功能 - <strong>钻石：</strong> 24/7 VIP、专属客户经理、定制营销</p>
+<p><strong>注意：</strong> 更高等级获得<strong>更多</strong>积分<strong>和</strong>更低平台费。等级折扣率有双重作用。</p>
+<p><strong>示例：</strong> $1,000预订，金牌等级： - 赚取：25积分（2.5% × $1,000） - 平台费：12.5% - 您的收款：<strong>$875</strong>（扣除$125费用后）</p>
+<h3 id="房东资源">5.8 房东资源</h3>
+<h4 id="清洁任务管理">5.8.1 清洁任务管理</h4>
+<p>详见<a href="USER_MANUAL_CLEANER_v2.md#6-保洁员">保洁员手册第6节</a>了解完整文档。</p>
+<p><strong>房东快速参考：</strong> 自动任务（退房 → 下次入住）、手动任务（任何时候）、智能分配、在团队标签监控进度/评分、跟踪绩效指标</p>
+<h4 id="房东与房源徽章">5.8.2 房东与房源徽章</h4>
+<p>在个人资料、房源、搜索结果和消息中显示的视觉信任指标。</p>
+<p><strong>房东品质徽章（自动）：</strong> - <strong>超级房东：</strong> 4.8+评分、90%+响应率、&lt;1%取消率、10+预订 - <strong>即时回复：</strong> 95%+响应率、&lt;1小时回复时间 - <strong>资深房东：</strong> 50+预订、1+年 - <strong>顶级房东：</strong> 城市前10%、4.9+评分、100+预订</p>
+<p><strong>房源特色徽章（管理员验证）：</strong> - <strong>可持续住宿：</strong> 太阳能/可再生能源、电动汽车充电、节能电器 - <strong>远程工作就绪：</strong> 50+ Mbps WiFi、专用工作区、良好照明 - <strong>宠物友好认证：</strong> 允许宠物、户外空间、宠物设施、5+正面宠物评价 - <strong>家庭友好认证：</strong> 儿童设施、安全功能、宽敞布局 - <strong>豪华住宿：</strong> 高端设施、&gt;$300/晚、4.9+评分</p>
+<p><strong>申请：</strong> 房源编辑器 → 徽章 → 上传文件 → 提交 → 管理员审核（3-5天）</p>
+<p>详见<a href="#附录c徽章详情">附录C：徽章详情</a>了解完整标准。</p>
+<h4 id="房东表现与超级房东状态">5.8.3 房东表现与超级房东状态</h4>
+<p><strong>绩效指标：</strong> 响应率（24小时内%）、响应时间（平均小时）、接受率、总体评分、取消率</p>
+<p><strong>目标：</strong> 90%+响应（目标：100%）、&lt;1小时回复（目标：&lt;10分钟）、90%+接受、4.5+星（目标：4.8+）、&lt;1%取消</p>
+<p align="center">
+<img src="../screens/cn/Host/host_badges.png" width="300">
+</p>
+<p align="center">
+<img src="../screens/cn/Host/host_performance.png" width="300">
+</p>
+<p><strong>超级房东状态：</strong> 精英季度认可，带徽章、更高搜索排名、优先支持</p>
+<p><strong>要求：</strong> 10+预订或100+晚、90%+响应/接受（或即时预订）、4.8+评分、&lt;1%取消</p>
+<p><strong>评估：</strong> 每季度（1月/4月/7月/10月）、过去12个月、自动</p>
+<p><strong>福利：</strong> 徽章、更高搜索排名、优先支持、独家奖励、更高房客转化</p>
+<h4 id="支持与帮助">5.8.4 支持与帮助</h4>
+<p><strong>帮助中心：</strong> 房东仪表板 → “帮助”或应用内菜单 → “帮助中心”</p>
+<p><strong>联系客服：</strong> 应用内聊天（24/7，最快）、邮件（support@peapod.com）、电话（即将推出）</p>
+<p><strong>房东社区：</strong>（即将推出）</p>
+<hr />
+<h2 id="附录-1">附录</h2>
+<p>详细参考资料，请参阅单独的附录文档：</p>
+<p><strong>→ <a href="USER_MANUAL_HOST_APPENDIX.html">房东手册附录</a></strong></p>
+<p>包含： - <strong>附录A：</strong> 智能定价详情 - <strong>附录B：</strong> 联合房东高级主题 - <strong>附录C：</strong> 徽章详情 - <strong>附录D：</strong> AI房源优化器 [即将推出] - <strong>附录E：</strong> 智能分配算法 - <strong>附录F：</strong> 故障排除 - <strong>附录G：</strong> 最佳实践 - <strong>附录H：</strong> 自动重新安排详情 - <strong>附录I：</strong> 消息模板参考 - <strong>附录J：</strong> 房东费用与等级计划（中国版1.0） - <strong>附录K：</strong> 多单元房源管理（酒店与青旅）</p>
+<hr />
+<p>← <a href="USER_MANUAL_TOP.html">返回目录</a> | <a href="USER_MANUAL_CLEANER.html">保洁员指南 →</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peapod Hotels. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../../terms-zh.html">服务条款</a>
+                <a href="../../privacy-zh.html">隐私政策</a>
+                <a href="../../sms-terms-zh.html">短信条款</a>
+                <a href="../../manual/cn/index.html">APP手册</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

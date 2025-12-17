@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peapod User Manual - Host Guide Appendix - Peapod Hotels</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manual.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍐 Peapod Hotels</div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../terms.html">Terms</a></li>
+                <li><a href="../../privacy.html">Privacy</a></li>
+                <li><a href="../../sms-terms.html">SMS Terms</a></li>
+                <li><a href="../../manual/en/index.html" class="active">APP Manual</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <a href="../cn/index.html" title="Switch language">
+                    <span class="lang-icon">🌐</span>
+                    <span>中文</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="manual-content">
+<h1 id="peapod-user-manual---host-guide-appendix">Peapod User Manual - Host Guide Appendix</h1>
+<p><strong>Version:</strong> 0.18.8 (Slice V - Multi-Unit Support) <strong>Last Updated:</strong> November 30, 2025 <strong>Platform:</strong> iOS (iPhone, iPad)</p>
+<p>← <a href="USER_MANUAL_HOST.html">Back to Host Guide</a> | <a href="USER_MANUAL_TOP.html">Back to Index</a></p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#appendix-a-smart-pricing-details">Appendix A: Smart Pricing Details</a></li>
+<li><a href="#appendix-b-co-hosting-advanced-topics">Appendix B: Co-Hosting Advanced Topics</a></li>
+<li><a href="#appendix-c-badge-details">Appendix C: Badge Details</a></li>
+<li><a href="#appendix-d-ai-listing-optimizer-coming-soon">Appendix D: AI Listing Optimizer</a></li>
+<li><a href="#appendix-e-smart-assignment-algorithm">Appendix E: Smart Assignment Algorithm</a></li>
+<li><a href="#appendix-f-troubleshooting">Appendix F: Troubleshooting</a></li>
+<li><a href="#appendix-g-best-practices">Appendix G: Best Practices</a></li>
+<li><a href="#appendix-h-auto-reschedule-details">Appendix H: Auto-Reschedule Details</a></li>
+<li><a href="#appendix-i-message-templates-reference">Appendix I: Message Templates Reference</a></li>
+<li><a href="#appendix-j-host-fees--tier-program-cn-release-10">Appendix J: Host Fees &amp; Tier Program</a></li>
+<li><a href="#appendix-k-cancellation--refund-policy-cn-release-10">Appendix K: Cancellation &amp; Refund Policy</a></li>
+</ul>
+<hr />
+<h2 id="appendix-a-smart-pricing-details">Appendix A: Smart Pricing Details</h2>
+<p>This appendix contains detailed revenue examples, discount strategies, and business impact analysis for Smart Pricing features.</p>
+<h3 id="duration-based-discounts-weekly-monthly">Duration-Based Discounts (Weekly &amp; Monthly)</h3>
+<p>Automatically reduce nightly rate for longer stays. Guests see the discounted total price, encouraging extended bookings.</p>
+<p><strong>Discount Types:</strong> 1. <strong>Weekly Discount</strong> (7-27 nights) - Percentage off base price - Range: 5% - 50% - Recommended: 10-20% - Example: $100/night → $90/night for 7+ nights = $630 for week (vs $700)</p>
+<ol start="2" type="1">
+<li><strong>Monthly Discount</strong> (28+ nights)
+<ul>
+<li>Percentage off base price</li>
+<li>Range: 10% - 60%</li>
+<li>Recommended: 20-30%</li>
+<li>Example: $100/night → $75/night for 28+ nights = $2,100 for month (vs $2,800)</li>
+</ul></li>
+</ol>
+<h3 id="last-minute-deals-deep-dive">Last-Minute Deals Deep Dive</h3>
+<p>Special discounts for same-day bookings (“tonight”) to fill empty rooms that would otherwise earn $0. Only visible to high-tier guests (Platinum/Diamond) as a loyalty perk.</p>
+<p><strong>Key Features:</strong> - <strong>Tonight only</strong>: Booking must be for current date - <strong>Exclusive</strong>: Only Platinum/Diamond tier guests see the deal - <strong>Host-controlled</strong>: You set discount percentage - <strong>Auto-expires</strong>: At midnight (deal ends, room goes back to regular price) - <strong>Optional</strong>: Turn on/off per listing</p>
+<p><strong>Eligibility Requirements:</strong> - Guest tier: Platinum (10+ bookings) or Diamond (25+ bookings) - Booking timing: Same day (check-in today) - Listing availability: Must be available tonight - Host setting: Last-minute deals enabled for this listing</p>
+<h3 id="discount-stacking-rules-important">Discount Stacking Rules (Important!)</h3>
+<p><strong>The Golden Rule:</strong> Only the <strong>best single discount</strong> applies. Discounts do NOT stack.</p>
+<p><strong>Why No Stacking?</strong></p>
+<p>Prevents over-discounting that hurts revenue. Without this rule: - 20% monthly discount + 30% last-minute deal = 50% off (too much!) - Host loses money vs leaving room empty</p>
+<p><strong>Example Scenarios:</strong></p>
+<p><strong>Scenario A: 30-night stay + Last-minute deal active</strong> - Base price: $100/night - Monthly discount: 25% off → $75/night - Last-minute deal: 40% off → $60/night (BUT not eligible - booking is 30 nights, not tonight) - <strong>Applied:</strong> Monthly discount ($75/night) ✅</p>
+<p><strong>Scenario B: 7-night stay + Last-minute deal active (check-in tonight)</strong> - Base price: $100/night - Weekly discount: 15% off → $85/night - Last-minute deal: 30% off → $70/night (eligible!) - <strong>Applied:</strong> Last-minute deal ($70/night) (better than 15% weekly)</p>
+<p><strong>Scenario C: 10-night stay (no last-minute deal)</strong> - Base price: $100/night - Weekly discount: 15% off → $85/night - Monthly discount: 25% off → (not eligible, &lt;28 nights) - <strong>Applied:</strong> Weekly discount ($85/night) ✅</p>
+<p><strong>How System Decides:</strong></p>
+<p>The system calculates all eligible discounts for a booking and automatically applies the best one (lowest price). Here’s how it works:</p>
+<ol type="1">
+<li>Start with base price (no discount)</li>
+<li>Check if weekly discount applies (7+ nights and feature enabled)</li>
+<li>Check if monthly discount applies (28+ nights and feature enabled)</li>
+<li>Check if last-minute deal applies (tonight check-in, Platinum/Diamond guest, feature enabled)</li>
+<li>Compare all eligible prices and choose the lowest one for the guest</li>
+</ol>
+<h3 id="revenue-impact-examples">Revenue Impact Examples</h3>
+<p><strong>Example 1: Beach House - Before Smart Pricing</strong> - Base price: $200/night - Average booking: 3 nights - Occupancy: 60% (18 days/month) - Revenue: 18 × $200 = <strong>$3,600/month</strong></p>
+<p><strong>Example 1: Beach House - After Smart Pricing</strong> - Base price: $200/night - Weekly discount: 15% → $170/night for 7+ nights - Monthly discount: 25% → $150/night for 28+ nights - Bookings shift: - 10 nights short stays (3 nights each): 10 × $200 = $2,000 - 2 week-long stays (7 nights each): 14 × $170 = $2,380 - 1 last-minute tonight: 1 × $140 (30% off) = $140 - Occupancy: 83% (25 days/month) ← Increased due to discounts - Revenue: $2,000 + $2,380 + $140 = <strong>$4,520/month</strong> <strong>+26% revenue!</strong></p>
+<p><strong>Example 2: Mountain Cabin - Seasonal Strategy</strong> - Base price: $150/night - Winter (peak season): No discounts enabled - Summer (slow season): 20% weekly, 30% monthly discounts - Result: Summer occupancy increases from 40% to 65% - Annual revenue increase: <strong>+18%</strong></p>
+<p><strong>Example 3: Urban Apartment - Last-Minute Deals</strong> - Base price: $120/night - Last-minute deal: 40% off → $72/night - Scenario: 5 empty nights this month would have earned $0 - With deals: 3 of 5 nights filled by Platinum guests - Revenue gain: 3 × $72 = <strong>$216</strong> (vs $0) ✅</p>
+<p><strong>Example 4: Luxury Villa - Strategic Discounting</strong> - Base price: $500/night - Weekly discount: 10% → $450/night - Monthly discount: 20% → $400/night - Target: Long-term remote workers and relocating families - Result: Average booking length increases from 3 nights to 12 nights - Annual occupancy increases from 55% to 75% - Total revenue increase: <strong>+35%</strong></p>
+<hr />
+<h2 id="appendix-b-co-hosting-advanced-topics">Appendix B: Co-Hosting Advanced Topics</h2>
+<p>This appendix contains best practices and troubleshooting tips for managing co-hosts and cleaners.</p>
+<h3 id="communication-best-practices">Communication Best Practices</h3>
+<p><strong>Team Communication:</strong> - Use in-app messaging for all property-related communication - CC host on important guest conversations - Weekly team status updates - Share local knowledge (restaurants, attractions) - Report maintenance issues in real-time</p>
+<p><strong>Guest Communication:</strong> - Identify yourself and role in first message - Example: “Hi! I’m Sarah, the co-host helping manage this property.” - Maintain professionalism at all times - Never contradict host’s policies - Escalate complex issues to host</p>
+<h3 id="training-onboarding">Training &amp; Onboarding</h3>
+<p><strong>New Co-Host Checklist:</strong> - [ ] Complete property walkthrough - [ ] Review all house rules and policies - [ ] Practice using message templates - [ ] Understand check-in/check-out procedures - [ ] Know emergency contacts (plumber, electrician, locksmith) - [ ] Review past guest reviews for common questions - [ ] Shadow experienced co-host for first 3 bookings - [ ] Understand pricing strategy and restrictions</p>
+<p><strong>New Cleaner Checklist:</strong> - [ ] Property walkthrough with detailed cleaning checklist - [ ] Location of cleaning supplies and equipment - [ ] Access codes and key locations - [ ] Emergency contacts - [ ] Photo requirements for task completion - [ ] Damage reporting procedure - [ ] Restocking procedures - [ ] Preferred cleaning products/methods</p>
+<h3 id="analytics-performance-tracking">Analytics &amp; Performance Tracking</h3>
+<p><strong>Key Metrics for Co-Hosts:</strong> - Average response time (goal: &lt;1 hour) - Message volume per week - Guest satisfaction mentions in reviews - Booking conversion rate (inquiry → confirmed) - Issue resolution time - Proactive guest interactions</p>
+<p><strong>Key Metrics for Cleaners:</strong> - Task completion rate (goal: 100%) - Average completion time - Photo upload compliance - Issue reports submitted - Guest cleanliness ratings - Re-clean requests (goal: 0%)</p>
+<p><strong>How to View Analytics:</strong> 1. Access Host Dashboard → Analytics 2. Filter by team member 3. View trends over time (weekly, monthly, quarterly) 4. Compare to benchmarks 5. Discuss in regular check-ins 6. Adjust roles/responsibilities as needed</p>
+<h3 id="legal-financial-considerations">Legal &amp; Financial Considerations</h3>
+<p><strong>Tax Implications:</strong> - Co-hosts may be considered contractors (1099 in US) - Cleaners typically contractors for tax purposes - Consult tax professional for proper classification - Keep records of all payments to team members</p>
+<p><strong>Insurance:</strong> - Verify home insurance covers short-term rentals - Consider additional liability coverage for co-hosting - Cleaners should have their own liability insurance - Include team members in insurance disclosure if required</p>
+<p><strong>Contracts &amp; Agreements:</strong> - Create written co-hosting agreement - Define responsibilities, payment terms, termination clause - Include non-disclosure agreement for guest information - Address property damage and liability - Specify intellectual property (photos, descriptions)</p>
+<p><strong>Payment Structures:</strong> - Co-hosts: Percentage of revenue (10-20%) or flat fee per booking - Cleaners: Flat rate per clean (varies by property size) - Consider performance bonuses for high ratings - Weekly or monthly payment schedules - Use platform payments when possible for record-keeping</p>
+<hr />
+<h2 id="appendix-c-badge-details">Appendix C: Badge Details</h2>
+<p>(Badge content - reserved for future documentation)</p>
+<hr />
+<h2 id="appendix-d-ai-listing-optimizer-coming-soon">Appendix D: AI Listing Optimizer [Coming Soon]</h2>
+<p>AI-powered optimization: - Photo selection and ordering - Title/description optimization - Pricing recommendations - Seasonal suggestions</p>
+<hr />
+<h2 id="appendix-e-smart-assignment-algorithm">Appendix E: Smart Assignment Algorithm</h2>
+<h3 id="how-smart-assignment-works">How Smart Assignment Works</h3>
+<p><strong>Step 1: Eligibility Check</strong> - Filter to cleaners assigned to this property - Check cleaner availability at deadline time - Exclude cleaners marked unavailable or over capacity</p>
+<p><strong>Step 2: Scoring Algorithm</strong></p>
+<p>Each eligible cleaner receives a score based on:</p>
+<ol type="1">
+<li><strong>Current Workload (40% weight)</strong>
+<ul>
+<li>Sum of estimated hours for pending tasks</li>
+<li>Lower workload = higher score</li>
+<li>Formula: <code>100 - (pending_hours / max_hours_per_week * 100)</code></li>
+</ul></li>
+<li><strong>Performance Rating (30% weight)</strong>
+<ul>
+<li>Average rating from past completed tasks</li>
+<li>Scale: 1-5 stars → 20-100 points</li>
+<li>Formula: <code>rating * 20</code></li>
+</ul></li>
+<li><strong>Deadline Feasibility (20% weight)</strong>
+<ul>
+<li>Can they realistically complete before deadline?</li>
+<li>Formula: <code>(deadline_hours - pending_hours) / task_duration * 100</code></li>
+<li>If result &lt; 0 (overbooked), score = 0 for this cleaner</li>
+</ul></li>
+<li><strong>Distance to Property (10% weight)</strong>
+<ul>
+<li>Travel time from cleaner’s location (if available)</li>
+<li>Not yet implemented - reserved for future enhancement</li>
+<li>Currently: Equal score (50 points) for all</li>
+</ul></li>
+</ol>
+<p><strong>Step 3: Selection</strong> - Cleaner with highest total score is assigned - Tie-breaker: Cleaner with fewest total tasks assigned (lifetime) - Final tie-breaker: Alphabetical by name</p>
+<h3 id="example-scenario">Example Scenario</h3>
+<p><strong>Task:</strong> Manual deep clean needed by Friday 2 PM (3 hours estimated)</p>
+<p><strong>Eligible Cleaners:</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 13%" />
+<col style="width: 7%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 12%" />
+<col style="width: 17%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr>
+<th>Cleaner</th>
+<th>Pending Hours</th>
+<th>Rating</th>
+<th>Deadline Hours</th>
+<th>Workload Score</th>
+<th>Rating Score</th>
+<th>Feasibility Score</th>
+<th>Total Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+<td>6 hours</td>
+<td>4.8★</td>
+<td>48 hours</td>
+<td>85 (40×0.4=34)</td>
+<td>96 (30×0.3=29)</td>
+<td>100 (20×0.2=20)</td>
+<td><strong>83 points</strong></td>
+</tr>
+<tr>
+<td>Mike</td>
+<td>12 hours</td>
+<td>4.5★</td>
+<td>48 hours</td>
+<td>70 (40×0.4=28)</td>
+<td>90 (30×0.3=27)</td>
+<td>75 (20×0.2=15)</td>
+<td><strong>70 points</strong></td>
+</tr>
+<tr>
+<td>Lisa</td>
+<td>3 hours</td>
+<td>4.2★</td>
+<td>48 hours</td>
+<td>93 (40×0.4=37)</td>
+<td>84 (30×0.3=25)</td>
+<td>100 (20×0.2=20)</td>
+<td><strong>82 points</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> Sarah assigned (highest score)</p>
+<h3 id="fallback-logic">Fallback Logic</h3>
+<p>If no cleaner available before deadline: 1. System finds earliest available slot across all cleaners 2. Suggests alternative deadline to host 3. Host can either: - Accept new deadline - Manually assign and accept risk - Cancel task creation</p>
+<h3 id="urgent-notification-system">Urgent Notification System</h3>
+<p><strong>Alert Risk Levels:</strong></p>
+<ul>
+<li>🔴 <strong>CRITICAL</strong> - Urgent action required immediately
+<ul>
+<li>No cleaner assigned to task</li>
+<li>Less than 3 hours until guest check-in, task not started</li>
+</ul></li>
+<li>🟠 <strong>HIGH</strong> - Action needed soon
+<ul>
+<li>Less than 6 hours until check-in, task not started</li>
+</ul></li>
+<li>🟡 <strong>MEDIUM</strong> - Heads up, monitor situation
+<ul>
+<li>Less than 12 hours until check-in, task not started</li>
+</ul></li>
+<li>🟢 <strong>LOW</strong> - Normal monitoring
+<ul>
+<li>All other pending tasks</li>
+</ul></li>
+</ul>
+<p><strong>When You’ll Receive Alerts:</strong></p>
+<p>You’ll receive push notifications on your phone when: - <strong>IMMEDIATE</strong>: Guest checks out but NO cleaner can be assigned before next check-in (sent instantly) - <strong>IMMEDIATE</strong>: You create a manual task but no cleaner is available before your deadline - A task has no cleaner assigned - Check-in is approaching and cleaning hasn’t started - System detects risk of missing guest arrival deadline</p>
+<p><strong>Alert Frequency:</strong> - <strong>Critical failures</strong>: Sent immediately (&lt; 1 minute) when checkout cleaning cannot be assigned - <strong>Routine checks</strong>: Run every 30 minutes automatically - You won’t receive duplicate alerts within 1 hour for the same task - Critical alerts have highest priority (override Do Not Disturb)</p>
+<p><strong>IMMEDIATE CRITICAL - Checkout with No Available Cleaner:</strong></p>
+<pre><code>🚨 CRITICAL: No cleaner available
+Property &quot;Beachfront Coronado Home&quot; has NO CLEANER available
+for checkout cleaning. Guest checks in in 6 hours.
+Assign a cleaner immediately!
+[Tap to Assign Cleaner]</code></pre>
+<p><strong>Responding to Alerts:</strong> 1. <strong>Tap notification</strong> to open task details 2. <strong>View cleaner status</strong> - Are they working on it? 3. <strong>Take action:</strong> - Call/text cleaner directly if not started - Reassign to another available cleaner - Delay guest check-in if necessary (last resort) - Monitor progress in real-time</p>
+<p><strong>Preventing False Alarms:</strong></p>
+<p>The system is smart about alerts: - Only alerts on tasks genuinely at risk - Considers cleaner workload and capacity - Accounts for task duration in deadline calculations - Stops alerting once cleaner starts the task - Doesn’t alert for tasks with ample time remaining</p>
+<hr />
+<h2 id="appendix-f-troubleshooting">Appendix F: Troubleshooting</h2>
+<p><strong>Q: Cleaner declined new schedule, what now?</strong> A: System automatically finds next available cleaner. If none available, you’ll see “Manual Intervention Needed” and can either delay check-in or contact cleaners directly.</p>
+<p><strong>Q: Can I override Auto-Reschedule decisions?</strong> A: Yes. In pre-flight panel, tap “Manual Mode” to choose your own cleaner or timing.</p>
+<p><strong>Q: What if guest requests a change outside my policy?</strong> A: Auto-Reschedule respects your cancellation policy and minimum stay settings. Requests violating policy require manual approval.</p>
+<p><strong>Q: How do I disable Auto-Reschedule for specific listings?</strong> A: Listing Editor → Settings → Toggle off “Auto-Reschedule” (you’ll handle modifications manually).</p>
+<hr />
+<h2 id="appendix-g-best-practices">Appendix G: Best Practices</h2>
+<h3 id="best-practices-for-task-management">Best Practices for Task Management</h3>
+<p><strong>Creating Tasks:</strong> - 🎯 <strong>Set realistic deadlines</strong> - Allow buffer time before next check-in - 🎯 <strong>Provide clear notes</strong> - Specific tasks, not vague instructions - 🎯 <strong>Use correct priority</strong> - Reserve “Urgent” for true emergencies - 🎯 <strong>Estimate duration accurately</strong> - Prevents overloading cleaners - 🎯 <strong>Trust auto-assign</strong> - Algorithm considers more factors than you can</p>
+<p><strong>Managing Cleaners:</strong> - 🎯 <strong>Rate promptly</strong> - Provide feedback within 24 hours of completion - 🎯 <strong>Be fair</strong> - 5 stars for excellent work, not perfection - 🎯 <strong>Communicate issues directly</strong> - Use task notes or direct message - 🎯 <strong>Monitor workload</strong> - Ensure even distribution across team - 🎯 <strong>Recognize top performers</strong> - Bonus, thank you note, consistent assignments</p>
+<p><strong>Quality Control:</strong> - 🎯 <strong>Review photos</strong> - Check before/after for each room - 🎯 <strong>Spot check occasionally</strong> - Visit property unannounced (with notice) - 🎯 <strong>Guest feedback</strong> - Track cleanliness ratings in reviews - 🎯 <strong>Address issues immediately</strong> - Don’t let quality slip - 🎯 <strong>Update checklists</strong> - Add items for recurring problems</p>
+<p><strong>Troubleshooting:</strong> - 🎯 <strong>Late completion?</strong> - Check cleaner’s workload, adjust estimates - 🎯 <strong>Quality declining?</strong> - Review photos, provide specific feedback - 🎯 <strong>Cleaner declining tasks?</strong> - Discuss availability, adjust schedule - 🎯 <strong>Guest complaints?</strong> - Document, share with cleaner, retrain if needed</p>
+<h3 id="best-practices-for-message-templates">Best Practices for Message Templates</h3>
+<p><strong>Template Creation:</strong> - 🎯 <strong>Keep it short</strong>: 150-300 words ideal - 🎯 <strong>Use variables</strong>: Personalize every message - 🎯 <strong>Test variables</strong>: Send to yourself first to verify substitution - 🎯 <strong>Proofread carefully</strong>: Templates used many times, errors multiply - 🎯 <strong>Add emojis sparingly</strong>: One or two for visual break, not excessive</p>
+<p><strong>Template Usage:</strong> - 🎯 <strong>Customize when needed</strong>: Edit template before sending for specific situations - 🎯 <strong>Don’t overuse</strong>: Balance templates with personal messages - 🎯 <strong>Update regularly</strong>: Refresh content as property changes - 🎯 <strong>Track effectiveness</strong>: Monitor guest responses to see what works</p>
+<p><strong>Template Organization:</strong> - 🎯 <strong>Consistent naming</strong>: “Check-in - [Scenario]” format - 🎯 <strong>Category correctly</strong>: Makes finding templates faster - 🎯 <strong>Delete unused</strong>: Keep list manageable (10-15 templates max) - 🎯 <strong>Order by frequency</strong>: Most-used templates at top</p>
+<p><strong>Variable Usage:</strong> - 🎯 <strong>Required variables first</strong>: {{guest_name}}, {{listing_title}} - 🎯 <strong>Optional variables</strong>: Add graceful fallbacks in template - 🎯 <strong>Test edge cases</strong>: What if WiFi password missing? - 🎯 <strong>Keep variables updated</strong>: Change lockbox code? Update template!</p>
+<h3 id="best-practices-for-smart-pricing">Best Practices for Smart Pricing</h3>
+<p><strong>Duration Discounts:</strong> - 🎯 <strong>Start conservative</strong>: 10% weekly, 20% monthly - 🎯 <strong>Monitor occupancy</strong>: If &lt;70%, increase discounts - 🎯 <strong>Seasonal adjustment</strong>: Higher discounts in slow season - 🎯 <strong>Competitive analysis</strong>: Check nearby listings’ discounts - 🎯 <strong>Test &amp; iterate</strong>: Try different percentages, measure results - 🎯 <strong>Track booking patterns</strong>: Understand when guests book longer stays - 🎯 <strong>Calculate break-even</strong>: Know minimum occupancy needed to profit</p>
+<p><strong>Last-Minute Deals:</strong> - 🎯 <strong>Enable for low-occupancy periods</strong>: Not during peak season - 🎯 <strong>Set 30-40% discount</strong>: Big enough to motivate tonight bookings - 🎯 <strong>Don’t overuse</strong>: Trains guests to wait for deals - 🎯 <strong>Combine with instant book</strong>: Faster booking flow - 🎯 <strong>Track conversion</strong>: How many deals lead to bookings? - 🎯 <strong>Weekend focus</strong>: More effective for Fri/Sat nights - 🎯 <strong>Monitor guest quality</strong>: Ensure last-minute guests maintain standards</p>
+<p><strong>General Strategy:</strong> - 🎯 <strong>Set base price correctly first</strong>: Discounts apply to base price - 🎯 <strong>Use pricing preview</strong>: Verify rates before saving - 🎯 <strong>Review quarterly</strong>: Adjust based on booking patterns - 🎯 <strong>Don’t over-discount</strong>: 50%+ off hurts perceived value - 🎯 <strong>Communicate value</strong>: Guests love “getting a deal” - 🎯 <strong>A/B test</strong>: Try different discount levels for 30 days - 🎯 <strong>Market positioning</strong>: Price relative to comparable properties</p>
+<p><strong>Business Strategy:</strong></p>
+<p><strong>When to Use Duration Discounts:</strong> - Low occupancy (&lt;70%) - Slow season months - Competitive market with similar properties - Property benefits from longer stays (less turnover)</p>
+<p><strong>When NOT to Use Duration Discounts:</strong> - Peak season (already high demand) - Unique property with no competition - Already at 90%+ occupancy</p>
+<p><strong>When to Use Last-Minute Deals:</strong> - Empty calendar tonight - Urban locations (business travelers) - High cleaning costs (offset by some revenue)</p>
+<p><strong>When NOT to Use Last-Minute Deals:</strong> - Peak holidays (will book anyway) - Remote locations (can’t book same-day) - Property needs advance prep time</p>
+<p><strong>ROI Calculation:</strong></p>
+<p>To determine if Smart Pricing is working:</p>
+<ol type="1">
+<li><strong>Track occupancy rate</strong> (before vs after enabling)</li>
+<li><strong>Calculate average nightly revenue</strong> (total revenue / nights booked)</li>
+<li><strong>Measure total monthly revenue</strong> (occupancy × average rate × days)</li>
+<li><strong>Compare periods</strong> (3 months before vs after)</li>
+</ol>
+<p><strong>Success Metrics:</strong> - Occupancy rate increase: +10-20% - Total revenue increase: +15-30% - Average booking length: +50-100% - Guest satisfaction: Maintain or improve ratings</p>
+<h3 id="best-practices-for-co-hosting">Best Practices for Co-Hosting</h3>
+<p><strong>For Hosts:</strong> - 🎯 <strong>Vet co-hosts carefully</strong>: Check references, past experience - 🎯 <strong>Set clear expectations</strong>: Response time, communication style - 🎯 <strong>Review activity logs regularly</strong>: Ensure quality control - 🎯 <strong>Provide training</strong>: Share your hosting philosophy and standards - 🎯 <strong>Recognize good work</strong>: Thank and reward high performers - 🎯 <strong>Use analytics</strong>: Data-driven team management decisions - 🎯 <strong>Cleaner availability</strong>: Ensure backup cleaners for busy periods - 🎯 <strong>Document processes</strong>: Create standard operating procedures - 🎯 <strong>Regular check-ins</strong>: Weekly or monthly team meetings - 🎯 <strong>Performance reviews</strong>: Quarterly assessment of team members</p>
+<p><strong>For Co-Hosts:</strong> - 🎯 <strong>Respond quickly</strong>: &lt;2 hours during waking hours - 🎯 <strong>Match host’s tone</strong>: Maintain consistent brand voice - 🎯 <strong>Log all changes</strong>: Keep host informed via activity log - 🎯 <strong>Don’t overstep</strong>: Respect pricing/payout restrictions - 🎯 <strong>Communicate issues</strong>: Report problems to host immediately - 🎯 <strong>Be proactive</strong>: Anticipate guest needs - 🎯 <strong>Learn property details</strong>: Know amenities, quirks, instructions - 🎯 <strong>Use templates wisely</strong>: Personalize when needed - 🎯 <strong>Track your metrics</strong>: Monitor response time, guest satisfaction</p>
+<p><strong>For Cleaners:</strong> - 🎯 <strong>Update availability</strong>: Block dates when unavailable - 🎯 <strong>Complete tasks promptly</strong>: Before next check-in - 🎯 <strong>Upload photos</strong>: Proof of quality work - 🎯 <strong>Report issues immediately</strong>: Don’t wait until next task - 🎯 <strong>Maintain standards</strong>: Follow host’s cleaning checklist - 🎯 <strong>Stock supplies</strong>: Track inventory, request restocks - 🎯 <strong>Respect guest privacy</strong>: Don’t enter if guest present - 🎯 <strong>Secure property</strong>: Lock doors, close windows, set alarms</p>
+<hr />
+<h2 id="appendix-h-auto-reschedule-details">Appendix H: Auto-Reschedule Details</h2>
+<h3 id="auto-reschedule-smart-booking-modifications">Auto-Reschedule: Smart Booking Modifications</h3>
+<p>Auto-Reschedule handles booking changes automatically in seconds.</p>
+<p align="center">
+<img src="../screens/en/Host/host_cancel_booking.png" width="300">
+</p>
+<p align="center">
+<img src="../screens/en/Host/host_bookings_details.png" width="300">
+</p>
+<p align="center">
+<img src="../screens/en/Host/host_cancel_booking_reason.png" width="300">
+</p>
+<h3 id="what-auto-reschedule-handles">What Auto-Reschedule Handles</h3>
+<ol type="1">
+<li><strong>Guest-Initiated Changes:</strong>
+<ul>
+<li>Date extension or reduction</li>
+<li>Check-in/check-out time modifications</li>
+<li>Guest count changes</li>
+<li>Early check-in requests</li>
+<li>Late check-out requests</li>
+</ul></li>
+<li><strong>Host-Initiated Changes:</strong>
+<ul>
+<li>Approving early check-in/late checkout</li>
+<li>Manually adjusting booking dates</li>
+<li>Modifying guest count</li>
+</ul></li>
+<li><strong>Cancellations:</strong>
+<ul>
+<li>Automatic cleanup of associated tasks</li>
+<li>Calendar reopening</li>
+<li>Optional last-minute deal trigger</li>
+</ul></li>
+</ol>
+<h3 id="what-gets-auto-updated">What Gets Auto-Updated</h3>
+<p><strong>1. Cleaning Tasks</strong> - Recalculates cleaning start/end times based on new checkout - Re-assigns cleaner if original has conflict - Preserves before/after photo requirements - Sends notifications to cleaner with updated schedule</p>
+<p><strong>2. Calendar &amp; Buffers</strong> - Blocks extended nights immediately - Frees up released nights for new bookings - Inserts smart buffers if turnover time &lt; 3 hours (configurable) - Flags “Tight Turnover” risk if SLA threatened</p>
+<p><strong>3. Co-Host Duty Windows</strong> - Adjusts on-call periods to match new dates - Updates message routing (guests see correct on-duty co-host) - Coordinates handoffs between co-hosts</p>
+<p><strong>4. Guest Messaging</strong> - Auto-sends confirmation of changes via templates - Updates check-in/check-out instructions with new times - Includes any new entry codes or special instructions</p>
+<p><strong>5. Last-Minute Pricing (Optional)</strong> - If nights freed within 72 hours, suggests enabling Last-Minute Deal - Boosts visibility to fill unexpected vacancy</p>
+<h3 id="example-scenarios">Example Scenarios</h3>
+<p><strong>Scenario 1: Guest Requests Date Extension</strong> - Guest asks to extend 2 more nights - System checks availability - Auto-Reschedule updates cleaning task, calendar, and messaging</p>
+<p><strong>Scenario 2: Approve Early Check-In</strong></p>
+<p>Pre-Flight Panel Shows: - <strong>Cleaner Impact:</strong> “Cleaning must finish by 11:30 AM (was 2:30 PM)” - <strong>Risk Badge:</strong> “Tight Turnover” (if previous checkout is 11 AM) - <strong>Alternative:</strong> “Suggest check-in 1 PM to allow safe buffer?”</p>
+<p>Choose Action: - <strong>Option A:</strong> Confirm 12 PM check-in (cleaner will rush) - <strong>Option B:</strong> Counter-offer 1 PM check-in (safer) - <strong>Option C:</strong> Delay previous guest’s checkout by 1 hour</p>
+<p>Auto-Reschedule Executes: - Cleaning task adjusted to finish by 11:30 AM - Cleaner receives urgent notification - Guest receives updated instructions - Entry code generation (if smart lock)</p>
+<p><strong>Scenario 3: Guest Count Increase</strong> - Updates cleaning task notes (“4 guests, extra linens needed”) - Sends updated pricing to guest - Logs change in Activity Log</p>
+<h3 id="conflict-resolution">Conflict Resolution</h3>
+<p>If the original cleaner can’t accommodate new schedule:</p>
+<p><strong>System Logic:</strong> 1. Checks cleaner’s availability for new time slot 2. If unavailable, finds <strong>next best cleaner</strong> by: - Availability (primary) - Travel time to property (minimize) - Rating (quality) - Current workload (balance)</p>
+<p><strong>Fallback Options:</strong> - <strong>No cleaner available?</strong> - Suggest inserting a buffer (delay guest check-in by 1-2 hours) - Offer to push booking to next available slot - Escalate to host for manual resolution</p>
+<p><strong>Host Notifications:</strong> - “Original cleaner unavailable. Assigned backup cleaner Mike (4.9★, 5 mi away)” - “Risk: Tight turnover. Consider 1-hour buffer?”</p>
+<h3 id="risk-badges-warnings">Risk Badges &amp; Warnings</h3>
+<p>Auto-Reschedule flags potential issues:</p>
+<ul>
+<li>🔴 <strong>Tight Turnover:</strong> &lt;3 hours between checkout and check-in (SLA risk)</li>
+<li>🟡 <strong>Cleaner Reassigned:</strong> Original cleaner unavailable, backup assigned</li>
+<li>🟡 <strong>No Cleaner:</strong> No available cleaner found (manual intervention needed)</li>
+<li>🔴 <strong>SLA Breach:</strong> Impossible to clean property in time</li>
+</ul>
+<h3 id="activity-log-integration">Activity Log Integration</h3>
+<p>All Auto-Reschedule actions are logged with full attribution:</p>
+<p><strong>View Activity Log:</strong> - Listing → Activity → Filter by “Auto-Reschedule” - See complete history of all automatic adjustments</p>
+<h3 id="guest-communication-templates">Guest Communication Templates</h3>
+<p>Auto-generated messages sent to guests via templates:</p>
+<ul>
+<li><strong>Template 1: Date Extension Confirmed</strong></li>
+<li><strong>Template 2: Early Check-In Approved</strong></li>
+</ul>
+<p><strong>Templates Are Editable:</strong> - Customize default messages in Settings → Message Templates - Variables auto-populate ({Guest Name}, {Dates}, etc.)</p>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li>Review pre-flight panel before confirming changes</li>
+<li>Set minimum turnover buffer (3-4 hours recommended)</li>
+<li>Enable push notifications for cleaner confirmations</li>
+<li>Check Activity Log weekly to spot patterns</li>
+<li>Communicate with cleaners about their availability preferences</li>
+<li>Don’t approve tight turnovers without cleaner confirmation</li>
+<li>Don’t extend bookings during peak season without checking calendar conflicts</li>
+</ul>
+<h3 id="configuration-options">Configuration Options</h3>
+<p><strong>Adjustable Settings:</strong> - <strong>Minimum Turnover Buffer:</strong> 2-6 hours (default: 3 hours) - <strong>Auto-Assign Backup Cleaners:</strong> ON/OFF (default: ON) - <strong>Require Cleaner Acknowledgment:</strong> For changes &lt;2 hours before cleaning (default: ON) - <strong>Guest Message Templates:</strong> Customize confirmation messages - <strong>Risk Threshold:</strong> When to show warnings (Conservative / Balanced / Aggressive)</p>
+<h3 id="integration-with-team-management">Integration with Team Management</h3>
+<p><strong>Co-Host Permissions:</strong> - Can approve guest-requested modifications - See cleaner assignments and risk badges - Cannot override SLA warnings (host approval required)</p>
+<p><strong>Cleaner Notifications:</strong> - Push notification when schedule changes - Deep link to updated task details - Option to decline if unavailable (triggers reassignment)</p>
+<p><strong>Activity Attribution:</strong> - All changes show who approved them (Host vs Co-Host name) - Cleaners can see modification history for their tasks</p>
+<h3 id="future-enhancements">Future Enhancements</h3>
+<ul>
+<li><strong>Multi-Property Load Balancing:</strong> Auto-assign cleaners across your entire portfolio</li>
+<li><strong>External Calendar Sync:</strong> Coordinate with Airbnb/VRBO booking changes</li>
+<li><strong>Price Optimization:</strong> Automatically suggest optimal pricing for freed-up nights</li>
+<li><strong>Predictive Scheduling:</strong> AI predicts likely modification requests and pre-plans alternatives</li>
+</ul>
+<hr />
+<h2 id="appendix-i-message-templates-reference">Appendix I: Message Templates Reference</h2>
+<h3 id="using-message-templates">Using Message Templates</h3>
+<ol type="1">
+<li>Open a guest conversation in “Messages” tab</li>
+<li>Tap template icon (speech bubble) in message field</li>
+<li>Browse available templates by category</li>
+<li>Tap template to preview</li>
+<li>Variables auto-fill with guest/booking data</li>
+<li>Edit template text if needed (customize)</li>
+<li>Tap “Send” to send message</li>
+</ol>
+<p><strong>Variable Substitution:</strong> - Templates contain placeholders like <code>{{guest_name}}</code> - System automatically replaces with real data - Example: <code>{{guest_name}}</code> → “John” - Example: <code>{{check_in_time}}</code> → “3:00 PM”</p>
+<p align="center">
+<img src="../screens/en/Host/message_templates.png" width="300">
+</p>
+<h3 id="default-message-templates-10-total">Default Message Templates (10 Total)</h3>
+<p><strong>Check-in Templates (3):</strong></p>
+<p><strong>1. Check-in Instructions (Detailed)</strong> - <code>{{guest_name}}</code> - Guest’s first name - <code>{{listing_title}}</code> - Property name - <code>{{check_in_time}}</code> - From booking (e.g., “3:00 PM”) - <code>{{property_address}}</code> - Full address - <code>{{access_method}}</code> - “Lockbox code 1234” or “Key under mat” - <code>{{parking_instructions}}</code> - “Street parking” or “Driveway” - <code>{{wifi_password}}</code> - WiFi credentials - <code>{{host_name}}</code> - Your name</p>
+<p><strong>2. Check-in Instructions (Simple)</strong></p>
+<p><strong>3. Early Check-in Request</strong></p>
+<p><strong>House Rules Templates (2):</strong></p>
+<p><strong>4. House Rules Reminder</strong> - <code>{{pets_allowed}}</code> - “Allowed with $50 fee” or “Not allowed” - <code>{{parties_allowed}}</code> - “Not permitted” or “Small gatherings OK” - <code>{{quiet_hours}}</code> - “10 PM - 8 AM” - <code>{{trash_location}}</code> - “Curb on Wednesdays” or “Bins outside”</p>
+<p><strong>5. Quiet Hours Reminder</strong></p>
+<p><strong>Local Tips Templates (2):</strong></p>
+<p><strong>6. Local Recommendations</strong></p>
+<p><strong>7. Transportation Tips</strong></p>
+<p><strong>General Templates (2):</strong></p>
+<p><strong>8. Thank You After Checkout</strong></p>
+<p><strong>9. Issue Resolution</strong> - <code>{{issue_type}}</code> - “WiFi issue” or “Heating problem” - <code>{{response_time}}</code> - “30 minutes” or “2 hours”</p>
+<p><strong>Pricing Template (1):</strong></p>
+<p><strong>10. Pricing Breakdown Explanation</strong> - <code>{{nightly_rate}}</code> - Base price per night - <code>{{nights}}</code> - Number of nights - <code>{{subtotal}}</code> - Nightly rate × nights - <code>{{cleaning_fee}}</code> - One-time cleaning fee - <code>{{service_fee}}</code> - Platform fee - <code>{{total_price}}</code> - Grand total - <code>{{discount_info}}</code> - “Weekly discount applied: -15%” (if applicable)</p>
+<h3 id="variable-substitution-system">Variable Substitution System</h3>
+<p><strong>How Variables Work:</strong></p>
+<p>Variables are placeholders in templates that automatically fill with real data from the booking and property.</p>
+<p><strong>Syntax:</strong> - Variables use double curly braces: <code>{{variable_name}}</code> - Case-insensitive: <code>{{Guest_Name}}</code> = <code>{{guest_name}}</code> - Unknown variables left unchanged: <code>{{unknown}}</code> stays as <code>{{unknown}}</code></p>
+<p><strong>Available Variables:</strong></p>
+<p><strong>Guest Info:</strong> - <code>{{guest_name}}</code> - First name - <code>{{guest_full_name}}</code> - Full name - <code>{{guest_count}}</code> - Number of guests</p>
+<p><strong>Property Info:</strong> - <code>{{listing_title}}</code> - Property name - <code>{{property_address}}</code> - Full address - <code>{{wifi_password}}</code> - WiFi credentials - <code>{{lockbox_code}}</code> - Access code - <code>{{access_method}}</code> - Entry instructions - <code>{{parking_instructions}}</code> - Parking details</p>
+<p><strong>Booking Info:</strong> - <code>{{check_in_date}}</code> - Date (e.g., “Dec 15, 2025”) - <code>{{check_in_time}}</code> - Time (e.g., “3:00 PM”) - <code>{{check_out_date}}</code> - Date - <code>{{check_out_time}}</code> - Time (e.g., “11:00 AM”) - <code>{{nights}}</code> - Number of nights - <code>{{total_price}}</code> - Total booking cost</p>
+<p><strong>Host Info:</strong> - <code>{{host_name}}</code> - Your name - <code>{{host_phone}}</code> - Your phone number</p>
+<p><strong>Pricing Info:</strong> - <code>{{nightly_rate}}</code> - Base price per night - <code>{{cleaning_fee}}</code> - Cleaning fee - <code>{{service_fee}}</code> - Platform fee - <code>{{subtotal}}</code> - Nightly rate × nights - <code>{{discount_info}}</code> - Applied discounts</p>
+<hr />
+<h2 id="appendix-j-host-fees-tier-program-cn-release-1.0">Appendix J: Host Fees &amp; Tier Program (CN Release 1.0)</h2>
+<h3 id="cn-release-1.0-fee-model">CN Release 1.0 Fee Model</h3>
+<p><strong>Important:</strong> The fee structure for CN Release 1.0 differs from previous versions.</p>
+<h3 id="fee-structure">Fee Structure</h3>
+<table>
+<thead>
+<tr>
+<th>Party</th>
+<th>Fee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guests</strong></td>
+<td><strong>0% service fee</strong> – Guests pay NO platform fees</td>
+</tr>
+<tr>
+<td><strong>Hosts</strong></td>
+<td><strong>Tier-dependent platform fee</strong> – See tier table below</td>
+</tr>
+</tbody>
+</table>
+<h3 id="host-tiers-platform-fees">Host Tiers &amp; Platform Fees</h3>
+<p>Higher-tier hosts pay <strong>lower platform fees</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 33%" />
+<col style="width: 29%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Host Tier</th>
+<th>Annual Revenue</th>
+<th>Platform Fee</th>
+<th>Perks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Silver</strong></td>
+<td>$0+</td>
+<td><strong>13%</strong></td>
+<td>Standard support</td>
+</tr>
+<tr>
+<td><strong>Gold</strong></td>
+<td>$50,000+</td>
+<td><strong>12.5%</strong></td>
+<td>Priority support, featured placement</td>
+</tr>
+<tr>
+<td><strong>Platinum</strong></td>
+<td>$250,000+</td>
+<td><strong>12%</strong></td>
+<td>Premium support, webinars, early features</td>
+</tr>
+<tr>
+<td><strong>Diamond</strong></td>
+<td>$500,000+</td>
+<td><strong>11.5%</strong></td>
+<td>VIP 24/7, account manager, custom marketing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples-by-tier">Examples by Tier</h3>
+<p><strong>Silver Tier (13% fee):</strong> - Booking total: $1,000 - Platform fee: 13% = $130 - Host payout: <strong>$870</strong></p>
+<p><strong>Gold Tier (12.5% fee):</strong> - Booking total: $1,000 - Platform fee: 12.5% = $125 - Host payout: <strong>$875</strong></p>
+<p><strong>Platinum Tier (12% fee):</strong> - Booking total: $1,000 - Platform fee: 12% = $120 - Host payout: <strong>$880</strong></p>
+<p><strong>Diamond Tier (11.5% fee):</strong> - Booking total: $1,000 - Platform fee: 11.5% = $115 - Host payout: <strong>$885</strong></p>
+<h3 id="tier-advancement">Tier Advancement</h3>
+<p>Your tier is based on <strong>Annual Revenue</strong> (resets yearly): - Silver: $0+ (default) - Gold: $50,000+ - Platinum: $250,000+ - Diamond: $500,000+</p>
+<h3 id="important-notes">Important Notes</h3>
+<ul>
+<li>Higher tiers = lower platform fees = higher payouts</li>
+<li>Tier is calculated automatically based on trailing 12-month revenue</li>
+<li>Fee changes apply to <strong>new bookings only</strong> (existing bookings keep original fee)</li>
+<li>View your current tier in <strong>Profile → Host Dashboard</strong></li>
+</ul>
+<h3 id="technical-how-platform-fee-is-calculated">Technical: How Platform Fee is Calculated</h3>
+<p>The platform fee uses a simple formula with Admin-configurable values:</p>
+<pre><code>Host Platform Fee = platform_fee_rate - tier_discount_rate</code></pre>
+<table>
+<thead>
+<tr>
+<th>Config Value</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>platform_fee_rate</code></td>
+<td>15%</td>
+<td>Base platform fee (same for all)</td>
+</tr>
+<tr>
+<td><code>host_silver_rate</code></td>
+<td>2%</td>
+<td>Silver tier discount</td>
+</tr>
+<tr>
+<td><code>host_gold_rate</code></td>
+<td>2.5%</td>
+<td>Gold tier discount</td>
+</tr>
+<tr>
+<td><code>host_platinum_rate</code></td>
+<td>3%</td>
+<td>Platinum tier discount</td>
+</tr>
+<tr>
+<td><code>host_diamond_rate</code></td>
+<td>3.5%</td>
+<td>Diamond tier discount</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> - Silver: 15% - 2% = <strong>13%</strong> - Gold: 15% - 2.5% = <strong>12.5%</strong> - Platinum: 15% - 3% = <strong>12%</strong> - Diamond: 15% - 3.5% = <strong>11.5%</strong></p>
+<blockquote>
+<p><strong>For Admins:</strong> These values are stored in the <code>unified_config</code> database table and can be modified via the Admin dashboard (LoyaltyConfigView) without code changes.</p>
+</blockquote>
+<hr />
+<h2 id="appendix-k-cancellation-refund-policy-cn-release-1.0">Appendix K: Cancellation &amp; Refund Policy (CN Release 1.0)</h2>
+<p>This appendix explains the cancellation policies you can set for your listings.</p>
+<h3 id="available-cancellation-policies">Available Cancellation Policies</h3>
+<p>When creating or editing a listing, you choose one of the following policies:</p>
+<h3 id="flexible-policy">Flexible Policy</h3>
+<p><strong>Best for:</strong> Properties in competitive markets, attracting more bookings</p>
+<table>
+<thead>
+<tr>
+<th>When Guest Cancels</th>
+<th>Guest Refund</th>
+<th>Your Payout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24+ hours before check-in</td>
+<td>100% refund</td>
+<td>$0</td>
+</tr>
+<tr>
+<td>Less than 24 hours before check-in</td>
+<td>No refund</td>
+<td>Full payout</td>
+</tr>
+</tbody>
+</table>
+<h3 id="moderate-policy">Moderate Policy</h3>
+<p><strong>Best for:</strong> Balance between flexibility and commitment</p>
+<table>
+<thead>
+<tr>
+<th>When Guest Cancels</th>
+<th>Guest Refund</th>
+<th>Your Payout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5+ days before check-in</td>
+<td>100% refund</td>
+<td>$0</td>
+</tr>
+<tr>
+<td>2-5 days before check-in</td>
+<td>50% refund</td>
+<td>50% payout</td>
+</tr>
+<tr>
+<td>Less than 2 days before check-in</td>
+<td>No refund</td>
+<td>Full payout</td>
+</tr>
+</tbody>
+</table>
+<h3 id="strict-policy">Strict Policy</h3>
+<p><strong>Best for:</strong> High-demand properties, seasonal rentals</p>
+<table>
+<thead>
+<tr>
+<th>When Guest Cancels</th>
+<th>Guest Refund</th>
+<th>Your Payout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7+ days before check-in</td>
+<td>100% refund</td>
+<td>$0</td>
+</tr>
+<tr>
+<td>7-30 days before check-in</td>
+<td>50% refund</td>
+<td>50% payout</td>
+</tr>
+<tr>
+<td>Less than 7 days before check-in</td>
+<td>No refund</td>
+<td>Full payout</td>
+</tr>
+</tbody>
+</table>
+<h3 id="host-initiated-cancellations">Host-Initiated Cancellations</h3>
+<p><strong>Warning:</strong> Cancelling a booking as a host has serious consequences:</p>
+<ul>
+<li>Guest receives <strong>full refund</strong> including all fees</li>
+<li>You may be charged a <strong>cancellation fee</strong></li>
+<li>Your <strong>cancellation rate</strong> is tracked and displayed</li>
+<li>High cancellation rates may result in:
+<ul>
+<li>Lower search ranking</li>
+<li>Loss of Superhost status</li>
+<li>Account suspension</li>
+</ul></li>
+</ul>
+<p><strong>When You May Cancel:</strong> - Guest violates house rules - Property damage from previous guest - Emergency repairs needed - Force majeure events</p>
+<p>Always contact support before cancelling to document legitimate reasons.</p>
+<h3 id="setting-your-cancellation-policy">Setting Your Cancellation Policy</h3>
+<ol type="1">
+<li>Go to <strong>Listings</strong> tab</li>
+<li>Tap the listing you want to edit</li>
+<li>Scroll to <strong>Policies</strong> section</li>
+<li>Select <strong>Cancellation Policy</strong></li>
+<li>Choose Flexible, Moderate, or Strict</li>
+<li>Tap <strong>Save</strong></li>
+</ol>
+<p>Policy changes apply only to new bookings, not existing reservations.</p>
+<h3 id="tips-for-hosts">Tips for Hosts</h3>
+<ul>
+<li>✅ <strong>Flexible</strong> attracts more bookings but more cancellations</li>
+<li>✅ <strong>Strict</strong> provides income security but may reduce bookings</li>
+<li>✅ <strong>Moderate</strong> is recommended for most hosts</li>
+<li>✅ Consider seasonal policies (stricter for high-demand periods)</li>
+</ul>
+<hr />
+<p>← <a href="USER_MANUAL_HOST.html">Back to Host Guide</a> | <a href="USER_MANUAL_TOP.html">Back to Index</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peapod Hotels. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../../terms.html">Terms</a>
+                <a href="../../privacy.html">Privacy</a>
+                <a href="../../sms-terms.html">SMS Terms</a>
+                <a href="../../manual/en/index.html">APP Manual</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

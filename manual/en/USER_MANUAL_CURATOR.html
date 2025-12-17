@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peapod User Manual - Curator Guide - Peapod Hotels</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manual.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍐 Peapod Hotels</div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../terms.html">Terms</a></li>
+                <li><a href="../../privacy.html">Privacy</a></li>
+                <li><a href="../../sms-terms.html">SMS Terms</a></li>
+                <li><a href="../../manual/en/index.html" class="active">APP Manual</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <a href="../cn/index.html" title="Switch language">
+                    <span class="lang-icon">🌐</span>
+                    <span>中文</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="manual-content">
+<h1 id="peapod-user-manual---curator-guide">Peapod User Manual - Curator Guide</h1>
+<p><strong>Version:</strong> 0.18.8 (Slice V - Multi-Unit Support) <strong>Last Updated:</strong> November 30, 2025 <strong>Platform:</strong> iOS (iPhone, iPad)</p>
+<p><strong>What’s New in v0.18.8 (Slice V):</strong> - ✅ <strong>Multi-Unit Properties</strong> - Hotels, Hostels, Boutique Hotels, and Resorts now support room/bed types (see Section 7.4.5) - ✅ <strong>Room Type Validation</strong> - New validation rule: multi-unit properties require at least one active room/bed type before approval - ✅ <strong>Two-Tier Amenities</strong> - Understand shared vs room-specific amenities when reviewing Hotels/Hostels</p>
+<p><strong>Previous (CN Release 1.0):</strong> - ✅ <strong>Two-Tier Edit Review System</strong> - Review critical edits to active listings before they go live (all other edits auto-approve) - ✅ <strong>Edit Reviews Queue</strong> - New section in Listings tab for reviewing listing edits (Critical changes only) - ✅ <strong>No Draft Status</strong> - Listings now go directly from local device to “Pending Review” when submitted - ✅ <strong>Active Listings Stay Visible</strong> - Pending critical edits don’t make listings invisible; guests see old approved data until you approve changes - ✅ <strong>Immediate Resubmission</strong> - Hosts can resubmit rejected listings immediately after fixing issues (no waiting period) - ✅ <strong>Badge Notifications</strong> - Listings tab badge shows count of pending new listings + critical edits - ✅ <strong>Formal SLA Commitments</strong> - Clear response time targets for reviews, safety issues, and disputes</p>
+<p><strong>Note:</strong> Advanced AI features (AI Pre-Screening, AI Listing Optimizer) remain in “Coming Soon” status and are not yet implemented.</p>
+<p>← <a href="USER_MANUAL_TOP.html">Back to Index</a></p>
+<hr />
+<h2 id="for-curators">7. For Curators</h2>
+<h3 id="curator-overview">7.1 Curator Overview</h3>
+<p>As a curator, you: - 📋 <strong>Review New Listings</strong> - Approve/reject new property submissions - 🔍 <strong>Review Edits</strong> - Approve critical changes to active listings (bedrooms, bathrooms, capacity, amenities) - ✏️ <strong>Request Improvements</strong> - Guide hosts to enhance listings - 📊 <strong>Monitor Quality</strong> - Ensure platform standards maintained - 💬 <strong>Support Hosts</strong> - Provide feedback and guidance - 🎯 <strong>Maintain Standards</strong> - Uphold Peapod’s quality promise</p>
+<p><strong>Two Types of Reviews:</strong> 1. <strong>New Listing Approvals</strong> - Host submits new property, you approve/reject/request edits 2. <strong>Edit Reviews</strong> - Host edits critical information on active listing, you approve changes before they go live (all other changes auto-approve)</p>
+<p><strong>Key Features:</strong> - 🧠 <strong>Smart Review Assignment</strong> - Listings are automatically distributed to available curators based on specialization, region, and past performance - 🔁 <strong>Auto-Sync with Listing Pipeline</strong> - New host submissions instantly appear in your review queue - 🧩 <strong>Improvement Templates 2.0</strong> - Modular message blocks speed up feedback creation and improve clarity - ⭐ <strong>Host Feedback on Curator</strong> - Hosts can rate curator feedback quality after resubmission - 🔔 <strong>Smart Notifications</strong> - Real-time alerts for new listings, host updates, and resubmissions - 🤖 <strong>AI Pre-Screening</strong> (Future) - Automatic pre-review scan for photo quality, safety, and missing info</p>
+<hr />
+<h3 id="curator-navigation">7.2 Curator Navigation</h3>
+<p><strong>Bottom Navigation (5 tabs):</strong> 1. <strong>Dashboard</strong> (chart.bar.fill icon) - Overview, pending reviews, performance 2. <strong>Listings</strong> (house.fill icon) - Review new listings AND edit reviews (two sections) 3. <strong>Availability</strong> (calendar icon) - Manage curator schedule 4. <strong>Messages</strong> (message icon) - Communications with hosts 5. <strong>Profile</strong> (person icon) - Profile settings</p>
+<p><strong>How It Works:</strong> - Tap any tab to switch views - Active tab highlighted in pink - Badge shows counts: - <strong>Listings:</strong> Combined count of new listings + critical edits awaiting approval - <strong>Messages:</strong> Number of unread messages - Tasks appear instantly upon listing submission or edit (Auto-Sync)</p>
+<p><strong>Listings Tab - Two Review Queues:</strong> The Listings tab contains two sections accessible via filters or separate views: - <strong>New Listing Approvals:</strong> New listings in “Pending Review” or “Request Edits” status - <strong>Edit Reviews:</strong> Critical and medium priority edits to active listings</p>
+<hr />
+<h3 id="curator-dashboard">7.3 Curator Dashboard</h3>
+<p><strong>Location:</strong> Main tab → “Dashboard” (chart.bar.fill icon)</p>
+<p><strong>Dashboard Overview Shows:</strong></p>
+<p><strong>Performance Cards:</strong> - <strong>Pending New Listings</strong> - Count of NEW listings awaiting approval (with Auto-Sync updates) - <strong>Pending Critical Edits</strong> - Count of critical edits awaiting approval - <strong>Total Reviewed</strong> - All-time review count (listings + edits) - <strong>Approval Rate</strong> - Percentage of listings/edits approved - <strong>Average Review Time</strong> - Time to complete review - <strong>Host Feedback Score</strong> - Average rating from hosts (1-5⭐)</p>
+<p><strong>Activity Breakdown:</strong> - <strong>Today:</strong> - Reviews completed today - Listings approved - Changes requested - Listings rejected</p>
+<ul>
+<li><strong>This Week:</strong>
+<ul>
+<li>Weekly review count</li>
+<li>Weekly approval rate</li>
+<li>Average response time</li>
+<li>Host feedback received</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="review-listings">7.4 Review Listings</h3>
+<h4 id="review-queue">7.4.1 Review Queue</h4>
+<p><strong>What You’ll See:</strong> - List of pending listings sorted by urgency and submission date (oldest first) - Listings automatically appear via <strong>Auto-Sync with Listing Pipeline</strong> - Submission date for each listing - “New” badge if submitted today - <strong>“Smart Assigned”</strong> badge shows system-based assignment</p>
+<p><strong>How to Access:</strong> 1. From Curator Dashboard, tap “Pending Reviews” 2. See list of listings to review 3. Tap listing to begin review</p>
+<p><strong>Queue Features:</strong> - Auto-refresh when new listings arrive - Priority indicators for urgent reviews - Estimated review time per listing</p>
+<h4 id="review-process">7.4.2 Review Process</h4>
+<p><strong>Step 1: Property Overview</strong></p>
+<p>Tap a listing from the queue to see all details: - <strong>Photos</strong> - All images uploaded by host - <strong>Title and description</strong> - Property name and detailed description - <strong>Amenities</strong> - Listed features and services - <strong>House rules</strong> - Check-in/out times, policies - <strong>Pricing</strong> - Base price, cleaning fees, discounts - <strong>Location</strong> - Address and map preview - <strong>Preview</strong> - How listing appears to guests</p>
+<p><strong>Step 2: Quality Checklist</strong></p>
+<p>Review against platform standards (see <a href="#76-quality-standards">Section 7.6</a> for complete criteria): - ✅ Photos are high-quality (bright, clear, accurate) - ✅ Description is detailed and accurate (500+ words recommended) - ✅ Amenities match photos - ✅ Pricing is reasonable for market - ✅ House rules are clear and complete - ✅ Location is accurate - ✅ No safety concerns - ✅ Meets Peapod quality standards</p>
+<p><strong>AI Pre-Screen Suggestions (Future):</strong> - System suggests likely issues based on automated scan - Highlights missing information or low-quality photos - Flags potential safety concerns</p>
+<h4 id="understanding-listing-status-workflow">7.4.3 Understanding Listing Status Workflow</h4>
+<p>As a curator, you control listing status through your review decisions. Here’s the complete workflow from your perspective:</p>
+<p><strong>Listing Status Reference:</strong></p>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 31%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr>
+<th>Status</th>
+<th>What It Means</th>
+<th>Your Actions Available</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pending Review</strong></td>
+<td>NEW listing submitted, awaiting your review</td>
+<td>Review → Approve, Request Edits, or Reject</td>
+</tr>
+<tr>
+<td><strong>Request Edits</strong></td>
+<td>You sent NEW listing back for improvements</td>
+<td>Wait for host to fix → Review again</td>
+</tr>
+<tr>
+<td><strong>Active</strong></td>
+<td>You approved, live and bookable on platform</td>
+<td>Monitor quality, can pause if issues found, review edits to listing</td>
+</tr>
+<tr>
+<td><strong>Active (Pending Edits)</strong></td>
+<td>Active listing with critical edits awaiting your approval</td>
+<td>Review edits → Approve or Reject changes</td>
+</tr>
+<tr>
+<td><strong>Paused by Host</strong></td>
+<td>Host temporarily disabled it</td>
+<td>No action needed (will auto-reactivate when host unpauses)</td>
+</tr>
+<tr>
+<td><strong>Paused by Curator</strong></td>
+<td>You found issue with live listing</td>
+<td>Host must fix → Resubmits → You re-review</td>
+</tr>
+<tr>
+<td><strong>Rejected</strong></td>
+<td>You blocked this listing due to serious issues</td>
+<td>Host can fix issues and resubmit immediately, or appeal via chat</td>
+</tr>
+<tr>
+<td><strong>Archived</strong></td>
+<td>Host permanently removed it</td>
+<td>No action needed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important Notes:</strong></p>
+<p><strong>No Draft Status:</strong> Hosts create listings locally on their device. Once submitted, listings go directly to “Pending Review” status. There is no draft state in the database.</p>
+<p><strong>Active Listings with Pending Edits:</strong> When a host edits critical information on an active listing (bedrooms, bathrooms, capacity, property type, etc.), the listing <strong>stays active and bookable</strong>. Guests continue to see the old curator-approved information until you approve the changes. This protects guests from seeing unverified changes. See section 7.4.4 for the edit review workflow.</p>
+<hr />
+<p><strong>Complete Review Workflow for NEW Listings:</strong></p>
+<ol type="1">
+<li><p><strong>Host submits NEW listing</strong> → Status: <strong>Pending Review</strong> → Appears in your “New Listing Approvals” queue</p></li>
+<li><p><strong>You review</strong> → Three paths:</p>
+<p><strong>Path A: Request Edits (Fixable Issues)</strong></p>
+<ul>
+<li>You select “Request Changes” → Status: <strong>Request Edits</strong></li>
+<li>Host receives detailed feedback</li>
+<li>Host makes improvements and resubmits immediately → Status: <strong>Pending Review</strong> (back to you)</li>
+<li>You review again → Approve or Request more changes</li>
+</ul>
+<p><strong>Path B: Approve (Quality Standards Met)</strong></p>
+<ul>
+<li>You select “Approve” → Status: <strong>Active</strong></li>
+<li>Listing goes live immediately</li>
+<li>Guests can search and book</li>
+<li>You can monitor for future issues</li>
+</ul>
+<p><strong>Path C: Reject (Serious Issues)</strong></p>
+<ul>
+<li>You select “Reject” → Status: <strong>Rejected</strong></li>
+<li>Host receives detailed rejection reason</li>
+<li><strong>Host can fix issues and resubmit immediately</strong> (no waiting period)</li>
+<li>Or host can appeal via chat if they believe rejection was a mistake</li>
+<li>Rejection is for this specific listing submission, not permanent ban</li>
+</ul></li>
+<li><p><strong>Active Listing Monitoring:</strong></p>
+<ul>
+<li>If you find issue with live listing → Pause it → Status: <strong>Paused by Curator</strong></li>
+<li>Host must fix issue and request re-review → Status: <strong>Pending Review</strong> (back to you)</li>
+<li>You review fixes → Approve to make Active again</li>
+</ul></li>
+</ol>
+<p><strong>Your Two Core Actions Explained:</strong></p>
+<p><strong>“Request Edits” = Fixable Issues</strong> ✏️ Use for quality improvements needed: - Poor photo quality or insufficient count - Description too brief or missing details - Incomplete amenities list - Unclear house rules - Pricing needs adjustment - Location details incomplete</p>
+<p><strong>“Reject” = Serious Issues</strong> ❌ Use for issues that need significant fixes before approval: - Fraudulent listing (fake photos, property doesn’t exist) - Illegal activity or policy violations - Duplicate listing already on platform - Safety hazards that cannot be remediated - Property not suitable for platform - Wrong platform (commercial property, hotel, etc.)</p>
+<p><strong>After Rejection:</strong> - <strong>Host can fix issues and resubmit immediately</strong> - No waiting period, no penalty - Host can appeal via chat if they believe rejection was a mistake - You can review appeal and reconsider if issues were misunderstood - Rejection is for this specific submission, not a permanent ban on the property</p>
+<hr />
+<p><strong>Step 3: Decision</strong></p>
+<p>Choose one of three actions:</p>
+<p><strong>Option 1: Approve Listing ✅</strong></p>
+<p><strong>How to Approve:</strong> 1. Verify all checklist items pass quality standards 2. Tap “Approve” button (green) 3. Confirmation alert appears: “Approve this listing?” 4. Tap “Confirm” 5. Listing status changes to “Active” 6. Host receives approval notification immediately 7. Listing appears in search results immediately 8. Your review count increments</p>
+<p><strong>When to Approve:</strong> - All quality standards met - Photos are professional and accurate - Description is detailed and helpful - No safety concerns - Amenities accurately represented - Pricing is competitive</p>
+<hr />
+<p><strong>Option 2: Request Changes 🟧</strong></p>
+<p><strong>How to Request Changes:</strong> 1. Identify specific quality issues that need improvement 2. Tap “Request Changes” button (orange) 3. <strong>Use Improvement Templates 2.0:</strong> - Select predefined issue categories - Choose modular feedback blocks: - <strong>Photo Feedback Block</strong> - “Add at least 3 photos per bedroom with good lighting” - <strong>Description Feedback Block</strong> - “Add details about nearby attractions and neighborhood” - <strong>Safety Feedback Block</strong> - “Include visible smoke detector or first aid kit in photos” - <strong>Amenity Feedback Block</strong> - “Verify all listed amenities are visible in photos” - <strong>Pricing Feedback Block</strong> - “Adjust pricing to align with comparable properties in area” - Combine multiple blocks as needed 4. Add custom comments for specific issues not covered by templates 5. Tap “Send Feedback to Host” 6. Listing status changes to “Changes Requested” 7. Host receives notification with detailed feedback</p>
+<p><strong>Common Issues to Request Changes:</strong> - <strong>Photos need improvement:</strong> - Not enough photos (minimum 5, recommend 15-20) - Poor lighting or blurry images - Missing key rooms (bedrooms, bathrooms, kitchen) - Need exterior shots - <strong>Description too short:</strong> - Less than 500 words - Missing neighborhood information - No mention of nearby attractions - Lacks unique property features - <strong>Missing amenities:</strong> - Claimed amenities not visible in photos - Incomplete amenity list - No mention of WiFi, parking, or kitchen - <strong>Pricing unclear:</strong> - No cleaning fee listed - Discount structure confusing - Significantly above/below market rate - <strong>House rules incomplete:</strong> - No check-in/check-out times - Missing pet policy - No smoking policy stated - Quiet hours not specified - <strong>Location issues:</strong> - Map pin incorrect - Address incomplete - Parking instructions missing - <strong>Safety concerns:</strong> - No visible smoke detectors - Potential hazards in photos - Missing emergency contact info</p>
+<p><strong>Feedback Best Practices:</strong> - ✅ Be specific (e.g., “Add photos of bedroom” not “Need more photos”) - ✅ Be constructive and helpful - ✅ Explain why change is needed - ✅ Provide examples if possible - ✅ Use templates for efficiency and consistency - ✅ Attach reference photos if helpful - ❌ Don’t be vague or generic - ❌ Don’t use harsh language - ❌ Don’t reject when changes would suffice</p>
+<p><strong>Host Feedback System:</strong> After host resubmits, they can rate your feedback clarity (1-5⭐). This helps improve your curator performance and guides future feedback quality.</p>
+<hr />
+<p><strong>Option 3: Reject Listing ❌</strong></p>
+<p><strong>IMPORTANT: Use Rejection Thoughtfully!</strong> Most issues can be fixed through “Request Changes”. Use rejection for serious issues that require significant fixes before approval.</p>
+<p><strong>How to Reject:</strong> 1. Determine listing has serious issues (see rejection reasons below) 2. Tap “Reject” button (red) 3. Select rejection reason from dropdown (matches categories below) 4. Write detailed explanation (required, minimum 100 words): - Explain specifically what is wrong - Reference evidence (specific photos, descriptions, etc.) - Explain what needs to be fixed - Inform host they can resubmit immediately after fixing issues 5. Tap “Confirm Rejection” 6. Confirmation alert: “Are you sure you want to reject?” 7. Tap “Confirm” 8. Listing status changes to “Rejected” 9. Host receives notification with detailed reason 10. Host can fix issues and resubmit immediately (no waiting period)</p>
+<p><strong>Rejection Reasons Taxonomy:</strong></p>
+<p>Only reject for these fundamental problems:</p>
+<p><strong>1. Fraudulent Listing 🚨</strong> - Stock photos or images stolen from other websites - Photos clearly from different properties - Property doesn’t exist at stated address - Verified scam indicators - Host using fake identity or stolen credentials - <em>Example: “Photos are stock images from Shutterstock, not actual property”</em></p>
+<p><strong>2. Illegal Activity or Policy Violations ⚖️</strong> - Illegal short-term rental in jurisdiction that bans them - Property used for illegal purposes mentioned in listing - Discriminatory policies violating fair housing laws - Adult-only content or services - Promotes illegal activities - <em>Example: “City has ban on short-term rentals; cannot approve”</em></p>
+<p><strong>3. Duplicate Listing 🔁</strong> - Property already listed on Peapod under different account - Same host has listed same property multiple times - Verified to be existing active listing - <em>Example: “This property already exists as Listing #12345”</em></p>
+<p><strong>4. Property Not Available ❌</strong> - Property is not actually available for rent - Under construction or renovation indefinitely - Owner does not have authority to rent - Property is condemned or uninhabitable by law - <em>Example: “Building permit shows property condemned by city”</em></p>
+<p><strong>5. Wrong Platform / Property Type 🏢</strong> - Commercial property (office, retail, warehouse) - RV, boat, or vehicle (not traditional housing) - Time-share or fractional ownership - <em>Example: “This is a commercial office space, not residential”</em></p>
+<p><strong>Note:</strong> Hotels, Hostels, Boutique Hotels, and Resorts are <strong>now supported</strong> on Peapod with multi-unit room/bed types. See Section 7.4.5 for review guidelines specific to these property types.</p>
+<p><strong>6. Unremediated Safety Hazards ⚠️</strong> - Severe structural damage visible in photos - Electrical hazards that pose immediate danger - Toxic mold or environmental contamination - Building code violations that cannot be fixed - Unsafe location with documented crime issues - <em>Example: “Visible exposed wiring and ceiling collapse in photos”</em></p>
+<p><strong>When to Reject vs. Request Edits:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Reject</th>
+<th>Request Edits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fraudulent photos</td>
+<td>Poor quality photos</td>
+</tr>
+<tr>
+<td>Illegal rental</td>
+<td>Missing amenities</td>
+</tr>
+<tr>
+<td>Duplicate listing</td>
+<td>Incomplete description</td>
+</tr>
+<tr>
+<td>Property condemned</td>
+<td>Pricing too high/low</td>
+</tr>
+<tr>
+<td>Commercial property</td>
+<td>House rules unclear</td>
+</tr>
+<tr>
+<td>Severe structural damage</td>
+<td>No smoke detector visible</td>
+</tr>
+<tr>
+<td>Scam listing</td>
+<td>Location details incomplete</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resubmission &amp; Appeal Process:</strong> - <strong>Host can resubmit immediately after fixing issues</strong> - No waiting period, no penalty - Host receives detailed feedback explaining what needs to be fixed - After fixing issues, host can resubmit for review - Listing returns to “Pending Review” status in your queue - You review the fixes and approve or provide additional feedback - <strong>Appeal Option:</strong> If host believes rejection was a mistake, they can message you via chat - You can reconsider if there was a misunderstanding - If rejection stands, explain clearly why and what needs to change</p>
+<p><strong>Documentation Requirements:</strong> When rejecting, document evidence: - Screenshot specific photos showing fraud/issues - Note specific policy violations - Reference comparable listings for duplicates - Cite building codes or regulations if applicable - Save all documentation in case of appeal</p>
+<hr />
+<h4 id="reviewing-edits-to-active-listings-three-tier-system">7.4.4 Reviewing Edits to Active Listings: Three-Tier System</h4>
+<p>Once a listing is approved and active, hosts can make edits. The system automatically categorizes edits by urgency and routes them appropriately.</p>
+<p><strong>Important:</strong> Active listings stay visible and bookable even with pending critical edits. Guests see the old curator-approved information until you approve changes. This protects guests from seeing unverified updates.</p>
+<hr />
+<p><strong>Edit Categories and Your Role:</strong></p>
+<p><strong>🔴 Critical Edits (Require Your Approval)</strong></p>
+<p>These fundamentally define what guests are booking. Changes require your approval before going live.</p>
+<p><strong>Examples:</strong> - Property type (House → Apartment) - Number of bedrooms - Number of bathrooms - Max guest capacity - Location/Address - Major amenities (Pool, Hot tub, Parking, AC/Heating, Kitchen, Washer/Dryer, Accessibility features)</p>
+<p><strong>What Happens:</strong> 1. Host makes critical change (e.g., bedrooms 2 → 3) 2. Listing stays <strong>Active</strong> - Guests still see old approved data (2 bedrooms) 3. Edit appears in your <strong>“Edit Reviews”</strong> queue with <strong>“Critical”</strong> badge 4. You receive notification: “Critical edit awaiting review” 5. You review within 24 hours (SLA)</p>
+<p><strong>Your Decision:</strong> - <strong>Approve:</strong> Changes go live immediately, guests now see new information (3 bedrooms) - <strong>Reject:</strong> Listing stays with old information (2 bedrooms), host sees rejection reason and can resubmit immediately</p>
+<p><strong>Review Process:</strong> 1. Open edit from “Edit Reviews” queue 2. See side-by-side comparison: - <strong>Old:</strong> 2 bedrooms (currently shown to guests) - <strong>New:</strong> 3 bedrooms (proposed change) 3. Verify claim matches photos/reality 4. Tap “Approve” or “Reject” with reason 5. Edit record updated, host notified</p>
+<p><strong>Important:</strong> If guest books during pending period, they book based on OLD approved information (e.g., 2 bedrooms). Host must honor what guest booked. After you approve, future bookings show new information.</p>
+<hr />
+<p><strong>✅ Auto-Approved Changes (No Review Needed)</strong></p>
+<p>All other changes go live immediately without your review.</p>
+<p><strong>Examples:</strong> - Photos/Videos - Title changes - Description changes - Price changes - Cleaning fee adjustments - Cancellation policy changes - Minimum/maximum stay requirements - Minor amenity additions/removals</p>
+<p><strong>What Happens:</strong> 1. Host makes medium priority change (e.g., price $200 → $250) 2. Change goes live <strong>immediately</strong> 3. Listing stays <strong>Active</strong> 4. Guests see new information right away ($250) 5. Edit appears in your <strong>“Weekly Review Queue”</strong> for async review 6. You review during weekly quality check 7. If issue found, you message host to adjust</p>
+<p><strong>Your Role:</strong> - Review weekly (not urgent) - Check for quality issues - Message host if adjustments needed - Auto-marked as reviewed after 7 days if no action</p>
+<hr />
+<p><strong>🟢 Low Priority Edits (No Review Needed)</strong></p>
+<p>Operational details that don’t affect booking decisions. Updates go live immediately.</p>
+<p><strong>Examples:</strong> - WiFi password - Door codes/check-in instructions - Local recommendations - Neighborhood guide - Parking instructions - Trash/recycling info - Calendar availability</p>
+<p><strong>What Happens:</strong> 1. Host makes low priority change 2. Change goes live <strong>immediately</strong> 3. No curator review needed 4. Logged in audit trail for compliance</p>
+<p><strong>Your Role:</strong> - No action required - System handles automatically</p>
+<hr />
+<p><strong>Your Two Queues as a Curator:</strong></p>
+<p>Both queues are accessible from the <strong>Listings tab</strong> with filters or separate sections:</p>
+<p><strong>1. New Listing Approvals</strong> - New listings in “Pending Review” status - Listings in “Request Edits” status (resubmissions) - Listings you paused (“Paused by Curator” status)</p>
+<p><strong>2. Edit Reviews</strong> - Critical edits to active listings requiring approval - Organized by urgency and age (oldest critical first) - Auto-approved edits do not appear here (they go live immediately)</p>
+<p><strong>Listings Tab Features:</strong> - <strong>Stats:</strong> Total pending, Critical count, Medium count, Oldest age - <strong>Filters:</strong> [New Listings] [Edit Reviews] or [All] [Critical] [Medium] - <strong>Edit Cards:</strong> Show listing name, host, category, changed fields, age - <strong>Badge:</strong> Tab shows combined count of pending new listings + critical edits</p>
+<p><strong>Example Edit Card:</strong></p>
+<pre><code>🔴 Downtown Loft · Host: Jane Smith
+    Active listing · 3 days pending
+    Changes: bedrooms (2 → 3)
+    Category: CRITICAL
+    [Review Changes →]</code></pre>
+<hr />
+<p><strong>Review Best Practices:</strong></p>
+<p><strong>Critical Edits:</strong> - ✅ Review within 24 hours (high priority) - ✅ Verify changes match photos - ✅ Check for fraud (e.g., claiming features that don’t exist) - ✅ Consider guest impact (bookings honored based on old data) - ✅ Approve quickly if changes are legitimate - ✅ Reject with clear reason if misleading</p>
+<p><strong>Auto-Approved Changes:</strong> - ✅ No review needed - changes go live immediately - ✅ Monitor listings during regular quality checks - ✅ Message host if you notice quality issues - ✅ Pause listing if serious problems found</p>
+<p><strong>Communication:</strong> - ✅ Explain why you rejected critical edit - ✅ Be specific about what needs verification - ✅ Host can resubmit immediately after fixing - ✅ Thank host for keeping listing up to date</p>
+<hr />
+<h4 id="reviewing-multi-unit-properties-hotelshostelsboutique-hotelsresorts">7.4.5 Reviewing Multi-Unit Properties (Hotels/Hostels/Boutique Hotels/Resorts)</h4>
+<p><strong>NEW IN SLICE V:</strong> Hotels, Hostels, Boutique Hotels, and Resorts now support multi-unit booking with room/bed types. This section covers special considerations when reviewing these property types.</p>
+<hr />
+<p><strong>Understanding Multi-Unit Properties:</strong></p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 19%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Property Type</th>
+<th>Unit Term</th>
+<th>Typical Units</th>
+<th>Booking Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hotel</strong></td>
+<td>Room</td>
+<td>“Deluxe King Room”, “Standard Double”</td>
+<td>Book 1+ rooms</td>
+</tr>
+<tr>
+<td><strong>Hostel</strong></td>
+<td>Bed</td>
+<td>“Bunk in 6-Bed Dorm”, “Female Dorm Bed”</td>
+<td>Book 1+ beds</td>
+</tr>
+<tr>
+<td><strong>Boutique Hotel</strong></td>
+<td>Room</td>
+<td>“Garden Suite”, “Penthouse”</td>
+<td>Book 1+ rooms</td>
+</tr>
+<tr>
+<td><strong>Resort</strong></td>
+<td>Room/Villa</td>
+<td>“Ocean View Suite”, “Beach Villa”</td>
+<td>Book 1+ units</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Difference:</strong> Unlike Houses/Apartments where guests book the entire property, Hotels/Hostels allow multiple guests to book different room/bed types on the same dates.</p>
+<hr />
+<p><strong>Validation Rule (REQUIRED):</strong></p>
+<p>⚠️ <strong>Multi-unit properties CANNOT be approved unless they have at least one active room/bed type.</strong></p>
+<p><strong>What to Check:</strong> 1. Open the listing review 2. Scroll to <strong>“Room Types”</strong> or <strong>“Bed Types”</strong> section 3. Verify at least one room/bed type exists 4. If empty → <strong>Request Edits</strong> with message: &gt; “Your [Hotel/Hostel] listing requires at least one room or bed type before approval. Please add your room types in the listing editor under ‘Room Types’.”</p>
+<hr />
+<p><strong>Room/Bed Type Review Checklist:</strong></p>
+<p>For each room/bed type, verify:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>Descriptive (e.g., “Deluxe King Room”, not “Room A”)</td>
+</tr>
+<tr>
+<td><strong>Total Units</strong></td>
+<td>Reasonable number (not 0, not 9999)</td>
+</tr>
+<tr>
+<td><strong>Max Guests</strong></td>
+<td>Appropriate for room size</td>
+</tr>
+<tr>
+<td><strong>Price</strong></td>
+<td>Within market range for type</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Accurate, helpful</td>
+</tr>
+<tr>
+<td><strong>Room Amenities</strong></td>
+<td>Match photos, don’t duplicate shared</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Two-Tier Amenities System:</strong></p>
+<p>Multi-unit properties have two levels of amenities:</p>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 23%" />
+<col style="width: 25%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th>Amenity Level</th>
+<th>Where Set</th>
+<th>Applies To</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shared Amenities</strong></td>
+<td>Listing Editor → Amenities</td>
+<td>All room types</td>
+<td>Pool, Gym, Restaurant, Lobby WiFi</td>
+</tr>
+<tr>
+<td><strong>Room-Type Amenities</strong></td>
+<td>Room Type Editor</td>
+<td>Specific room only</td>
+<td>Balcony, Minibar, Private Bathroom</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What to Verify:</strong> - ✅ Shared amenities are property-wide features (guests can access regardless of room type) - ✅ Room-type amenities are specific to that room/bed type - ❌ No duplication (if Pool is shared, shouldn’t be in each room type) - ❌ Room-type amenities shouldn’t include property features</p>
+<p><strong>Search Impact (FYI):</strong> Guest searches match room types where <code>shared + room amenities</code> include all filtered amenities. If a guest filters for “WiFi + Balcony”, only room types with both (either shared or room-specific) will appear.</p>
+<hr />
+<p><strong>Photo Requirements for Multi-Unit:</strong></p>
+<p><strong>Listing-Level Photos:</strong> - Exterior/building shots - Common areas (lobby, pool, restaurant, gym) - Shared facilities</p>
+<p><strong>Room-Type Photos (Recommended):</strong> - Each room type should have representative photos - Show bed configuration, bathroom, amenities - Help guests distinguish between room types</p>
+<p><strong>What to Check:</strong> - Listing has sufficient property photos (min 5) - Room types have photos OR host mentions “rooms similar to photos shown” - Photos match room type descriptions</p>
+<hr />
+<p><strong>Common Issues &amp; Resolutions:</strong></p>
+<table>
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No room types defined</td>
+<td>Request Edits: “Add at least one room/bed type”</td>
+</tr>
+<tr>
+<td>Room type price = 0</td>
+<td>Request Edits: “Set pricing for each room type”</td>
+</tr>
+<tr>
+<td>Total units = 0</td>
+<td>Request Edits: “Set total units available for each type”</td>
+</tr>
+<tr>
+<td>Room amenities duplicate shared</td>
+<td>Request Edits: “Remove duplicates from room amenities”</td>
+</tr>
+<tr>
+<td>Hostel showing as “room”</td>
+<td>Request Edits: “Hostels should use ‘bed’ as inventory unit”</td>
+</tr>
+<tr>
+<td>No description on room types</td>
+<td>Request Edits: “Add descriptions to help guests choose”</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Approval Checklist for Multi-Unit:</strong></p>
+<p>Before approving a Hotel/Hostel/Boutique Hotel/Resort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />At least one room/bed type exists</label></li>
+<li><label><input type="checkbox" />Each room type has name, units, guests, price</label></li>
+<li><label><input type="checkbox" />Room type pricing is reasonable</label></li>
+<li><label><input type="checkbox" />Shared amenities are property-wide only</label></li>
+<li><label><input type="checkbox" />Room amenities don’t duplicate shared</label></li>
+<li><label><input type="checkbox" />Photos show property and (ideally) room types</label></li>
+<li><label><input type="checkbox" />All standard quality checks pass (photos, description, safety)</label></li>
+</ul>
+<hr />
+<h3 id="monitor-re-submissions">7.5 Monitor Re-Submissions</h3>
+<p><strong>What You’ll See:</strong> - Listing with “Re-submission” badge in review queue - Original feedback notes you provided - Host’s response comments - Changes made by host (highlighted) - Notification when host re-submits</p>
+<p><strong>How to Review Re-Submissions:</strong> 1. Host makes requested changes and re-submits listing 2. Listing appears in “Re-Review Queue” (separate from new submissions) 3. You receive notification: “Host has updated [Listing Name]” 4. Review changes made against original feedback 5. Verify all requested issues have been addressed 6. Compare new photos/description with original version 7. Make decision: - <strong>Approve</strong> if all issues resolved - <strong>Request more changes</strong> if issues remain - <strong>Reject</strong> if major problems persist (rare)</p>
+<p><strong>Re-Review Best Practices:</strong> - ✅ Review within 24 hours of re-submission - ✅ Acknowledge improvements made - ✅ Be consistent with original feedback - ✅ Thank host for making changes - ✅ Approve quickly if standards met - ❌ Don’t add new requirements not in original feedback - ❌ Don’t be overly critical if most issues fixed</p>
+<p><strong>Priority Handling:</strong> Re-submissions get higher priority than new listings. Hosts have already invested time in improvements and deserve fast feedback.</p>
+<hr />
+<h3 id="quality-standards">7.6 Quality Standards</h3>
+<p>These are the platform-wide quality standards all listings must meet.</p>
+<h4 id="photo-quality-standards">Photo Quality Standards</h4>
+<p><strong>Requirements:</strong> - <strong>Well-lit and bright</strong> - Natural lighting preferred, no dark shadows - <strong>No heavy filters</strong> - Accurate colors, minimal editing - <strong>Accurate representation</strong> - Shows property as it actually looks - <strong>Multiple angles</strong> - Each room from different perspectives - <strong>Professional appearance</strong> - Clean, staged, high-resolution - <strong>Minimum count</strong> - At least 5 photos required, 15-20 recommended</p>
+<p><strong>Required Photo Types:</strong> - Exterior (front of property, street view) - Living room (multiple angles) - All bedrooms (made beds, clean) - All bathrooms (clean, well-lit) - Kitchen (appliances, counters, sink) - Dining area (if separate) - Outdoor spaces (yard, patio, balcony, pool) - Special features (fireplace, home office, gym)</p>
+<p><strong>Photo Red Flags:</strong> - ❌ Stock photos or images from other websites - ❌ Extremely blurry or dark images - ❌ Photos clearly from different properties - ❌ Heavy filters hiding property condition - ❌ Cluttered, messy, or dirty spaces - ❌ Visible damage not disclosed</p>
+<h4 id="description-quality-standards">Description Quality Standards</h4>
+<p><strong>Requirements:</strong> - <strong>Detailed length</strong> - Minimum 500 words, 800-1000 words ideal - <strong>Accurate representation</strong> - Honest description of property - <strong>Unique features highlighted</strong> - What makes this property special - <strong>Neighborhood information</strong> - Local area, attractions, amenities - <strong>No spelling/grammar errors</strong> - Professional writing quality - <strong>Professional tone</strong> - Welcoming but not overly casual</p>
+<p><strong>What to Include:</strong> 1. <strong>Property Overview</strong> (2-3 sentences) - Property type, size, key selling points 2. <strong>Detailed Description</strong> (main body) - Room-by-room descriptions - Unique features and highlights - Recent renovations or upgrades 3. <strong>The Space</strong> - Bedroom configurations - Bathroom count and features - Kitchen amenities - Living areas - Work-from-home setup (if applicable) 4. <strong>Guest Access</strong> - Which areas guests can use - Shared vs private spaces - Parking availability and instructions 5. <strong>The Neighborhood</strong> - Walking distance to attractions - Restaurants, shops, entertainment nearby - Public transportation options - Safety and character of area 6. <strong>Other Information</strong> - Check-in instructions preview - Best for (families, couples, business travelers) - Seasonal highlights</p>
+<p><strong>Description Red Flags:</strong> - ❌ Less than 300 words (too brief) - ❌ Copy-pasted from other listings - ❌ Excessive typos or grammar errors - ❌ All caps or excessive exclamation marks - ❌ Discriminatory language - ❌ Contact information included (against policy)</p>
+<h4 id="accuracy-standards">Accuracy Standards</h4>
+<p><strong>Requirements:</strong> - <strong>Amenities match photos</strong> - All listed amenities visible or verified - <strong>Room counts accurate</strong> - Bedroom/bathroom counts match reality - <strong>Location pin correct</strong> - Map marker at actual property address - <strong>House rules clear</strong> - Complete policies stated - <strong>Pricing competitive</strong> - Within market range for area and size</p>
+<p><strong>Common Accuracy Issues:</strong> - Listed WiFi but no router visible - Claimed pool but no photos of pool - “3 bedrooms” but only 2 shown in photos - Incorrect address or map pin - Missing check-in/check-out times - Pricing 2x+ market rate without justification</p>
+<h4 id="safety-standards">Safety Standards</h4>
+<p><strong>Requirements:</strong> - <strong>No visible hazards</strong> - No exposed wiring, structural damage, safety risks - <strong>Smoke/CO detectors present</strong> - Visible in photos or mentioned in description - <strong>Fire extinguisher</strong> - Should be visible or mentioned - <strong>First aid kit</strong> - Should be mentioned in amenities - <strong>Safe neighborhood</strong> - No obvious safety concerns in area - <strong>Emergency information</strong> - Emergency contact provided</p>
+<p><strong>Safety Red Flags:</strong> - ❌ Exposed electrical wiring - ❌ Mold or water damage visible - ❌ Broken windows or doors - ❌ No smoke detectors visible - ❌ Unsafe stairs or railings - ❌ Known dangerous neighborhood - ❌ Pool without safety fence (if children allowed)</p>
+<p><strong>When in Doubt:</strong> If you’re unsure about safety, reject the listing and explain concerns. Safety is paramount - better to be cautious.</p>
+<hr />
+<h3 id="availability-management">7.7 Availability Management</h3>
+<p><strong>Location:</strong> Main tab → “Availability” (calendar icon)</p>
+<p><strong>Purpose:</strong> Manage your curator schedule, working hours, and capacity to prevent burnout and maintain quality reviews.</p>
+<hr />
+<h4 id="review-capacity">7.7.1 Review Capacity</h4>
+<p><strong>What You’ll See:</strong> - <strong>Review Capacity Card</strong> at top of Availability screen - Current status: “Available” (green) or “At Capacity” (red) - Daily capacity: Progress bar showing “3 / 5 reviews today” - Weekly capacity: Progress bar showing “12 / 25 reviews this week” - Edit button to adjust limits</p>
+<p><strong>How Capacity Works:</strong> - System tracks how many listings you’ve reviewed today and this week - Daily limit: Default 5 reviews/day (range: 1-50) - Weekly limit: Default 25 reviews/week (range: 1-200) - Counts reset automatically: - Daily count resets at midnight - Weekly count resets every Monday - Status shows “At Capacity” when you reach either daily or weekly limit</p>
+<p><strong>How to Edit Capacity:</strong> 1. Tap “Edit” button on Capacity Card 2. Sheet appears with sliders: - <strong>Max Reviews Per Day:</strong> Adjust slider (1-50) - <strong>Max Reviews Per Week:</strong> Adjust slider (1-200) - <strong>Alert Threshold:</strong> When to warn you (50%-100%, default 80%) 3. Tap “Save” 4. Capacity card updates with new limits</p>
+<p><strong>Capacity Recommendations:</strong> - <strong>New curators:</strong> Start with 3-5 reviews/day, 15-20/week - <strong>Experienced curators:</strong> 8-10 reviews/day, 40-50/week - <strong>Leave buffer:</strong> Don’t max out - allow time for re-reviews and questions</p>
+<p><strong>What Happens at Capacity:</strong> - Status badge turns red: “At Capacity” - System can use this for smart assignment (future) - You can still review listings (no enforcement) - Visual reminder to maintain quality over quantity</p>
+<hr />
+<h4 id="weekly-schedule">7.7.2 Weekly Schedule</h4>
+<p><strong>What You’ll See:</strong> - <strong>Weekly Schedule</strong> section showing your working hours - List of days (Monday - Sunday) - Each day shows time range (e.g., “9:00 AM - 5:00 PM”) - Green checkmark for days with hours set - Empty state: “No schedule set. Tap Edit to add your working hours.”</p>
+<p><strong>How to Set Your Schedule:</strong> 1. Tap “Edit” button in Weekly Schedule section 2. Sheet appears with day-by-day configuration 3. For each day: - Toggle “Available” on/off - If available, set: - <strong>Start Time:</strong> When you begin reviewing (e.g., 9:00 AM) - <strong>End Time:</strong> When you stop reviewing (e.g., 5:00 PM) 4. Tap “Save” 5. Schedule list updates with your hours</p>
+<p><strong>Schedule Examples:</strong> - <strong>Full-time curator:</strong> Mon-Fri, 9:00 AM - 5:00 PM - <strong>Part-time curator:</strong> Mon/Wed/Fri, 10:00 AM - 2:00 PM - <strong>Flexible curator:</strong> Mon-Sun, 8:00 AM - 12:00 PM - <strong>Weekend curator:</strong> Sat-Sun, 12:00 PM - 8:00 PM</p>
+<p><strong>Why Set a Schedule:</strong> - Helps you maintain work-life balance - Future: Smart assignment can use this to assign during your hours - Visual reminder of your commitment level - Can adjust as needed (vacations, busy periods)</p>
+<p><strong>Best Practices:</strong> - ✅ Be realistic - don’t overcommit - ✅ Include breaks between review sessions - ✅ Update schedule when circumstances change - ✅ Leave buffer time for host questions - ✅ Quality over quantity - better to review fewer listings well</p>
+<hr />
+<h4 id="time-off-management">7.7.3 Time Off Management</h4>
+<p><strong>What You’ll See:</strong> - <strong>Time Off</strong> section listing your scheduled time-off periods - Each entry shows: - Date range (e.g., “Dec 24 → Dec 31”) - Reason (optional, e.g., “Holiday vacation”) - Duration (e.g., “7 days”) - Delete button (trash icon) - Empty state: “No time off scheduled.”</p>
+<p><strong>How to Add Time Off:</strong> 1. Tap “Add” button (+ icon) in Time Off section 2. Sheet appears with form: - <strong>Start Date:</strong> Pick first day of time off - <strong>End Date:</strong> Pick last day of time off - <strong>Reason (optional):</strong> Enter reason (e.g., “Vacation”, “Conference”) 3. Tap “Save” 4. Time-off period added to list 5. Duration automatically calculated</p>
+<p><strong>How to Delete Time Off:</strong> 1. Tap trash icon on any time-off entry 2. Confirmation alert: “Delete this time-off period?” 3. Tap “Delete” 4. Time-off period removed</p>
+<p><strong>What Happens During Time Off:</strong> - Currently: Visual reminder on your schedule - Future: Smart assignment will avoid assigning you listings during time-off - No impact on existing assigned listings (you should complete before time-off)</p>
+<p><strong>Time Off Examples:</strong> - <strong>Vacation:</strong> Dec 20 - Dec 27 (7 days) - <strong>Conference:</strong> Mar 15 - Mar 17 (3 days) - <strong>Personal:</strong> Nov 5 (1 day) - <strong>Sick leave:</strong> Oct 12 - Oct 14 (3 days)</p>
+<p><strong>Best Practices:</strong> - ✅ Add time-off well in advance (at least 1 week notice) - ✅ Complete pending reviews before time-off starts - ✅ Include reason for your own reference - ✅ Update if plans change (delete and re-add)</p>
+<hr />
+<h4 id="calendar-view-visual-schedule-new">7.7.4 Calendar View (Visual Schedule) ✨ NEW</h4>
+<p><strong>What You’ll See:</strong> - <strong>Monthly calendar</strong> showing your availability at a glance - Each day color-coded: - <strong>Green:</strong> Working day with capacity available - <strong>Orange:</strong> Working day near/at capacity - <strong>Gray:</strong> Time-off or no working hours set - <strong>Blue highlight:</strong> Today - Small indicator showing reviews completed that day - Navigation: Previous/Next month buttons</p>
+<p><strong>How to Use Calendar:</strong> 1. Tap “Calendar View” button at top of Availability screen 2. Monthly calendar displays 3. Tap any day to see details: - Working hours for that day - Reviews completed - Capacity remaining - Time-off reason (if applicable) 4. Swipe left/right to change months 5. Tap “Close” to return to list view</p>
+<p><strong>Color Meanings:</strong> - <strong>Green:</strong> Available and under capacity - <strong>Orange/Red:</strong> At or near capacity - <strong>Gray:</strong> Time-off or not working - <strong>Blue border:</strong> Today - <strong>Dots:</strong> Reviews completed that day (1 dot = 1-2 reviews, 2 dots = 3-5, 3 dots = 6+)</p>
+<p><strong>What Calendar Shows:</strong> - Visual overview of your availability - Time-off periods at a glance - Busy vs light days - Upcoming commitments</p>
+<hr />
+<h4 id="availability-check-for-future-smart-assignment">7.7.5 Availability Check (For Future Smart Assignment)</h4>
+<p><strong>How System Uses Your Availability (Future Feature):</strong></p>
+<p>When new listing submitted, system checks: 1. <strong>Does curator have working hours today?</strong> - Check weekly schedule - If Monday and curator works Mon 9am-5pm → Yes</p>
+<ol start="2" type="1">
+<li><strong>Is curator on time-off?</strong>
+<ul>
+<li>Check time-off table</li>
+<li>If today is between start_date and end_date → No assignments</li>
+</ul></li>
+<li><strong>Is curator at capacity?</strong>
+<ul>
+<li>Check daily/weekly review counts</li>
+<li>If 5/5 daily or 25/25 weekly → At capacity</li>
+</ul></li>
+</ol>
+<p><strong>Result:</strong> - <code>isAvailable = true</code> → Curator can receive assignments - <code>isAvailable = false</code> → Skip this curator, check next</p>
+<p><strong>Future: Smart Assignment Algorithm:</strong> - Only assign to available curators - Distribute workload fairly - Match specialization (property type, location) - Respect capacity limits - Honor time-off periods</p>
+<p><strong>Currently:</strong> - Availability system exists and works - You can set schedule, capacity, time-off - Smart assignment not yet implemented - Manual assignment still used</p>
+<hr />
+<h3 id="service-level-agreements-sla---cn-release-1.0">7.8 Service Level Agreements (SLA) - CN Release 1.0</h3>
+<blockquote>
+<p>⚠️ <strong>IMPORTANT:</strong> Curators are expected to meet these SLA commitments. Consistent SLA violations may trigger escalation to Admin.</p>
+</blockquote>
+<p><strong>Purpose:</strong> Ensure timely, consistent service for hosts and maintain platform quality standards.</p>
+<hr />
+<h4 id="review-sla-targets">7.8.1 Review SLA Targets</h4>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 28%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Review Type</th>
+<th>Target Time</th>
+<th>Maximum Time</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>New Listing Approval</strong></td>
+<td>24 hours</td>
+<td>48 hours</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td><strong>Critical Edit Review</strong></td>
+<td>24 hours</td>
+<td>48 hours</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td><strong>Re-submission Review</strong></td>
+<td>24 hours</td>
+<td>48 hours</td>
+<td>High (prioritize over new)</td>
+</tr>
+<tr>
+<td><strong>Safety/Abuse Reports</strong></td>
+<td>4 hours</td>
+<td>8 hours</td>
+<td>🚨 Urgent</td>
+</tr>
+<tr>
+<td><strong>Dispute Resolution</strong></td>
+<td>24 hours</td>
+<td>48 hours</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Time Definitions:</strong> - <strong>Target Time:</strong> Goal to complete review from when task enters your queue - <strong>Maximum Time:</strong> Deadline before escalation to Admin - <strong>Clock starts:</strong> When listing/edit enters “Pending Review” status</p>
+<hr />
+<h4 id="sla-breakdown">7.8.2 SLA Breakdown</h4>
+<p><strong>New Listing Approvals (24h target / 48h max)</strong> - Review within 24 hours of submission - If exceeds 48 hours → Admin notified for escalation - Hosts expect quick turnaround to start earning</p>
+<p><strong>Critical Edit Reviews (24h target / 48h max)</strong> - Active listings with pending edits need quick approval - Guests may be booking based on old data - Approve or reject within 24 hours</p>
+<p><strong>Re-submission Reviews (24h target / 48h max)</strong> - Host already invested time making requested changes - Prioritize over new submissions - Fast turnaround encourages host engagement</p>
+<p><strong>Safety/Abuse Reports (4h target / 8h max)</strong> - 🚨 <strong>URGENT:</strong> These protect guests and platform integrity - Examples: Fraudulent listing, safety hazard discovered, abuse reported - Drop everything to address safety issues - Escalate immediately if unsure</p>
+<p><strong>Dispute Resolution (24h target / 48h max)</strong> - Host appeals rejection or requests reconsideration - Review appeal with fresh perspective - Respond with clear reasoning</p>
+<hr />
+<h4 id="sla-monitoring">7.8.3 SLA Monitoring</h4>
+<p><strong>How SLA is Tracked:</strong> - System timestamps when review task enters queue - Dashboard shows “Time in Queue” for each pending item - Color coding: - <strong>Green:</strong> Within target (&lt; 24h for standard) - <strong>Yellow:</strong> Approaching target (18-24h) - <strong>Orange:</strong> Past target, approaching max (24-48h) - <strong>Red:</strong> SLA breached (&gt; max time)</p>
+<p><strong>Your SLA Dashboard (Profile → Performance):</strong> - Current SLA compliance rate (target: 95%+) - Average review time (target: &lt; 12 hours) - SLA breaches this month (target: 0) - Comparison to peer average</p>
+<hr />
+<h4 id="escalation-process">7.8.4 Escalation Process</h4>
+<p><strong>What Happens When SLA is Breached:</strong></p>
+<ol type="1">
+<li><strong>At 48 hours (Standard reviews):</strong>
+<ul>
+<li>Admin receives automatic notification</li>
+<li>Task flagged as “SLA Breach” in system</li>
+<li>Admin may reassign or assist</li>
+</ul></li>
+<li><strong>At 8 hours (Safety/Abuse):</strong>
+<ul>
+<li>Admin receives urgent notification</li>
+<li>Task escalated to Admin queue</li>
+<li>Admin takes over or assists immediately</li>
+</ul></li>
+</ol>
+<p><strong>Escalation Actions:</strong> - Admin may message you to understand situation - Task may be reassigned to available curator - Pattern of breaches → Performance review discussion</p>
+<hr />
+<h4 id="sla-best-practices">7.8.5 SLA Best Practices</h4>
+<p><strong>Meeting Your SLAs:</strong> - ✅ Check queue at start of each work session - ✅ Process oldest items first (FIFO approach) - ✅ Use templates to speed up feedback - ✅ Set realistic capacity limits - ✅ Mark time-off to avoid assignments - ✅ Prioritize safety reports immediately - ✅ Communicate if overwhelmed (message Admin)</p>
+<p><strong>When You Can’t Meet SLA:</strong> - ✅ Set yourself unavailable if overloaded - ✅ Notify Admin before SLA breach if possible - ✅ Request help or reassignment - ❌ Don’t let tasks sit unattended - ❌ Don’t rush and sacrifice quality</p>
+<p><strong>Quality vs Speed:</strong> - SLA measures timeliness, not quality - Never sacrifice review quality for speed - A thorough review at 23 hours &gt; rushed review at 1 hour - Host feedback score matters equally to SLA compliance</p>
+<hr />
+<h3 id="messages-curator-host-communication">7.9 Messages (Curator-Host Communication)</h3>
+<p><strong>Location:</strong> Main tab → “Messages” (message icon)</p>
+<p><strong>Purpose:</strong> Communicate with hosts during review process for clarifications, additional information, or guidance.</p>
+<h4 id="access-messages">7.9.1 Access Messages</h4>
+<p><strong>What You’ll See:</strong> - List of all conversations with hosts - Host profile photo - Host name - Listing name (if applicable) - Last message preview - Timestamp (“2 hours ago”, “Yesterday”) - Unread count (red badge on Messages tab) - “Pending Review” badge if listing awaits your decision - “Re-submitted” badge if host updated listing</p>
+<p><strong>How to Access:</strong> 1. Tap “Messages” tab in bottom navigation 2. See list of conversations, sorted by most recent 3. Unread badge appears on tab if new messages 4. Tap conversation to open chat</p>
+<p><strong>Message Features:</strong> - Real-time delivery - Read receipts (seen by host) - Typing indicators (“Host is typing…”) - Photo attachments - Message threading (organized by conversation) - Search messages (search bar at top)</p>
+<h4 id="message-hosts">7.9.2 Message Hosts</h4>
+<p><strong>When to Message:</strong> - <strong>Request additional photos/information</strong> - Missing key photos - <strong>Clarify listing details</strong> - Unclear amenities or description - <strong>Explain rejection reasons in detail</strong> - Provide more context - <strong>Congratulate on approval</strong> - Celebrate host success - <strong>Provide guidance for improvements</strong> - Help beyond templates - <strong>Ask questions before deciding</strong> - Verify uncertain details</p>
+<p><strong>How to Message:</strong> 1. <strong>From Messages tab:</strong> - Tap conversation with host - Message compose screen appears 2. <strong>From listing review page:</strong> - Tap “Message Host” button - Opens conversation for that listing 3. Type your message in text field 4. Optional: Attach photos using camera button - Take new photo - Select from library - Attach reference examples 5. Tap “Send” button (paper airplane icon) 6. Message delivered to host immediately 7. Host receives push notification</p>
+<p><strong>Message Best Practices:</strong> - ✅ Respond within 8 hours (initial message) - ✅ Be professional and constructive - ✅ Provide specific, actionable feedback - ✅ Use templates for efficiency - ✅ Attach examples when helpful - ✅ Keep conversation focused on listing - ✅ Thank hosts for improvements - ❌ Don’t use informal language - ❌ Don’t make personal comments - ❌ Don’t share personal contact info - ❌ Don’t promise approval before reviewing</p>
+<h4 id="enhanced-message-templates-new">7.9.3 Enhanced Message Templates ✨ NEW</h4>
+<p><strong>Location:</strong> Message thread → “…” menu → “Use Message Template”</p>
+<p><strong>What’s New:</strong> - 10 professional, database-driven templates organized by category - Template picker with category filtering (All, Approval, Edits, Rejection, General) - Automatic placeholder replacement (host name, listing title, location) - Message appears in conversation thread (not separate sheet) - <strong>Listing status updates automatically when template message sent</strong> 🔄</p>
+<hr />
+<p><strong>How to Use Templates:</strong></p>
+<p><strong>1. From Listing Review Page:</strong> - Click “Request Edits” / “Approve” / “Reject” button - Message thread opens automatically - Template picker shows relevant category (e.g., “Edits”)</p>
+<p><strong>2. From Template Picker:</strong> - Tap “…” menu in message thread header - Select “Use Message Template” - See templates organized by category - Filter by category using chips at top (All, Approval, Edits, Rejection, General) - Tap template card to select</p>
+<p><strong>3. Customize and Send:</strong> - Template text appears in message field - Placeholders auto-replaced: - <code>{{host_name}}</code> → “Jennifer” - <code>{{listing_title}}</code> → “Cozy Beach Apartment” - <code>{{city}}</code> → “San Diego” - <code>{{state}}</code> → “CA” - Edit message if needed (optional) - Tap Send button - <strong>Listing status updates automatically</strong> (for Edits/Approve templates)</p>
+<hr />
+<p><strong>Available Template Categories:</strong></p>
+<p><strong>📋 Approval (1 template):</strong></p>
+<p><strong>1. “Listing Approved”</strong></p>
+<pre><code>Hi {{host_name}},
+
+Great news! Your listing &quot;{{listing_title}}&quot; has been approved and is now live on Peapod.
+
+Next steps:
+- Keep your calendar updated
+- Respond to guest inquiries within 24 hours
+- Maintain high ratings for better visibility
+
+Welcome to the Peapod community!
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> Listing status → “approved” ✅</li>
+<li><strong>Use When:</strong> Listing meets all standards, ready to go live</li>
+</ul>
+<hr />
+<p><strong>❌ Rejection (2 templates):</strong></p>
+<p><strong>2. “Photos Need Improvement”</strong></p>
+<pre><code>Hi {{host_name}},
+
+Thank you for submitting &quot;{{listing_title}}&quot;. We cannot approve your listing at this time due to photo quality issues.
+
+What needs improvement:
+- Photos are too dark or blurry
+- Key rooms (bedroom, bathroom) not shown clearly
+- Need professional quality photos
+
+Please retake photos with:
+- Good natural lighting
+- Wide-angle shots of each room
+- Clean and staged spaces
+
+Resubmit when ready!
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> Message sent (manual rejection still required via Reject button)</li>
+<li><strong>Use When:</strong> Photo quality is below standards</li>
+</ul>
+<p><strong>3. “Incomplete Information”</strong></p>
+<pre><code>Hi {{host_name}},
+
+We reviewed &quot;{{listing_title}}&quot; but cannot approve it due to missing critical information.
+
+Required information missing:
+- Complete property description
+- House rules
+- Check-in/check-out instructions
+- Amenities list
+
+Please update your listing with all required information and resubmit.
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> Message sent (manual rejection still required via Reject button)</li>
+<li><strong>Use When:</strong> Listing missing required fields</li>
+</ul>
+<hr />
+<p><strong>✏️ Edit Requests (4 templates):</strong></p>
+<p><strong>4. “Please Update Photos”</strong></p>
+<pre><code>Hi {{host_name}},
+
+Your listing &quot;{{listing_title}}&quot; looks promising, but we need better photos before approval.
+
+Specific requests:
+- Add photos of the bathroom
+- Retake bedroom photos with better lighting
+- Include at least one photo of the building exterior
+
+Once updated, we will review again within 24 hours.
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> Listing status → “edits_requested” ✏️</li>
+<li><strong>Use When:</strong> Specific photo improvements needed</li>
+</ul>
+<p><strong>5. “Description Needs More Detail”</strong></p>
+<pre><code>Hi {{host_name}},
+
+We need more information in your listing description for &quot;{{listing_title}}&quot;.
+
+Please add:
+- Detailed walkthrough of the space
+- What makes your property unique
+- Nearby attractions and transportation
+- Special check-in instructions
+
+A detailed description helps guests make informed decisions!
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> Listing status → “edits_requested” ✏️</li>
+<li><strong>Use When:</strong> Description too brief or missing key details</li>
+</ul>
+<p><strong>6. “Missing Information”</strong></p>
+<pre><code>Hi {{host_name}},
+
+Your listing is almost ready! Please add the following information:
+
+{{missing_items}}
+
+Once you have updated this information, please resubmit for review.
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> Listing status → “edits_requested” ✏️</li>
+<li><strong>Use When:</strong> Multiple pieces of info missing (customize <code>{{missing_items}}</code>)</li>
+</ul>
+<p><strong>7. “Legal Documents”</strong></p>
+<pre><code>Hi {{host_name}},
+
+Please upload your property license or ID verification under the Legal section.
+
+This helps us ensure all listings comply with local regulations and keeps our community safe.
+
+If you have questions about required documents, please let us know!
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> Listing status → “edits_requested” ✏️</li>
+<li><strong>Use When:</strong> Legal documentation missing</li>
+</ul>
+<hr />
+<p><strong>💬 General (3 templates):</strong></p>
+<p><strong>8. “Thank You”</strong></p>
+<pre><code>Hi {{host_name}},
+
+Thank you for your submission! We are reviewing &quot;{{listing_title}}&quot; and will get back to you within 48 hours.
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> None</li>
+<li><strong>Use When:</strong> Acknowledging initial submission</li>
+</ul>
+<p><strong>9. “Follow-up on Requested Changes”</strong></p>
+<pre><code>Hi {{host_name}},
+
+Just checking in on the changes we requested for &quot;{{listing_title}}&quot;.
+
+Have you had a chance to make the updates? If you need help or have questions, please reply to this message.
+
+We are here to help you get approved!
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> None</li>
+<li><strong>Use When:</strong> Following up on pending edits</li>
+</ul>
+<p><strong>10. “Quick Response”</strong></p>
+<pre><code>Hi {{host_name}},
+
+Thanks for reaching out! I will get back to you shortly with more details about &quot;{{listing_title}}&quot;.
+
+Best regards,
+Peapod Curator Team</code></pre>
+<ul>
+<li><strong>Auto Action:</strong> None</li>
+<li><strong>Use When:</strong> Acknowledging host message, need time to research</li>
+</ul>
+<hr />
+<p><strong>Template Features:</strong> - ✅ <strong>Usage tracking</strong> - Shows “Used X times” on template cards - ✅ <strong>Template preview</strong> - See first 3 lines before selecting - ✅ <strong>Category icons and colors</strong> - Visual organization - ✅ <strong>Searchable</strong> - Filter by title or category - ✅ <strong>Professional tone</strong> - Consistent, polite messaging - ✅ <strong>Automatic status updates</strong> - Saves manual work - ✅ <strong>Placeholder replacement</strong> - Personalized messages</p>
+<p><strong>Tips for Using Templates:</strong> - ✅ <strong>Customize when needed</strong> - Templates are starting points, edit to add specifics - ✅ <strong>Check placeholders</strong> - Verify host name and listing title are correct - ✅ <strong>Combine templates</strong> - Use multiple templates in one conversation - ✅ <strong>Add examples</strong> - Attach reference photos when requesting improvements - ✅ <strong>Be specific</strong> - Replace <code>{{missing_items}}</code> with actual list of what’s missing</p>
+<h4 id="message-notifications">7.9.4 Message Notifications</h4>
+<p><strong>When You Receive Messages:</strong> - Red badge appears on Messages tab (number of unread) - Push notification displays: “New message from [Host Name]” - Desktop notification (if logged in on web) - Email notification (if enabled in settings)</p>
+<p><strong>How It Works:</strong> 1. Host sends message 2. Red badge appears on Messages tab with count 3. Push notification: “New message from John about Coronado Beach House” 4. Tap notification to open conversation directly 5. Read message 6. Type response 7. Badge clears after reading</p>
+<p><strong>Notification Settings:</strong> Configure in Profile → Settings → Notifications: - Push notifications (on/off) - Email notifications (on/off) - Sound/vibration (on/off) - Notification preview (show/hide message content)</p>
+<h4 id="message-guidelines-response-times">7.9.5 Message Guidelines &amp; Response Times</h4>
+<p><strong>Response Time Goals:</strong> - <strong>Initial message from host:</strong> Within 8 hours - <strong>Follow-up questions:</strong> Within 24 hours - <strong>Urgent issues (safety, fraud):</strong> Within 2 hours - <strong>Re-submission notifications:</strong> Within 24 hours</p>
+<p><strong>Communication Best Practices:</strong> - ✅ Respond promptly (within time goals) - ✅ Be professional and courteous - ✅ Provide specific, actionable feedback - ✅ Use templates for common scenarios - ✅ Attach examples when helpful - ✅ Acknowledge improvements made - ✅ Thank hosts for their time - ✅ Keep messages focused on listing quality - ❌ Don’t use informal slang - ❌ Don’t make personal comments unrelated to listing - ❌ Don’t share personal contact info (phone, email) - ❌ Don’t promise approval without completing review - ❌ Don’t argue with hosts - escalate to admin if needed</p>
+<p><strong>Escalation:</strong> If a host becomes hostile or unresponsive: 1. Remain professional 2. Document the interaction 3. Contact platform admin via support 4. Admin will intervene and reassign if needed</p>
+<hr />
+<h3 id="notifications-alerts">7.10 Notifications &amp; Alerts</h3>
+<p><strong>Smart Notifications Include:</strong> - 🆕 <strong>New listing assigned</strong> - “New listing ready for review: [Property Name]” - 📨 <strong>Host responded to feedback</strong> - “[Host] replied to your feedback” - 🔄 <strong>Listing resubmitted</strong> - “[Host] updated listing per your feedback” - ⭐ <strong>Host rated your feedback</strong> - “You received a 5-star feedback rating!” - ⏰ <strong>Weekly performance summary</strong> - “This week: 12 reviews, 92% approval rate” - 🚨 <strong>Capacity alert</strong> - “You’re at 15/15 reviews this week” - 📅 <strong>Time off reminder</strong> - “You’re on leave starting tomorrow”</p>
+<p><strong>Notification Channels:</strong> - <strong>Push notifications</strong> - In-app, immediate - <strong>Email notifications</strong> - Digest or immediate - <strong>In-app badge</strong> - Red dot on relevant tabs</p>
+<p><strong>Customizable Settings:</strong> Access via <strong>Profile → Settings → Notifications</strong></p>
+<p><strong>Available Toggles:</strong> - New listing assigned (push/email) - Host message received (push/email) - Listing resubmitted (push/email) - Host feedback rating (push/email) - Weekly performance summary (email only) - Daily digest (email only) - Capacity alerts (push only)</p>
+<p><strong>Best Practice:</strong> Enable push for urgent items (new assignments, messages) and email for summaries (weekly reports).</p>
+<hr />
+<h3 id="profile-settings">7.11 Profile &amp; Settings</h3>
+<p>For common profile and account features, see the <strong><a href="USER_MANUAL_TOP.md#3-common-features">Common Features</a></strong> section in the main index:</p>
+<ul>
+<li><strong><a href="USER_MANUAL_TOP.md#31-profile-and-settings">Profile Management</a></strong> - View and edit your profile</li>
+<li><strong><a href="USER_MANUAL_TOP.md#32-messaging-system">Messaging System</a></strong> - How to send and receive messages</li>
+<li><strong><a href="USER_MANUAL_TOP.md#312-notification-settings">Notification Settings</a></strong> - Configure alerts and notifications</li>
+<li><strong><a href="USER_MANUAL_TOP.md#313-account-settings">Account Settings</a></strong> - Email, password, 2FA, security</li>
+<li><strong><a href="USER_MANUAL_TOP.md#314-region--language">Region &amp; Language</a></strong> - Language, currency, time zone</li>
+<li><strong><a href="USER_MANUAL_TOP.md#315-privacy-settings">Privacy Settings</a></strong> - Visibility, data download, account deletion</li>
+<li><strong><a href="USER_MANUAL_TOP.md#316-help--support">Help &amp; Support</a></strong> - Get help, contact support, report problems</li>
+<li><strong><a href="USER_MANUAL_TOP.md#24-sign-out">Sign Out</a></strong> - How to sign out</li>
+</ul>
+<p><strong>Curator-Specific Profile Features:</strong></p>
+<p><strong>Curator Stats Dashboard:</strong> - <strong>Total reviews completed</strong> - Lifetime count - <strong>Approval rate</strong> - Percentage of listings approved - <strong>Average review time</strong> - Typical duration per review - <strong>Host feedback score</strong> - Average rating from hosts (1-5⭐) - <strong>Reviews this month</strong> - Current month activity - <strong>Years as curator</strong> - Tenure on platform</p>
+<p><strong>Profile Tabs:</strong></p>
+<p><strong>About Tab:</strong> - Bio/description (introduce yourself to hosts) - Languages spoken (helps with assignment) - Areas of expertise (property types you specialize in) - Example: “Luxury homes, beach properties, urban apartments” - Review philosophy (your approach to quality)</p>
+<p><strong>Activity Tab:</strong> - Recent reviews completed - Approval/rejection history - Host feedback received - Performance trends over time</p>
+<p><strong>Notification Preferences:</strong></p>
+<p>Curators can configure specific alerts for: - New listing assigned (push/email) - Host responded to feedback (push/email) - Listing resubmitted (push/email) - Host feedback rating received (push/email) - Weekly performance summary (email only) - Daily review digest (email only) - Capacity alerts (push only)</p>
+<p>Access via Profile → Settings → Notifications</p>
+<hr />
+<h3 id="future-features-roadmap">7.12 Future Features Roadmap</h3>
+<p>Upcoming enhancements to the curator experience:</p>
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 21%" />
+<col style="width: 31%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Timeline</th>
+<th>Feature</th>
+<th>Description</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Q2 2026</strong></td>
+<td>AI Listing Pre-Screen</td>
+<td>Automated scan detects missing details, poor photos, or unsafe content before curator sees listing</td>
+<td>Faster reviews, curators focus on edge cases</td>
+</tr>
+<tr>
+<td><strong>Q3 2026</strong></td>
+<td>Host Feedback Analytics</td>
+<td>Aggregate host feedback data to identify top-performing curators and training needs</td>
+<td>Improve feedback quality, recognize excellence</td>
+</tr>
+<tr>
+<td><strong>Q4 2026</strong></td>
+<td>Peer Review Mode</td>
+<td>Curators can view anonymized reviews of each other’s decisions for learning and calibration</td>
+<td>Consistent standards, shared best practices</td>
+</tr>
+<tr>
+<td><strong>Q1 2027</strong></td>
+<td>AI Feedback Suggestion</td>
+<td>Auto-generate written feedback suggestions based on checklist flags and common issues</td>
+<td>Faster feedback, improved clarity</td>
+</tr>
+<tr>
+<td><strong>Q2 2027</strong></td>
+<td>Video Tour Support</td>
+<td>Review video walkthroughs submitted by hosts in addition to photos</td>
+<td>Better property understanding, richer reviews</td>
+</tr>
+<tr>
+<td><strong>Q3 2027</strong></td>
+<td>Regional Specialization</td>
+<td>Curator profiles include region expertise, assignments prioritize local knowledge</td>
+<td>Better local context, cultural understanding</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Stay Updated:</strong> Check Profile → What’s New for feature announcements and training materials.</p>
+<hr />
+<p>← <a href="USER_MANUAL_TOP.html">Back to Index</a> | <a href="USER_MANUAL_CLEANER.html">← Cleaner Guide</a> | <a href="USER_MANUAL_ADMIN.html">Admin Guide →</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peapod Hotels. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../../terms.html">Terms</a>
+                <a href="../../privacy.html">Privacy</a>
+                <a href="../../sms-terms.html">SMS Terms</a>
+                <a href="../../manual/en/index.html">APP Manual</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

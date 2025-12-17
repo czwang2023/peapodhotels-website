@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peapod User Manual - Guest Guide Appendix - Peapod Hotels</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manual.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍐 Peapod Hotels</div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../terms.html">Terms</a></li>
+                <li><a href="../../privacy.html">Privacy</a></li>
+                <li><a href="../../sms-terms.html">SMS Terms</a></li>
+                <li><a href="../../manual/en/index.html" class="active">APP Manual</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <a href="../cn/index.html" title="Switch language">
+                    <span class="lang-icon">🌐</span>
+                    <span>中文</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="manual-content">
+<h1 id="peapod-user-manual---guest-guide-appendix">Peapod User Manual - Guest Guide Appendix</h1>
+<p><strong>Version:</strong> 0.18.8 (Slice V - Multi-Unit Support) <strong>Last Updated:</strong> November 30, 2025 <strong>Platform:</strong> iOS (iPhone, iPad)</p>
+<p>← <a href="USER_MANUAL_GUEST.html">Back to Guest Guide</a> | <a href="USER_MANUAL_TOP.html">Back to Index</a></p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#appendix-a-commute-filter-technical-details">Appendix A: Commute Filter Technical Details</a></li>
+<li><a href="#appendix-b-map-view-technical-details">Appendix B: Map View Technical Details</a></li>
+<li><a href="#appendix-c-experience-bundles-future-feature">Appendix C: Experience Bundles (Future Feature)</a></li>
+<li><a href="#appendix-d-cancellation--refund-policy-cn-release-10">Appendix D: Cancellation &amp; Refund Policy</a></li>
+</ul>
+<hr />
+<h2 id="appendix-a-commute-filter-technical-details">Appendix A: Commute Filter Technical Details</h2>
+<h3 id="geocoding-details">Geocoding Details</h3>
+<p>The filter accepts various address formats: - Full address: “123 Main St, San Francisco, CA 94102” - Partial address: “Golden Gate Park, SF” - Landmarks: “Moscone Center” - Business names: “Apple Park”</p>
+<p><strong>Geocoding Support:</strong> - Uses Apple’s MapKit geocoding service - Converts address text to GPS coordinates (latitude/longitude) - Green checkmark appears when location is successfully verified - Red error message shows if address can’t be found</p>
+<p><strong>Troubleshooting Geocoding:</strong> - <strong>“Unable to geocode address”</strong>: Try a more specific address or use a landmark name - <strong>“Location verified” not showing</strong>: Tap “Set” button after entering address - <strong>Wrong location</strong>: Re-enter address with more detail (add city, state)</p>
+<h3 id="filtering-algorithm">Filtering Algorithm</h3>
+<p><strong>How Travel Time is Calculated:</strong> 1. User enters destination address 2. System geocodes destination to GPS coordinates 3. For each listing in database: - Calculate travel time from listing to destination - Use selected transport mode (Drive/Transit/Bicycle/Walk) - Compare against maximum time threshold 4. Only show listings within time limit</p>
+<p><strong>Transport Mode Details:</strong> - <strong>Drive</strong>: Uses car routing with real-time traffic data - <strong>Transit</strong>: Uses public transportation routes (bus, subway, train schedules) - <strong>Bicycle</strong>: Uses bike-friendly routes and paths - <strong>Walk</strong>: Uses pedestrian walkways</p>
+<p><strong>Per-Mode Persistence:</strong> Each transport mode remembers its own time setting: - Drive: 20 minutes - Transit: 40 minutes - Bicycle: 30 minutes - Walk: 15 minutes</p>
+<p>When you switch modes, the last-used time for that mode is restored.</p>
+<h3 id="performance">Performance</h3>
+<p><strong>Session Memory:</strong> Your destination and time settings are saved when you close the app using UserDefaults:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode swift"><code class="sourceCode swift"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>UserDefaults<span class="op">.</span>standard<span class="op">.</span><span class="kw">set</span><span class="op">(</span>destination<span class="op">,</span> forKey<span class="op">:</span> <span class="st">&quot;commute_destination&quot;</span><span class="op">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>UserDefaults<span class="op">.</span>standard<span class="op">.</span><span class="kw">set</span><span class="op">(</span>drivingTime<span class="op">,</span> forKey<span class="op">:</span> <span class="st">&quot;commute_time_drive&quot;</span><span class="op">)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>UserDefaults<span class="op">.</span>standard<span class="op">.</span><span class="kw">set</span><span class="op">(</span>transitTime<span class="op">,</span> forKey<span class="op">:</span> <span class="st">&quot;commute_time_transit&quot;</span><span class="op">)</span></span></code></pre></div>
+<p><strong>Example User Flow:</strong></p>
+<pre><code>Day 1: Set &quot;123 Market St, SF&quot; as destination
+       Configure Drive: 20 min, Transit: 40 min
+       Find and book a property
+
+Day 2: Reopen app - settings automatically restored!
+       Same destination, same time limits
+       Continue searching without re-entering</code></pre>
+<h3 id="limitations">Limitations</h3>
+<p><strong>Known Limitations:</strong> - Travel times are estimates and may vary with traffic conditions - Transit times assume service is running (check schedules) - Bicycle times assume moderate fitness level - Walking times assume average walking speed (3-4 mph) - Remote areas may have limited transit/bicycle routing data</p>
+<p><strong>Best Practices:</strong> - Set realistic times per mode (20 min drive ≠ 20 min walk!) - Use landmarks for easier entry (“Salesforce Tower” vs full address) - Compare Drive vs Transit modes (transit often faster in cities) - Increase max time if no results found - Combine with price filters for affordable &amp; convenient options</p>
+<hr />
+<h2 id="appendix-b-map-view-technical-details">Appendix B: Map View Technical Details</h2>
+<h3 id="search-circle-architecture">Search Circle Architecture</h3>
+<p><strong>Visual Feedback:</strong> - <strong>Pink Circle Overlay</strong>: Shows your active search radius - <strong>Circle Center</strong>: Your search location (pin icon) - <strong>Dynamic Sizing</strong>: Circle grows/shrinks as you adjust radius - <strong>Auto-Zoom</strong>: Map zooms to fit entire circle when radius changes</p>
+<p><strong>Radius Control:</strong> - <strong>Range</strong>: 5-50 miles (8-80 km) - <strong>Default</strong>: 25 miles (40 km) - <strong>Adjustable</strong>: Via inline slider - <strong>Persistent</strong>: Saved in UserDefaults (survives app restart)</p>
+<p><strong>Understanding the Search Circle:</strong> - Pink circle overlay shows your active search radius - Default radius: 25 miles - Circle center marks your search location - Only listings inside the circle are displayed - Map automatically zooms to fit the entire circle</p>
+<h3 id="inline-radius-control">Inline Radius Control</h3>
+<p><strong>What Changed (v0.14.7):</strong> - <strong>Before</strong>: Radius control buried in Filter sheet (4 taps to adjust) - <strong>After</strong>: Inline slider directly on map (instant adjustment)</p>
+<p><strong>Slider Interface:</strong> - <strong>Location</strong>: Bottom of map view (above listing cards) - <strong>Design</strong>: Horizontal slider with value labels - <strong>Range</strong>: 5 mi ←●─────→ 50 mi - <strong>Value Display</strong>: “25 mi” updates in real-time - <strong>Interaction</strong>: Drag slider, circle updates immediately - <strong>Persistence</strong>: Preference saved to UserDefaults</p>
+<p><strong>How to Adjust Radius:</strong> 1. Open Map view 2. Find the inline slider at the bottom showing current radius (e.g., “25 mi”) 3. Drag slider left to decrease radius: - Circle shrinks in real-time - Listings outside new radius disappear - Result count updates 4. Drag slider right to increase radius: - Circle expands - More listings appear - Result count increases 5. Release slider - map updates with new results</p>
+<p><strong>Session Persistence:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode swift"><code class="sourceCode swift"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Saved to UserDefaults</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>UserDefaults<span class="op">.</span>standard<span class="op">.</span><span class="kw">set</span><span class="op">(</span>radiusMiles<span class="op">,</span> forKey<span class="op">:</span> <span class="st">&quot;search_radius_preference&quot;</span><span class="op">)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Restored on app launch</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> <span class="va">savedRadius</span> <span class="op">=</span> UserDefaults<span class="op">.</span>standard<span class="op">.</span>double<span class="op">(</span>forKey<span class="op">:</span> <span class="st">&quot;search_radius_preference&quot;</span><span class="op">)</span></span></code></pre></div>
+<p><strong>Example User Flow:</strong></p>
+<pre><code>Day 1: User sets radius to 10 miles → Searches San Francisco → Quits app
+Day 2: User launches app → Radius automatically 10 miles (not 25 default!)
+Day 3: User increases to 35 miles → Searches Seattle → Closes app
+Day 4: User launches app → Radius still 35 miles ✅</code></pre>
+<h3 id="map-search-controls">Map Search Controls</h3>
+<p><strong>Top Navigation Bar:</strong></p>
+<pre><code>┌──────────────────────────────────────────────────────┐
+│ [Search 🔍] [AI Search ✨]         [Sort] [Filter]  │
+└──────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Search Button (Left Side):</strong> - <strong>Icon</strong>: Magnifying glass - <strong>Label</strong>: “Search” - <strong>Action</strong>: Opens SearchView sheet - <strong>Behavior</strong>: Search results update map immediately - <strong>Use Case</strong>: Enter specific city, address, or landmark</p>
+<p><strong>AI Search Button (Left of Sort):</strong> - <strong>Icon</strong>: Sparkles (✨) - <strong>Label</strong>: “AI Search” - <strong>Action</strong>: Opens AI natural language search - <strong>Behavior</strong>: AI interprets query → Updates map pins - <strong>Use Case</strong>: “Beachfront condos under $200 with pool”</p>
+<p><strong>Sort Button (Top Right):</strong> - <strong>Icon</strong>: Sparkles (default) or arrows (price sort) - <strong>Label</strong>: “Sort” - <strong>Color</strong>: Gray (default) → Pink (custom sort active) - <strong>Action</strong>: Opens SimpleSortSheet - <strong>Behavior</strong>: Re-orders map pins and list cards</p>
+<p><strong>Using Map Search:</strong> 1. Tap “Search” button (top left) on Map view 2. Enter your destination (e.g., “San Diego”) 3. Map pans to the location and loads nearby listings</p>
+<p><strong>Using Map AI Search:</strong> 1. Tap “AI Search” button (sparkles icon) on Map view 2. Describe what you’re looking for (e.g., “Dog-friendly cabins near Lake Tahoe under $150”) 3. AI interprets your query and updates the map with matching properties</p>
+<h3 id="distance-display-on-listing-cards">Distance Display on Listing Cards</h3>
+<p><strong>Distance Badge Design:</strong> - <strong>Location</strong>: Top-right corner of listing card - <strong>Format</strong>: “X.X mi” or “X.X km” - <strong>Background</strong>: White with shadow - <strong>Font</strong>: System, 12pt, semibold - <strong>Precision</strong>: 1 decimal place (e.g., “2.4 mi”, not “2.37 mi”)</p>
+<p><strong>When Distance Shows:</strong> - ✅ Map view (always visible) - ✅ List view (if Nearby Search used or “Nearest First” sort active) - ❌ List view with no location context (search by city name only)</p>
+<p><strong>Distance Calculation:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode swift"><code class="sourceCode swift"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Haversine formula for accurate geodesic distance</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">func</span> <span class="fu">distance</span><span class="op">(</span><span class="va">from</span><span class="op">:</span> <span class="dt">CLLocationCoordinate2D</span><span class="op">,</span> <span class="va">to</span><span class="op">:</span> <span class="dt">CLLocationCoordinate2D</span><span class="op">)</span> -&gt; <span class="fu">Double</span> <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="va">earthRadius</span> <span class="op">=</span> <span class="fl">3959.0</span> <span class="co">// miles (use 6371.0 for km)</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="va">dLat</span> <span class="op">=</span> <span class="op">(</span>to<span class="op">.</span>latitude <span class="op">-</span> from<span class="op">.</span>latitude<span class="op">)</span> <span class="op">*</span> <span class="op">.</span>pi <span class="op">/</span> <span class="fl">180.0</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="va">dLon</span> <span class="op">=</span> <span class="op">(</span>to<span class="op">.</span>longitude <span class="op">-</span> from<span class="op">.</span>longitude<span class="op">)</span> <span class="op">*</span> <span class="op">.</span>pi <span class="op">/</span> <span class="fl">180.0</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="va">a</span> <span class="op">=</span> sin<span class="op">(</span>dLat<span class="op">/</span><span class="dv">2</span><span class="op">)</span> <span class="op">*</span> sin<span class="op">(</span>dLat<span class="op">/</span><span class="dv">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>            cos<span class="op">(</span>from<span class="op">.</span>latitude <span class="op">*</span> <span class="op">.</span>pi <span class="op">/</span> <span class="fl">180.0</span><span class="op">)</span> <span class="op">*</span> cos<span class="op">(</span>to<span class="op">.</span>latitude <span class="op">*</span> <span class="op">.</span>pi <span class="op">/</span> <span class="fl">180.0</span><span class="op">)</span> <span class="op">*</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            sin<span class="op">(</span>dLon<span class="op">/</span><span class="dv">2</span><span class="op">)</span> <span class="op">*</span> sin<span class="op">(</span>dLon<span class="op">/</span><span class="dv">2</span><span class="op">)</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="va">c</span> <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> atan2<span class="op">(</span>sqrt<span class="op">(</span>a<span class="op">),</span> sqrt<span class="op">(</span><span class="dv">1</span><span class="op">-</span>a<span class="op">))</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> earthRadius <span class="op">*</span> c</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="map-style-toggle">Map Style Toggle</h3>
+<p><strong>Map Styles:</strong></p>
+<ol type="1">
+<li><strong>Standard</strong> (Default)
+<ul>
+<li>Clean street map</li>
+<li>Labels for streets, landmarks, neighborhoods</li>
+<li>Best for: General browsing, urban areas</li>
+<li>Colors: Light gray roads, green parks, blue water</li>
+</ul></li>
+<li><strong>Satellite</strong>
+<ul>
+<li>Aerial imagery</li>
+<li>No street labels (pure satellite view)</li>
+<li>Best for: Beachfront, scenic areas, understanding terrain</li>
+<li>Use Case: “Is this really on the beach?” “How close to mountains?”</li>
+</ul></li>
+<li><strong>Hybrid</strong>
+<ul>
+<li>Satellite imagery + street labels</li>
+<li>Best of both worlds</li>
+<li>Best for: Detailed location verification</li>
+<li>Use Case: “Which side of highway?” “Exact building location?”</li>
+</ul></li>
+</ol>
+<p><strong>How to Change Map Style:</strong> 1. Tap map style button (bottom-right corner) 2. Choose from Standard, Satellite, or Hybrid 3. Map transitions to your selected style 4. Your preference is automatically saved for future sessions</p>
+<p><strong>Saved Preference:</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode swift"><code class="sourceCode swift"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// UserDefaults key: &quot;map_style_preference&quot;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Values: &quot;standard&quot; | &quot;satellite&quot; | &quot;hybrid&quot;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>UserDefaults<span class="op">.</span>standard<span class="op">.</span><span class="kw">set</span><span class="op">(</span><span class="st">&quot;satellite&quot;</span><span class="op">,</span> forKey<span class="op">:</span> <span class="st">&quot;map_style_preference&quot;</span><span class="op">)</span></span></code></pre></div>
+<h3 id="postgis-backend-integration">PostGIS Backend Integration</h3>
+<p><strong>Backend Filtering Benefits:</strong> - PostgreSQL PostGIS extension performs circle filtering on server - 30-40% less data transferred (only listings in radius sent to client) - Accurate geodesic distance calculations (not approximations) - Faster performance with database spatial indexes (GIST)</p>
+<p><strong>Before v0.14.7 (Frontend Filtering):</strong></p>
+<pre><code>Client → &quot;Get all listings in San Diego&quot; → Server
+Server → Sends 10,000 listings → Client
+Client → Filters 10,000 down to 142 in 25-mile radius
+Result: 9,858 listings transferred but discarded (wasted bandwidth)</code></pre>
+<p><strong>After v0.14.7 (Backend Filtering):</strong></p>
+<pre><code>Client → &quot;Get listings within 25 miles of (32.7157°N, 117.1611°W)&quot; → Server
+Server → PostGIS ST_DWithin() query → Filters to 142 listings
+Server → Sends only 142 listings → Client
+Result: 30-40% less data, faster load times</code></pre>
+<p><strong>Database Query (PostGIS ST_DWithin):</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Migration 061: Added PostGIS extension</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> EXTENSION <span class="cf">IF</span> <span class="kw">NOT</span> <span class="kw">EXISTS</span> postgis;</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- Query listings within radius (meters)</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> listings</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> ST_DWithin(</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    geography(ST_MakePoint(longitude, latitude)),</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    geography(ST_MakePoint(<span class="op">-</span><span class="fl">117.1611</span>, <span class="fl">32.7157</span>)),</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="fl">40233.6</span>  <span class="co">-- 25 miles in meters</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">-- Performance: Uses GIST spatial index</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">INDEX</span> idx_listings_geog <span class="kw">ON</span> listings</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="kw">USING</span> GIST (geography(ST_MakePoint(longitude, latitude)));</span></code></pre></div>
+<p><strong>Performance Benefits:</strong> - ⚡ 30-40% faster map loads (less data over network) - ⚡ Accurate distances (geodesic, not Euclidean approximation) - ⚡ Scalable (handles millions of listings efficiently) - ⚡ Battery savings (less client-side processing)</p>
+<hr />
+<h2 id="appendix-c-experience-bundles-future-feature">Appendix C: Experience Bundles (Future Feature)</h2>
+<blockquote>
+<p><strong>⚠️ Note:</strong> Experience Bundles are <strong>NOT available in CN Release 1.0</strong>. This feature is planned for a future release.</p>
+</blockquote>
+<p><strong>What Are Experience Bundles?</strong></p>
+<p>Optional add-ons during booking that let you enhance your stay with curated local activities, services, and amenities. Think of them as pre-packaged experiences that complement your accommodation.</p>
+<p><strong>Current Status: Not Available</strong></p>
+<p>Experience Bundles are NOT available in CN Release 1.0 (China). This section describes the planned functionality for future releases.</p>
+<p><strong>How Experience Bundles Will Work:</strong></p>
+<p>During checkout, you’ll see optional bundles tailored to: - Your destination city/region - Trip duration and dates - Detected trip type (romantic, family, adventure, etc.) - Property amenities and location - Seasonal events and activities</p>
+<p><strong>Example Bundle Categories:</strong></p>
+<p><strong>🍷 Welcome &amp; Essentials:</strong> - Welcome basket (local snacks, wine, coffee) - Pre-stocked groceries (breakfast essentials, dinner ingredients) - Fresh flowers and candles - Local guidebook and maps</p>
+<p><strong>🎯 Adventure &amp; Activities:</strong> - Guided hiking tours - Kayak/paddleboard rentals - Wine tasting passes - Surf lessons - Rock climbing day passes - Bike rental packages</p>
+<p><strong>👨‍👩‍👧‍👦 Family Experiences:</strong> - Zoo/aquarium tickets - Theme park passes - Kids’ activity kits - Babysitting service (2-4 hours) - Family photo session</p>
+<p><strong>💑 Romantic Add-Ons:</strong> - Couples massage (in-unit or spa) - Champagne and chocolate - Rose petal setup - Private chef dinner - Sunset sailing</p>
+<p><strong>💼 Business &amp; Productivity:</strong> - Mobile hotspot rental (high-speed backup internet) - Printer/scanner rental - Meeting room access (coworking space) - Executive car service to meetings</p>
+<p><strong>🍕 Food &amp; Dining:</strong> - Restaurant reservations (hard-to-book spots) - Private chef dinner service - Wine/beer tasting tour - Cooking class - Meal delivery credits</p>
+<p><strong>How Bundles Will Be Presented:</strong></p>
+<ol type="1">
+<li><strong>During Booking Flow:</strong>
+<ul>
+<li>After selecting dates and guests</li>
+<li>Before payment confirmation</li>
+<li>Bundles displayed as optional add-ons</li>
+</ul></li>
+<li><strong>Smart Recommendations:</strong>
+<ul>
+<li>AI suggests 3-5 most relevant bundles</li>
+<li>Based on trip intent, season, and property location</li>
+<li>Examples: “Popular with families” or “Great for couples”</li>
+</ul></li>
+<li><strong>Bundle Details:</strong>
+<ul>
+<li>Clear pricing (one-time fee added to booking total)</li>
+<li>What’s included (itemized)</li>
+<li>When it’s delivered/activated (upon check-in, day 2, etc.)</li>
+<li>Cancellation policy (refundable up to 48 hours before check-in)</li>
+<li>Provider information (vetted local partners)</li>
+</ul></li>
+</ol>
+<p><strong>Example Booking Flow:</strong></p>
+<pre><code>Booking Summary:
+- 3 nights × $120/night = $360
+- Cleaning fee = $50
+- Service fee = $41
+───────────────────────
+Subtotal: $451
+
+Add Experience Bundles:
+┌─────────────────────────────────────┐
+│ 🍷 Welcome Wine &amp; Snacks Bundle     │
+│ Local wine, artisan cheese, crackers│
+│ Delivered upon check-in             │
+│ + $45                                │
+│ [Add to Booking]                    │
+└─────────────────────────────────────┘
+
+┌─────────────────────────────────────┐
+│ 🚴 Mountain Bike Rental (2 days)    │
+│ 2 bikes + helmets + trail map       │
+│ Pick up at property                 │
+│ + $80                                │
+│ [Add to Booking]                    │
+└─────────────────────────────────────┘
+
+[Skip and Continue to Payment]</code></pre>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>✅ <strong>Curated Quality</strong> - All providers pre-vetted by Peapod team</li>
+<li>✅ <strong>Seamless Integration</strong> - One payment, one confirmation</li>
+<li>✅ <strong>Host Coordination</strong> - Bundles coordinated with host for delivery/access</li>
+<li>✅ <strong>Flexible Cancellation</strong> - Refundable up to 48 hours before check-in</li>
+<li>✅ <strong>Local Expertise</strong> - Partnerships with best local providers</li>
+<li>✅ <strong>Dynamic Pricing</strong> - Discounts for bundling multiple experiences</li>
+</ul>
+<p><strong>Benefits to Guests:</strong></p>
+<ul>
+<li><strong>Save Time</strong> - No need to research and book activities separately</li>
+<li><strong>Guaranteed Quality</strong> - Vetted partners and experiences</li>
+<li><strong>Better Pricing</strong> - Bundle discounts vs booking individually</li>
+<li><strong>Convenience</strong> - Everything coordinated and delivered</li>
+<li><strong>Local Discovery</strong> - Curated by people who know the area</li>
+</ul>
+<p><strong>Pricing Model:</strong></p>
+<ul>
+<li>Most bundles: $25-$150 per bundle</li>
+<li>Premium experiences: $150-$500 (private chef, guided tours)</li>
+<li>Add-on fee charged once (not per night)</li>
+<li>Taxes included in displayed price</li>
+<li>Payment processed with booking (single transaction)</li>
+</ul>
+<p><strong>Cancellation &amp; Refunds:</strong></p>
+<ul>
+<li>Full refund if cancelled 48+ hours before check-in</li>
+<li>50% refund if cancelled 24-48 hours before check-in</li>
+<li>No refund if cancelled &lt;24 hours before check-in</li>
+<li>Bundle cancellation does NOT cancel the accommodation booking</li>
+</ul>
+<p><strong>Provider Network:</strong></p>
+<p>Peapod partners with: - Licensed tour operators - Verified local businesses - Background-checked service providers - Insured activity companies - Established restaurants and venues</p>
+<p><strong>Safety &amp; Quality Standards:</strong></p>
+<p>All experience providers must meet: - ✅ Proper licensing and insurance - ✅ Background checks for service providers - ✅ Safety certifications (for adventure activities) - ✅ 4+ star ratings from previous customers - ✅ COVID-19 safety protocols (as applicable)</p>
+<p><strong>Future Enhancements (Post-Launch):</strong></p>
+<ul>
+<li><strong>Multi-Day Packages</strong> - Bundles spanning entire trip (e.g., “3-Day Ski Package”)</li>
+<li><strong>Group Discounts</strong> - Pricing tiers for larger parties</li>
+<li><strong>Loyalty Integration</strong> - Earn points on bundle purchases</li>
+<li><strong>Host-Created Bundles</strong> - Hosts can offer custom local experiences</li>
+<li><strong>Gift Bundles</strong> - Purchase bundles for other guests as gifts</li>
+</ul>
+<p><strong>Feedback Welcome:</strong></p>
+<p>This feature is in active development. If you have ideas or requests for experience bundles you’d like to see, please contact support or leave feedback in the app.</p>
+<p><strong>Stay Updated:</strong></p>
+<ul>
+<li>Follow Peapod on social media for launch announcements</li>
+<li>Check the app for beta testing opportunities</li>
+<li>Email notifications when bundles launch in your area</li>
+</ul>
+<hr />
+<h2 id="appendix-d-cancellation-refund-policy-cn-release-1.0">Appendix D: Cancellation &amp; Refund Policy (CN Release 1.0)</h2>
+<p>This appendix explains the cancellation policies available on Peapod. When you book a property, the host’s chosen cancellation policy is displayed before you confirm your reservation.</p>
+<h3 id="understanding-cancellation-policies">Understanding Cancellation Policies</h3>
+<p>Hosts choose one of the following cancellation policies for their listings:</p>
+<h4 id="flexible-policy">Flexible Policy</h4>
+<p><strong>Best for:</strong> Travelers who need maximum flexibility</p>
+<table>
+<thead>
+<tr>
+<th>When You Cancel</th>
+<th>Refund Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24+ hours before check-in</td>
+<td><strong>100% refund</strong></td>
+</tr>
+<tr>
+<td>Less than 24 hours before check-in</td>
+<td><strong>No refund</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="moderate-policy">Moderate Policy</h4>
+<p><strong>Best for:</strong> Travelers with reasonably firm plans</p>
+<table>
+<thead>
+<tr>
+<th>When You Cancel</th>
+<th>Refund Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5+ days before check-in</td>
+<td><strong>100% refund</strong></td>
+</tr>
+<tr>
+<td>2-5 days before check-in</td>
+<td><strong>50% refund</strong></td>
+</tr>
+<tr>
+<td>Less than 2 days before check-in</td>
+<td><strong>No refund</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="strict-policy">Strict Policy</h4>
+<p><strong>Best for:</strong> Budget-conscious travelers who commit early</p>
+<table>
+<thead>
+<tr>
+<th>When You Cancel</th>
+<th>Refund Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7+ days before check-in</td>
+<td><strong>100% refund</strong></td>
+</tr>
+<tr>
+<td>7-30 days before check-in</td>
+<td><strong>50% refund</strong></td>
+</tr>
+<tr>
+<td>Less than 7 days before check-in</td>
+<td><strong>No refund</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-to-cancel-a-booking">How to Cancel a Booking</h3>
+<ol type="1">
+<li>Go to <strong>Trips</strong> tab</li>
+<li>Select the booking you want to cancel</li>
+<li>Tap <strong>Cancel Booking</strong></li>
+<li>Review the refund amount based on the property’s cancellation policy</li>
+<li>Confirm cancellation</li>
+<li>Refund is processed automatically</li>
+</ol>
+<h3 id="refund-processing-time">Refund Processing Time</h3>
+<ul>
+<li><strong>Credit/Debit Card:</strong> 5-10 business days</li>
+<li><strong>Apple Pay:</strong> 5-10 business days</li>
+<li><strong>Bank Account:</strong> 5-10 business days</li>
+</ul>
+<p>Refunds are issued to the original payment method used for the booking.</p>
+<h3 id="service-fees">Service Fees</h3>
+<ul>
+<li>Service fees are refundable <strong>only</strong> if the cancellation results in a full refund of the accommodation fees</li>
+<li>Partial refunds do not include a service fee refund</li>
+</ul>
+<h3 id="host-cancellations">Host Cancellations</h3>
+<p>If a host cancels your booking: - You receive a <strong>full refund</strong> including all service fees - You may receive booking credits for the inconvenience - Hosts who cancel frequently may have their listings penalized</p>
+<h3 id="extenuating-circumstances">Extenuating Circumstances</h3>
+<p>Full refunds may be provided outside the normal cancellation policy for: - Natural disasters affecting the property or your travel - Government-mandated travel restrictions - Serious illness or death (documentation required) - Other documented emergencies</p>
+<p>Contact Peapod Support with documentation to request an extenuating circumstances review.</p>
+<h3 id="tips-for-guests">Tips for Guests</h3>
+<ul>
+<li>✅ <strong>Check the policy</strong> before booking – it’s displayed on the listing detail page and at checkout</li>
+<li>✅ <strong>Book Flexible</strong> if your plans may change</li>
+<li>✅ <strong>Cancel early</strong> to maximize your refund</li>
+<li>✅ <strong>Message the host</strong> – some hosts may offer goodwill refunds outside their stated policy</li>
+</ul>
+<hr />
+<p>← <a href="USER_MANUAL_GUEST.html">Back to Guest Guide</a> | <a href="USER_MANUAL_TOP.html">Back to Index</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peapod Hotels. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../../terms.html">Terms</a>
+                <a href="../../privacy.html">Privacy</a>
+                <a href="../../sms-terms.html">SMS Terms</a>
+                <a href="../../manual/en/index.html">APP Manual</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

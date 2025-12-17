@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peapod User Manual - Host Guide - Peapod Hotels</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manual.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍐 Peapod Hotels</div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../terms.html">Terms</a></li>
+                <li><a href="../../privacy.html">Privacy</a></li>
+                <li><a href="../../sms-terms.html">SMS Terms</a></li>
+                <li><a href="../../manual/en/index.html" class="active">APP Manual</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <a href="../cn/index.html" title="Switch language">
+                    <span class="lang-icon">🌐</span>
+                    <span>中文</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="manual-content">
+<h1 id="peapod-user-manual---host-guide">Peapod User Manual - Host Guide</h1>
+<p><strong>Version:</strong> 0.21.0 (Domestic Currency MVP) <strong>Last Updated:</strong> December 11, 2025 <strong>Platform:</strong> iOS (iPhone, iPad)</p>
+<p>← <a href="USER_MANUAL_TOP.html">Back to Index</a></p>
+<p><strong>👥 About This Manual:</strong></p>
+<p>This manual covers both <strong>Hosts</strong> (property owners) and <strong>Co-Hosts</strong> (operational managers who handle day-to-day operations).</p>
+<hr />
+<h2 id="host-vs-co-host-understanding-the-roles">Host vs Co-Host: Understanding the Roles</h2>
+<h3 id="host-property-owner">Host (Property Owner)</h3>
+<p>The <strong>Host</strong> owns the property and has full account control. As a Host, you have:</p>
+<p><strong>Full Visibility:</strong> - All bookings for your listings - All messages in conversations involving your listings - Reviews and ratings - Payouts, earnings, and financial history - Dispute history and resolutions</p>
+<p><strong>Primary Responsibilities:</strong> - Pricing strategy and calendar management - Payout methods and financial settings - High-level decisions (cancellations, disputes, escalations) - Assigning a co-host to manage operations (optional)</p>
+<p><strong>What You Don’t Need to Handle:</strong> - Day-to-day guest messaging (delegated to co-host) - Routine notifications for cleaning, minor issues - Every operational detail</p>
+<h3 id="co-host-operational-manager">Co-Host (Operational Manager)</h3>
+<p>The <strong>Co-Host</strong> is assigned to a listing as the single operational manager. As a Co-Host, you have:</p>
+<p><strong>Operational Visibility:</strong> - All bookings for listings you’re assigned to - All messages for those bookings - Cleaning tasks and coordination - Check-in instructions and issue reports</p>
+<p><strong>Primary Responsibilities:</strong> - Day-to-day guest messaging - Handling most issues, exceptions, check-in problems - Coordinating cleaners and recleans - Escalating important issues to the host</p>
+<p><strong>What Co-Hosts Cannot Do:</strong> - ❌ View payout details, amounts, or bank information - ❌ Change payout methods or financial settings - ❌ Change listing ownership - ❌ Invite additional team members - ❌ Delete listings - ❌ Change base pricing (hosts retain pricing control)</p>
+<hr />
+<h3 id="mvp-rule-one-co-host-per-listing">MVP Rule: One Co-Host Per Listing</h3>
+<p>For the current release, each listing can have <strong>at most one co-host</strong> assigned. This simplifies operations and ensures clear responsibility for each property.</p>
+<hr />
+<h3 id="messaging-identity">Messaging Identity</h3>
+<p>When a guest receives a message, they see who sent it: - <strong>“Alice (Host)”</strong> - Message from the property owner - <strong>“Bob (Co-Host)”</strong> - Message from the assigned co-host</p>
+<p>This per-message identity helps guests know who they’re communicating with.</p>
+<hr />
+<h3 id="notification-routing">Notification Routing</h3>
+<p><strong>Co-Host receives notifications for:</strong> - New guest messages - Routine check-in questions - Issue reports (e.g., “towel missing”, “Wi-Fi not working”)</p>
+<p><strong>Host receives notifications for:</strong> - Issues explicitly escalated by co-host - High-priority events (fraud suspicion, major damage, emergency) - SLA breaches (e.g., guest message unanswered for extended time)</p>
+<p>This ensures co-hosts handle day-to-day operations while hosts are only notified for important matters.</p>
+<hr />
+<h3 id="permissions-summary">Permissions Summary</h3>
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Guest</th>
+<th>Co-Host</th>
+<th>Host</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View listing details</td>
+<td>✔</td>
+<td>✔ (assigned only)</td>
+<td>✔ (owned only)</td>
+</tr>
+<tr>
+<td>View bookings for listing</td>
+<td>✔ (own only)</td>
+<td>✔ (assigned listing)</td>
+<td>✔ (owned listing)</td>
+</tr>
+<tr>
+<td>View messages</td>
+<td>✔ (own only)</td>
+<td>✔ (assigned listing)</td>
+<td>✔ (owned listing)</td>
+</tr>
+<tr>
+<td>Send messages</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Manage payouts</td>
+<td>✖</td>
+<td>✖</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Change listing pricing/calendar</td>
+<td>✖</td>
+<td>✔ (calendar only)</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Configure cleaners/tasks</td>
+<td>✖</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Manage co-host assignment</td>
+<td>✖</td>
+<td>✖</td>
+<td>✔</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical Rule:</strong> Co-hosts never see payout details. Hosts can see everything and override any decision.</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#51-navigation">5.1 Navigation</a> - Dashboard, Listings, Bookings, Messages, Profile tabs</li>
+<li><a href="#52-create--edit-listings-host-only">5.2 Create &amp; Edit Listings</a> - Property basics, location, price, photos, availability, amenities, rules + Editing features + <strong>NEW: Room/Bed Types for Hotels/Hostels (5.2.13)</strong></li>
+<li><a href="#53-listing-review--approval-process-host-only">5.3 Listing Review &amp; Approval Process</a> - Curator review, approval statuses</li>
+<li><a href="#54-handle-booking-requests">5.4 Handle Booking Requests</a> - Accept/decline, instant book, modifications</li>
+<li><a href="#55-team-management-host-only">5.5 Team Management</a> - Invite co-hosts/cleaners, manage roles, permissions</li>
+<li><a href="#56-guest-communication--reviews">5.6 Guest Communication &amp; Reviews</a> - Message templates + Reviews &amp; ratings + <strong>NEW: Co-Host Messaging (5.6.3)</strong></li>
+<li><a href="#57-earnings--loyalty-host-only">5.7 Earnings &amp; Loyalty</a> - Revenue, payouts, tax info + Loyalty tiers &amp; rewards</li>
+<li><a href="#58-host-resources">5.8 Host Resources</a>
+<ul>
+<li><a href="#581-cleaning-task-management">5.8.1 Cleaning Task Management</a></li>
+<li><a href="#582-host--property-badges">5.8.2 Host &amp; Property Badges</a></li>
+<li><a href="#583-host-performance--superhost-status">5.8.3 Host Performance &amp; Superhost Status</a></li>
+<li><a href="#584-support--help">5.8.4 Support &amp; Help</a></li>
+</ul></li>
+</ul>
+<h3 id="appendices">Appendices</h3>
+<ul>
+<li><a href="#appendix-a-smart-pricing-details">Appendix A: Smart Pricing Details</a></li>
+<li><a href="#appendix-b-co-hosting-advanced-topics">Appendix B: Co-Hosting Advanced Topics</a></li>
+<li><a href="#appendix-c-badge-details">Appendix C: Badge Details</a></li>
+<li><a href="#appendix-d-ai-listing-optimizer-coming-soon">Appendix D: AI Listing Optimizer</a></li>
+<li><a href="#appendix-e-smart-assignment-algorithm">Appendix E: Smart Assignment Algorithm</a></li>
+<li><a href="#appendix-f-troubleshooting">Appendix F: Troubleshooting</a></li>
+<li><a href="#appendix-g-best-practices">Appendix G: Best Practices</a></li>
+<li><a href="#appendix-h-auto-reschedule-details">Appendix H: Auto-Reschedule Details</a></li>
+<li><a href="#appendix-i-message-templates-reference">Appendix I: Message Templates Reference</a></li>
+</ul>
+<hr />
+<h2 id="for-hosts-co-hosts">5. For Hosts &amp; Co-Hosts</h2>
+<blockquote>
+<p><strong>语言设置:</strong> 首次在中国区使用时默认显示简体中文，用户可在登录页面右上角切换至 English 界面。</p>
+</blockquote>
+<h3 id="navigation">5.1 Navigation</h3>
+<p>The host interface uses a 5-tab bottom navigation bar. Each tab provides access to key hosting functions.</p>
+<h4 id="dashboard-tab">5.1.1 Dashboard Tab</h4>
+<p>Your performance overview at a glance. Monitor revenue, bookings, and occupancy trends.</p>
+<p><strong>Key Metrics (Top Cards):</strong> - <strong>Received Payouts</strong> - Total amount paid out to your bank account (completed) - <strong>Pending Revenue</strong> - Amount awaiting payout after guest check-in (green = awaiting payout) - <strong>Total Bookings This Month</strong> - Number of confirmed reservations - <strong>Current Occupancy This Month</strong> - Percentage of nights booked</p>
+<p><strong>Revenue Overview Chart:</strong> - Bar chart showing revenue by month - View last 6 months of earnings - Y-axis shows dollar amounts ($0k-$4k scale) - Hover/tap bars to see exact amounts</p>
+<p><strong>Occupancy Section:</strong> - <strong>This Month</strong> - Current month occupancy percentage (red indicator) - <strong>Next Month</strong> - Upcoming month occupancy percentage (gray indicator) - Tap “View Calendar” to see detailed availability</p>
+<p align="center">
+<img src="../screens/en/Host/host_dashboard.png" width="300">
+</p>
+<h4 id="listings-tab">5.1.2 Listings Tab</h4>
+<p>Manage all your property listings from one screen. Create new listings, edit existing ones, and monitor status.</p>
+<p><strong>Search &amp; Filter:</strong> - Search bar: “Search listings…” - Find properties by name - Filter tabs: - <strong>All (14)</strong> - All listings regardless of status - <strong>Active (13)</strong> - Live listings visible to guests - <strong>Paused by You (1)</strong> - Listings you temporarily disabled - Counter shows total listings in each category - Text below tabs: “Showing X of Y listings”</p>
+<p><strong>Listing Cards Display:</strong> - Property photo thumbnail (left) - Property title (bold, large text) - Price per night (green, e.g., “$300/night”) - Location (city, state in gray) - Star rating and review count (e.g., “5.0 (4)”) - Status badge (right side): - Green “Active” - Live and bookable - Blue “Paused by You” - Temporarily disabled - Three-dot menu (⋯) - Quick actions: Edit, Team Members, Manage Tasks, Make Active, Delete</p>
+<p><strong>Create New Listing:</strong> - Tap “+” button (top-right corner) to start listing creation flow</p>
+<p align="center">
+<img src="../screens/en/Host/host_listings_view.png" width="300">
+</p>
+<h4 id="bookings-tab">5.1.3 Bookings Tab</h4>
+<p>View and manage all reservations across your properties. Track check-ins, payouts, and guest information.</p>
+<p><strong>Search &amp; Filter:</strong> - Search bar: “Search bookings…” - Find by guest name, property, or confirmation number - Filter tabs: - <strong>Pending</strong> - Awaiting your approval (if not instant book) - <strong>Upcoming</strong> - Future confirmed reservations - <strong>Today</strong> - Check-ins or check-outs happening today - <strong>All</strong> - Complete booking history</p>
+<p><strong>Booking Cards Display:</strong> - Property photo thumbnail (left) - Property name (bold) - Guest name (gray text, e.g., “Guest: John Peapod”) - Status badge (green “Confirmed”, yellow “Pending”, etc.) - <strong>Check-in</strong> date and <strong>Check-out</strong> date - <strong>Guests</strong> count - <strong>Payout</strong> amount you’ll receive (green, e.g., “$661”) - <strong>Confirmation #</strong> (booking ID) - Three-dot menu (⋯) - Actions (View Details, Message Guest, Modify, Cancel)</p>
+<p><strong>Refresh:</strong> - Tap refresh icon (top-right) to update booking status</p>
+<p align="center">
+<img src="../screens/en/Host/host_bookings_view.png" width="300">
+</p>
+<h4 id="messages-tab">5.1.4 Messages Tab</h4>
+<p>Communicate with guests about their bookings. View all conversations organized by property and booking dates.</p>
+<p><strong>Search:</strong> - Search bar: “Search messages” - Find conversations by guest name or property</p>
+<p><strong>Conversation List:</strong> - Guest profile picture (left, circular) - Property name (bold, e.g., “Waterfront Condo on Mission Bay”) - Booking dates if applicable (gray, e.g., “(Oct 14-16)”) - Last message preview (gray, truncated) - Timestamp (right, e.g., “1h ago”, “2d ago”) - Unread indicator (badge with count if unread)</p>
+<p><strong>Compose New:</strong> - Tap pencil icon (top-right) to start new conversation</p>
+<p><strong>Message Organization:</strong> - Most recent conversations at top - Grouped by property - Shows booking context for easy reference</p>
+<p align="center">
+<img src="../screens/en/Host/host_messages_view.png" width="300">
+</p>
+<h4 id="profile-tab">5.1.5 Profile Tab</h4>
+<p>Your account settings, preferences, and payout configuration. Switch between Host and Guest roles.</p>
+<p><strong>Profile Header:</strong> - Profile photo (circular, tap to change) - Name (e.g., “Jennifer Host”) - Role badge (e.g., “Host 👑” with crown icon) - <strong>Switch Role</strong> button (blue) - Toggle between Host and Guest views - Stats display: - <strong>Trips</strong> - Total bookings made as a guest - <strong>Reviews</strong> - Number of reviews received - <strong>Years Member</strong> - Account age</p>
+<p><strong>Account Settings:</strong> - <strong>Account</strong> - Email, password, and security settings - <strong>Preferences</strong> - Language, region, currency, and more - <strong>Notifications</strong> - Email, SMS, and push notification preferences - <strong>Privacy &amp; Legal</strong> - Privacy settings, data export, terms &amp; policy - <strong>Host Payouts</strong> - Set up payouts and view earnings - <strong>Help Center</strong> - Get help and contact support</p>
+<p><strong>Sign Out:</strong> - Red “Sign Out” button at bottom</p>
+<p><strong>Notifications:</strong> - Bell icon (top-right) - View notification history</p>
+<p align="center">
+<img src="../screens/en/Host/host_profile_view.png" width="300">
+</p>
+<h3 id="create-edit-listings">5.2 Create &amp; Edit Listings</h3>
+<p>The listing editor uses an 8-tile navigation grid where you can jump between sections in any order. Each completed section shows a green checkmark. Preview your listing anytime by tapping “Preview” in the top-right corner.</p>
+<p><strong>Create New Listing [Host Only]:</strong> 1. Listings tab → “+” button → Opens editor 2. Complete all 8 sections (Property Basics, Location, Price, Photos, Availability, Amenities, Booking Rules, House Rules) 3. Progress auto-saves to your device only (not on server) 4. Preview → “Submit for Review” sends to curator for approval</p>
+<p><strong>Edit Existing Listing:</strong> 1. Listings tab → Tap listing → Three-dot menu (⋯) → “Edit Listing” 2. Same 8-tile editor with pre-filled data 3. Make changes → Preview → Save 4. Changes categorized automatically (see section 5.3.3 for details): - <strong>Critical</strong> (bedrooms, bathrooms, max guests, property type, major amenities) → Requires curator approval before going live - <strong>Auto-Approved</strong> (photos, price, description, check-in instructions, etc.) → Goes live immediately, no review needed</p>
+<p><strong>Before Creating:</strong> - You own or have permission to rent the property - Property meets local regulations and safety requirements - You have high-quality photos of the property - You can provide check-in instructions to guests</p>
+<h4 id="property-basics">5.2.1 Property Basics</h4>
+<p>This section covers the essential details that describe your property to potential guests.</p>
+<p><strong>Property Title</strong> (40-100 characters recommended) - Create a descriptive, searchable title that highlights your property’s best features - Character counter shown below field (40/100) - Examples: “Beach Front Apartment Near La Jolla Cove”, “Cozy Downtown Studio with City Views” - Tips: Include location, property type, and key amenities</p>
+<p><strong>Property Type</strong> - Tap the dropdown to select from available types: - <strong>Single-Unit Types</strong> (book entire property): - <strong>House</strong> - Entire house with private entrance - <strong>Apartment</strong> - Entire apartment unit - <strong>Guest room</strong> - Private room in a home - <strong>Multi-Unit Types</strong> (book room/bed types): - <strong>Hotel</strong> - Hotel or motel room (see <a href="#5213-managing-room-types-hotelhostel-only">5.2.13 Managing Room Types</a>) - <strong>Hostel</strong> - Hostel bed or shared accommodation (see <a href="#5213-managing-room-types-hotelhostel-only">5.2.13 Managing Bed Types</a>) - <strong>Boutique Hotel</strong> - Boutique or small hotel (see <a href="#5213-managing-room-types-hotelhostel-only">5.2.13 Managing Room Types</a>) - <strong>Resort</strong> - Resort with multiple room types (see <a href="#5213-managing-room-types-hotelhostel-only">5.2.13 Managing Room Types</a>) - This helps guests filter search results by property type - Each type has a unique icon displayed in the picker - <strong>Note:</strong> Hotels, Hostels, Boutique Hotels, and Resorts require at least one room/bed type before publishing</p>
+<p><strong>Description</strong> (91-1000 characters) - Write a detailed description of your property - Character counter shown below field (91/1000) - Describe the space, amenities, neighborhood, and what makes it special - Use clear paragraphs for better readability - Green counter indicates sufficient length (91+ chars)</p>
+<p><strong>Max Number of Guests</strong> - Use + / - buttons to set capacity (1-20 guests) - Counter displays current number - Consider sleeping arrangements and common area space - Affects search visibility and pricing</p>
+<p><strong>Rooms &amp; Beds</strong> - <strong>Bedrooms:</strong> Number of private bedrooms (0-10) - Select 0 (“Any”) for studio apartments - <strong>Bathrooms:</strong> Number of bathrooms in 0.5 increments (0.5-10.0) - 0.5 = half bath (toilet + sink, no shower) - 1.0 = full bath (toilet + sink + shower/tub) - <strong>Beds:</strong> Total number of beds (1-20) - Count all sleeping surfaces guests can use</p>
+<p align="center">
+<img src="../screens/en/Host/create_listing_property_basics.png" width="300">
+</p>
+<h4 id="location">5.2.2 Location</h4>
+<p>Enter your property’s address and neighborhood information. Address validation ensures accurate coordinates for map display.</p>
+<p><strong>Address</strong> - Street address (required) - Apt, Suite, etc. (optional) - Add unit number or building details - City, State, ZIP Code (required) - All fields auto-populate from address validation</p>
+<p><strong>Validate Address Button</strong> - Tap “Validate Address” to verify location - System checks address against mapping service - Success: Green checkmark “✓ Address validated (coordinates set)” - If validation fails: Review and correct address components - Coordinates (latitude/longitude) automatically set for map display</p>
+<p><strong>Neighborhood</strong> (required) - Describe the neighborhood, nearby attractions, and transportation - Help guests understand the area’s character - Mention walking distance to popular destinations - Include parking availability if relevant - This field is shown on your listing page</p>
+<p align="center">
+<img src="../screens/en/Host/create_listing_location.png" width="300">
+</p>
+<h4 id="price">5.2.3 Price</h4>
+<p>Set your nightly rate and optional fees. Prices are shown to guests with transparent breakdowns.</p>
+<p><strong>Listing Currency:</strong> - Your listing’s currency is set based on your property’s location - <strong>US properties:</strong> Prices in USD ($) - <strong>China properties:</strong> Prices in CNY (¥) - Currency is displayed consistently throughout the booking flow</p>
+<p><strong>Currency Note (v1):</strong> In the current version, only guests with matching home currency can book: - USD listings → USD users only - CNY listings → CNY users only - International bookings will be supported in a future release</p>
+<p><strong>Base Price Per Night</strong> (required) - Your nightly rate before any fees - Enter amount in your listing’s currency (e.g., $200 or ¥1,200) - This is what you earn per night (minus platform fee) - Can be adjusted seasonally via calendar after listing is created</p>
+<p><strong>Cleaning Fee (Optional)</strong> - One-time fee charged per booking (not per night) - Covers deep cleaning, laundry, restocking - Enter amount in your listing’s currency (e.g., $50 or ¥300) - Recommended: $50-150 (or equivalent) depending on property size - Shown separately in guest’s price breakdown</p>
+<p><strong>What Guests Pay:</strong> - Base price (Price Per Night × nights) - + Cleaning fee - + Any applicable taxes</p>
+<p><strong>What You Receive:</strong> - Base price × nights - + Cleaning fee - - Platform fee (15% - Tier Percentage)</p>
+<p align="center">
+<img src="../screens/en/Host/create_listing_price.png" width="300">
+</p>
+<h4 id="photos">5.2.4 Photos</h4>
+<p>Upload high-quality images of your property. Photos are the #1 factor in booking decisions.</p>
+<p><strong>Add Photos Of Your Property</strong> - Tap “Add More” to select photos from your device - Each photo shows “NEW” badge when uploaded - Minimum: 5 photos (recommended: 10-20) - Maximum file size: 10MB per photo - Supported formats: JPG, PNG</p>
+<p><strong>Photo Tips:</strong> - Use natural lighting (open curtains, daytime shots) - Show all rooms guests can access - Include bathroom, kitchen, sleeping areas - Capture unique features and amenities - Take photos from corners to show full rooms - First photo is your cover image - make it count!</p>
+<p><strong>Reordering Photos:</strong> - Drag photos to reorder them - First photo shows in search results - Order remaining photos to tell a story (entrance → living areas → bedrooms → outdoor spaces)</p>
+<p><strong>Add Video (Optional)</strong> - Paste YouTube or Other video URL or ID - Video provides virtual tour for guests - Shows property layout and atmosphere - Maximum 1 video per listing</p>
+<p align="center">
+<img src="../screens/en/Host/create_listing_photos.png" width="300">
+</p>
+<h4 id="availability">5.2.5 Availability</h4>
+<p>Set blocked dates during listing creation. Advanced calendar features (custom pricing, recurring rules) are available after creating the listing.</p>
+<p><strong>Blocked Dates</strong> - “Select dates when your property is unavailable” - Note: “Calendar features will be available after creating the listing”</p>
+<p><strong>After Listing Creation:</strong> - Full calendar with date picker - Block specific dates or date ranges - Set custom pricing for holidays/peak seasons - Configure minimum/maximum stay requirements - Set advance booking window - Add recurring availability rules</p>
+<p align="center">
+<img src="../screens/en/Host/create_listing_availability.png" width="300">
+</p>
+<h4 id="amenities-accessibility">5.2.6 Amenities &amp; Accessibility</h4>
+<p>Select all amenities and accessibility features available at your property. Accurate selection improves search matching and helps guests find properties that meet their needs.</p>
+<p><strong>What Amenities Do You Offer?</strong></p>
+<p>Selected amenities show pink background with red checkmark: - WiFi - Kitchen - Washer - Dryer - TV - Balcony - Garden - Parking</p>
+<p>Unselected amenities show gray background: - Air Conditioning - Heating - Pool - Hot Tub - Gym - Fireplace - Dishwasher - Laundry - Iron</p>
+<p><strong>Accessibility Features</strong></p>
+<p>Select all applicable accessibility features that make your property more accessible to guests with mobility, hearing, or visual needs:</p>
+<p>Available options: - <strong>Step free entrance</strong> - No stairs at main entrance - <strong>Wide doorways</strong> - 32+ inches for wheelchair access - <strong>Accessible bathroom</strong> - Roll-in shower or accessible tub - <strong>Grab bars</strong> - In bathroom and other areas - <strong>Elevator</strong> - Building has elevator access - <strong>Wheelchair accessible</strong> - Full wheelchair accessibility throughout - <strong>Hearing accessible</strong> - Visual alerts, doorbell indicators - <strong>Visual aids</strong> - Braille, high-contrast signage - <strong>Service animals allowed</strong> - Service animals welcome</p>
+<p><strong>Note:</strong> Amenities and accessibility options are loaded from database - the list automatically updates as new options are added to the platform.</p>
+<p align="center">
+<img src="../screens/en/Host/create_listing_amenities.png" width="300"> <img src="../screens/en/Host/create_listing_acessibility.png" width="300">
+</p>
+<h4 id="booking-rules">5.2.7 Booking Rules</h4>
+<p>Configure cancellation policy, instant booking settings, and minimum stay requirements.</p>
+<p><strong>Minimum Nights</strong> - Set minimum booking length (default: 3 nights) - Use + / - buttons to adjust (1-30 nights) - Longer minimums reduce turnover but may limit bookings - Can be adjusted per date range after listing creation</p>
+<p><strong>Cancellation Policy</strong> - Tap dropdown to select policy (shows “Flexible” in example) - <strong>Flexible:</strong> Full refund up to 24 hours before check-in, 50% after - <strong>Moderate:</strong> Full refund up to 5 days before check-in, 50% refund 2-5 days, no refund within 2 days - <strong>Strict:</strong> Full refund up to 14 days before check-in, 50% refund 7-14 days, no refund within 7 days - Policy shown to guests before booking</p>
+<p><strong>Important Refund Rules:</strong> - <strong>Cleaning fee &amp; Taxes:</strong> Always 100% refunded if guest cancels before check-in (no cleaning needed, no tax applies) - <strong>Base price (accommodation):</strong> Subject to cancellation policy percentage (100%/50%/0% based on timing) - <strong>Service fee:</strong> Refundable for Flexible/Moderate policies, non-refundable for Strict policies</p>
+<p><strong>Example (Moderate policy, guest cancels 3 days before):</strong> - Base price $200 → 50% = $100 refund - Cleaning fee $50 → 100% = $50 refund ✅ - Taxes $20 → 100% = $20 refund ✅ - Service fee $28 → 100% = $28 refund (Moderate allows) - <strong>Total refund: $198</strong> (guest paid $298)</p>
+<p><strong>Booking Preferences</strong></p>
+<p><strong>Instant Book</strong> (Toggle on/off) - When enabled: Guests can book without host approval - Payment authorized automatically - Faster bookings, less manual work - Default: OFF (shown as ON in example)</p>
+<p><strong>Allow Instant Book for:</strong> (Require ALL selected criteria) - <strong>Everyone</strong> - No restrictions (not recommended) - <strong>Verified Guests</strong> - Government ID uploaded and verified - <strong>Returning Guests</strong> - Previously booked on platform - <strong>Guests with Good Ratings (&gt;4.5)</strong> - High guest rating required</p>
+<p><strong>Self check-in</strong> (Toggle on/off) - When enabled: Guests can enter without meeting you - Requires detailed entry instructions below</p>
+<p><strong>Self Check-In Instructions</strong> (required if self check-in enabled) - Provide step-by-step entry instructions - Include lockbox location and code, key location, or smart lock instructions - Example: “Code will be sent before check in date” - Instructions sent to guest automatically 24 hours before arrival</p>
+<p align="center">
+<img src="../screens/en/Host/create_listing_booking_rules.png" width="300">
+</p>
+<h4 id="house-rules">5.2.8 House Rules</h4>
+<p>Set check-in/out times and property rules to set guest expectations.</p>
+<p><strong>Check-in time / Check-out time</strong> - Default: Check-in 2:00 PM, Check-out 11:00 AM - Tap time to change using time picker - Allows buffer time for cleaning between guests - Shown to guests in booking confirmation</p>
+<p><strong>House Rules</strong></p>
+<p>Toggle each rule on/off: - <strong>Smoking allowed</strong> - Toggle off to prohibit smoking indoors - <strong>Pets allowed</strong> - Toggle off for no pets policy - <strong>Parties/events allowed</strong> - Toggle off to prohibit gatherings - Default: All OFF (prohibited)</p>
+<p><strong>Quiet Hours</strong> (Toggle on/off) - Enable to enforce quiet time periods - <strong>Start Time:</strong> When quiet hours begin (default: 11:00 PM) - <strong>End Time:</strong> When quiet hours end (default: 8:00 AM) - Shown in house rules on listing page</p>
+<p align="center">
+<img src="../screens/en/Host/create_listing_house_rules.png" width="300">
+</p>
+<h4 id="editing-price-smart-pricing">5.2.9 Editing Price &amp; Smart Pricing</h4>
+<p>After creating your listing, update pricing and access smart pricing features.</p>
+<p><strong>Basic Price Updates:</strong> Update nightly rate and cleaning fee (see section 5.2.3 for field details)</p>
+<p><strong>Smart Pricing &amp; Discounts:</strong> Tap “Manage Smart Pricing” button to access:</p>
+<p><strong>Duration Discounts:</strong> Encourage longer stays - 7+ nights: 10% off (edit/delete with trash icon) - 30+ nights: 20% off - Add custom duration tiers with + button</p>
+<p><strong>Last-Minute Deals:</strong> Exclusive for Platinum/Diamond loyalty members - Create same-day deals - Set discount percentage and availability</p>
+<p><strong>Seasonal &amp; Dynamic Pricing:</strong> Add price adjustments for specific dates/ranges (holidays, peak seasons)</p>
+<p align="center">
+<img src="../screens/en/Host/edit_listing_price.png" width="300"> <img src="../screens/en/Host/edit_listing_price_smartPricing.png" width="300">
+</p>
+<h4 id="editing-availability">5.2.10 Editing Availability</h4>
+<p>Full calendar management with date blocking, import/export, and recurring rules.</p>
+<p><strong>Block Dates:</strong> Tap dates → “Block” button → Optionally add reason (internal note)</p>
+<p><strong>Unblock Dates:</strong> Tap blocked dates (pink/red) → “Unblock” button</p>
+<p><strong>Action Buttons:</strong> - <strong>Import Calendar:</strong> Sync with external calendars (Airbnb, VRBO) - <strong>Recurring Rules:</strong> Set automatic blocking patterns - <strong>Export Calendar:</strong> Share availability with other platforms</p>
+<p align="center">
+<img src="../screens/en/Host/edit_listing_availability.png" width="300">
+</p>
+<h4 id="editing-photos-video">5.2.11 Editing Photos &amp; Video</h4>
+<p>Manage property photos and video tours.</p>
+<p><strong>Photos:</strong> Tap X to delete, drag to reorder (first = cover), tap “Add More” for new photos (max 10MB each)</p>
+<p><strong>Video:</strong> Paste YouTube URL → Video appears first in carousel with play button and badge. Increases booking conversion by 30%+.</p>
+<p align="center">
+<img src="../screens/en/Host/edit_listing_photo_video.png" width="300">
+</p>
+<h4 id="preview-submit">5.2.12 Preview &amp; Submit</h4>
+<p><strong>Preview:</strong> Tap “Preview” (top-right) to see guest view before submitting</p>
+<p><strong>Save Behavior:</strong> - <strong>Creating new listing:</strong> Changes auto-save to your device only (not on server). Tap “Submit for Review” when ready to send to curator. - <strong>Editing active listing:</strong> Changes are categorized automatically: - <strong>Critical changes</strong> (bedrooms, bathrooms, capacity, property type, major amenities): Saved but not visible to guests until curator approves (24h review) - <strong>Auto-approved changes</strong> (photos, title, description, price, WiFi password, check-in instructions, calendar): Applied immediately, no review needed</p>
+<p>See section 5.3.3 for full details on the two-tier review system.</p>
+<h4 id="managing-room-types-hotelhostelboutique-hotelresort-only">5.2.13 Managing Room Types (Hotel/Hostel/Boutique Hotel/Resort Only)</h4>
+<p><strong>NEW FEATURE (Slice V):</strong> Hotels, Hostels, Boutique Hotels, and Resorts can define multiple room or bed types, each with its own pricing, capacity, amenities, and availability.</p>
+<p><strong>Terminology:</strong> - <strong>Hotels/Boutique Hotels/Resorts</strong> → “Room Types” (e.g., Standard Room, Deluxe Suite, Ocean View Villa) - <strong>Hostels</strong> → “Bed Types” (e.g., Bunk Bed in 4-Bed Dorm, Single Bed in Female Dorm)</p>
+<p><strong>⚠️ Publishing Requirement:</strong> Multi-unit property types (Hotel, Hostel, Boutique Hotel, Resort) <strong>cannot be published</strong> until they have at least one active room/bed type. You’ll see a validation error if you try to submit without room types.</p>
+<hr />
+<p><strong>Why Room/Bed Types Matter:</strong></p>
+<p>Unlike vacation rentals where guests book the entire property, Hotels and Hostels: - Offer multiple units of different types - Allow simultaneous bookings for the same dates - Have capacity tracked per room/bed type - Enable different pricing for different accommodations</p>
+<hr />
+<p><strong>Accessing Room/Bed Type Management:</strong></p>
+<ol type="1">
+<li>Go to <strong>Listings</strong> tab</li>
+<li>Tap on your Hotel or Hostel listing</li>
+<li>Scroll to <strong>“Room Types”</strong> (Hotels) or <strong>“Bed Types”</strong> (Hostels) section</li>
+<li>Tap <strong>“Manage Types”</strong> to open the management screen</li>
+</ol>
+<hr />
+<p><strong>A. Creating a Room/Bed Type:</strong></p>
+<p><strong>Required Fields:</strong> - <strong>Type Name</strong> - Descriptive name (e.g., “Deluxe King Room with Ocean View”) - <strong>Total Units</strong> - How many of this room/bed type you have (e.g., 10 Deluxe Rooms) - <strong>Max Guests Per Unit</strong> - Maximum occupancy per room/bed (e.g., 2 guests per room) - <strong>Base Price Per Night</strong> - Nightly rate for this specific type</p>
+<p><strong>Optional Fields:</strong> - <strong>Description</strong> - Detailed description of this room/bed type - <strong>Amenities</strong> - Room-specific amenities (WiFi, AC, Private Bathroom, etc.) - <strong>Photos</strong> - Photos specific to this room/bed type</p>
+<p><strong>Steps to Create:</strong> 1. Tap <strong>“+ Add Room Type”</strong> (or “+ Add Bed Type”) 2. Enter the type name 3. Set total units available 4. Set max guests per unit 5. Enter base price per night 6. Add description and amenities (optional) 7. Upload room/bed-specific photos (optional) 8. Tap <strong>“Save”</strong></p>
+<hr />
+<p><strong>B. Editing Room/Bed Types:</strong></p>
+<ol type="1">
+<li>Tap on the room/bed type card</li>
+<li>Modify any fields</li>
+<li>Tap <strong>“Save Changes”</strong></li>
+</ol>
+<p><strong>What Can Be Edited:</strong> - Type name - Total units (increasing capacity) - Max guests per unit - Price per night - Description - Amenities - Photos</p>
+<p><strong>Note:</strong> Reducing total units below current active bookings is prevented.</p>
+<hr />
+<p><strong>C. Availability and Capacity:</strong></p>
+<p><strong>How Capacity Works:</strong> - Each room/bed type has its own capacity (total units) - Multiple guests can book the same type on the same dates - System tracks bookings vs. total units automatically - Overbooking is prevented at the database level</p>
+<p><strong>Example:</strong></p>
+<pre><code>Deluxe King Room: 5 total units
+- Booking 1: Guest A books 1 room (Dec 1-3) → 4 remaining
+- Booking 2: Guest B books 2 rooms (Dec 1-3) → 2 remaining
+- Booking 3: Guest C tries to book 3 rooms (Dec 1-3) → BLOCKED (only 2 available)</code></pre>
+<p><strong>Viewing Availability:</strong> - Each room/bed type shows current availability for selected dates - Color indicators: Green (available), Yellow (limited), Red (fully booked) - Tap “View Calendar” to see detailed availability</p>
+<hr />
+<p><strong>D. Deactivating/Deleting Room/Bed Types:</strong></p>
+<p><strong>Deactivate (Temporary):</strong> 1. Tap on the room/bed type 2. Toggle <strong>“Active”</strong> switch off 3. Type becomes unavailable for new bookings 4. Existing bookings remain valid 5. Can reactivate anytime</p>
+<p><strong>Delete (Permanent):</strong> 1. Tap on the room/bed type 2. Tap <strong>“Delete”</strong> button 3. Confirm deletion 4. <strong>Note:</strong> Cannot delete if there are active bookings</p>
+<hr />
+<p><strong>E. Best Practices for Hotels/Hostels:</strong></p>
+<ol type="1">
+<li><strong>Use Clear Names</strong> - “Deluxe King Room with Balcony” is better than “Room A”</li>
+<li><strong>Add Room-Specific Photos</strong> - Show each room type’s unique features</li>
+<li><strong>Price Strategically</strong> - Premium rooms should reflect their amenities</li>
+<li><strong>Monitor Availability</strong> - Check capacity regularly during peak seasons</li>
+<li><strong>Keep Descriptions Updated</strong> - Accurate amenity lists reduce guest complaints</li>
+</ol>
+<p><strong>Common Room Type Examples (Hotels):</strong> - Standard Double Room - Deluxe King Room - Suite with Living Area - Family Room (2 Queen Beds) - Accessible Room</p>
+<p><strong>Common Bed Type Examples (Hostels):</strong> - Bunk Bed in 4-Bed Mixed Dorm - Bunk Bed in 6-Bed Female Dorm - Single Bed in 8-Bed Mixed Dorm - Private Single Room - Private Double Room</p>
+<hr />
+<p><strong>F. Understanding Amenities &amp; Search Impact:</strong></p>
+<p><strong>Two Types of Amenities:</strong></p>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 23%" />
+<col style="width: 26%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th>Amenity Type</th>
+<th>Where Set</th>
+<th>Applies To</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shared Amenities</strong></td>
+<td>Listing Editor → Amenities</td>
+<td>All room/bed types</td>
+<td>Pool, Gym, Restaurant, Lobby WiFi</td>
+</tr>
+<tr>
+<td><strong>Room-Type Amenities</strong></td>
+<td>Room Type Editor</td>
+<td>Specific room type only</td>
+<td>Balcony, Minibar, Private Bathroom, In-Room Safe</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How Combined Amenities Work in Search:</strong></p>
+<p>When guests search with amenity filters, the system checks:</p>
+<pre><code>Combined Amenities = Shared Amenities ∪ Room-Type Amenities</code></pre>
+<p><strong>Example:</strong> - Your Hotel’s <strong>Shared Amenities:</strong> WiFi, Pool, Gym, Restaurant - <strong>Deluxe Room</strong> amenities: Balcony, Minibar - <strong>Standard Room</strong> amenities: (none)</p>
+<p><strong>Deluxe Room</strong> combined = WiFi, Pool, Gym, Restaurant, Balcony, Minibar <strong>Standard Room</strong> combined = WiFi, Pool, Gym, Restaurant</p>
+<p><strong>Search Impact:</strong> - Guest searches for “WiFi + Pool” → Both room types match ✅ - Guest searches for “WiFi + Balcony” → Only Deluxe Room matches ✅ - Guest searches for “Kitchen” → Neither matches ❌</p>
+<p><strong>Important:</strong> If a guest filters for an amenity that only exists in certain room types, your listing will appear with only those matching room types as options.</p>
+<p><strong>Best Practice for Amenities:</strong> 1. Add property-wide amenities to <strong>Shared Amenities</strong> (Listing Editor) 2. Add room-specific amenities to each <strong>Room Type</strong> 3. Don’t duplicate - if Pool is shared, don’t add it to each room type 4. Be accurate - guests expect what you list</p>
+<hr />
+<p><strong>G. How Guests See Your Listing in Search:</strong></p>
+<p>For multi-unit properties, search results show: - <strong>Property card</strong> with one entry per listing - <strong>“From $X/room”</strong> or <strong>“From $X/bed”</strong> - cheapest matching room type - <strong>Primary room type name</strong> - e.g., “Standard Double Room” - <strong>Shared badges</strong> - Superhost, Instant Book, etc.</p>
+<p><strong>What Determines the Primary Room Type:</strong> 1. Must match all guest’s filters (price, guests, beds, amenities) 2. Must have availability for selected dates 3. Cheapest among matching types is shown</p>
+<p><strong>Example:</strong> Guest searches: $100-$200, 2 guests, WiFi</p>
+<p>Your Hotel has: - Standard Room: $120, 2 guests, WiFi ✅ Match - Deluxe Suite: $180, 4 guests, WiFi ✅ Match - Executive Suite: $350, 4 guests, WiFi ❌ Over price filter</p>
+<p><strong>Result:</strong> Your listing appears with “From $120/room — Standard Room”</p>
+<hr />
+<p><strong>H. Viewing Bookings for Room Types:</strong></p>
+<p>In <strong>Bookings</strong> tab, hotel/hostel bookings show: - Property name - <strong>Room/Bed Type name</strong> (e.g., “Deluxe King Room”) - <strong>Units booked</strong> (e.g., “2 Rooms”) - Guest name and dates - Total payout</p>
+<p><strong>Booking Details show:</strong> - Room type with description - Number of rooms/beds booked - Per-unit and total price breakdown - Assigned unit numbers (if using individual units)</p>
+<hr />
+<h3 id="listing-review-approval-process-host-only">5.3 Listing Review &amp; Approval Process [Host Only]</h3>
+<p>Understanding listing statuses and how edits are reviewed helps you manage your properties effectively.</p>
+<hr />
+<h4 id="listing-statuses">5.3.1 Listing Statuses</h4>
+<p>Your listing’s status determines whether guests can see and book it.</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 28%" />
+<col style="width: 16%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Status</th>
+<th>What It Means</th>
+<th>Visible to Guests?</th>
+<th>Bookable?</th>
+<th>Your Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pending Review</strong></td>
+<td>New listing submitted, awaiting curator approval</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>Wait for curator review (24-48 hrs)</td>
+</tr>
+<tr>
+<td><strong>Request Edits</strong></td>
+<td>Curator sent it back for changes</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>Make requested changes, then resubmit immediately</td>
+</tr>
+<tr>
+<td><strong>Active</strong></td>
+<td>Approved and live on the platform</td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td>Manage bookings, can pause anytime</td>
+</tr>
+<tr>
+<td><strong>Active (Pending Edits)</strong></td>
+<td>Active listing with critical edits awaiting curator approval</td>
+<td>✅ Yes (shows old approved data)</td>
+<td>✅ Yes</td>
+<td>Wait for curator to review your changes</td>
+</tr>
+<tr>
+<td><strong>Paused by You</strong></td>
+<td>You temporarily disabled it</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>Unpause when ready (no re-review needed)</td>
+</tr>
+<tr>
+<td><strong>Paused by Curator</strong></td>
+<td>Curator found an issue with live listing</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>Fix issue, then resubmit for review</td>
+</tr>
+<tr>
+<td><strong>Rejected</strong></td>
+<td>Curator permanently blocked this listing</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>Fix issues and resubmit immediately, or appeal via chat</td>
+</tr>
+<tr>
+<td><strong>Archived</strong></td>
+<td>You permanently removed it</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>Cannot be restored</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important Notes:</strong></p>
+<p><strong>No Draft Status:</strong> Listings you’re creating are automatically saved on your device only. Once you submit, the listing is immediately created in our system with status “Pending Review.” You cannot save partial listings to the server.</p>
+<p><strong>Active Listings with Pending Edits:</strong> When you edit critical information on an active listing (see section 5.3.3 below), your listing <strong>stays active and bookable</strong>. Guests continue to see the old curator-approved information until your changes are reviewed and approved. This protects guests from seeing unverified changes.</p>
+<hr />
+<h4 id="new-listing-submission-workflow">5.3.2 New Listing Submission Workflow</h4>
+<p><strong>Creating Your First Listing:</strong></p>
+<ol type="1">
+<li><p><strong>Start Creating:</strong> Begin filling out listing details in the editor</p>
+<ul>
+<li>Progress auto-saves to your device only</li>
+<li>Not visible to curators or guests yet</li>
+<li>Can exit and return to continue editing</li>
+</ul></li>
+<li><p><strong>Submit for Review:</strong> Tap “Submit for Review” when complete</p>
+<ul>
+<li>Listing is created in our system</li>
+<li>Status: <strong>Pending Review</strong></li>
+<li>Enters curator review queue</li>
+<li>You’ll receive a notification (email + push)</li>
+</ul></li>
+<li><p><strong>Curator Reviews (24-48 hours):</strong></p>
+<p><strong>Option A: Approved</strong></p>
+<ul>
+<li>Status changes to <strong>Active</strong></li>
+<li>Listing goes live immediately</li>
+<li>Visible in search results</li>
+<li>Guests can book</li>
+</ul>
+<p><strong>Option B: Request Edits</strong></p>
+<ul>
+<li>Status changes to <strong>Request Edits</strong></li>
+<li>You receive specific feedback:
+<ul>
+<li>Poor quality photos (dark, blurry, not enough)</li>
+<li>Incomplete description (too short, missing details)</li>
+<li>Missing or inaccurate amenities</li>
+<li>Pricing seems incorrect</li>
+<li>Missing required documents</li>
+</ul></li>
+<li><strong>What You Do:</strong> Make the changes, then resubmit immediately</li>
+<li>Curator re-reviews within 24 hours</li>
+</ul>
+<p><strong>Option C: Rejected</strong></p>
+<ul>
+<li>Status changes to <strong>Rejected</strong></li>
+<li>Curator found fundamental problems:
+<ul>
+<li>Fraudulent (stolen photos, property doesn’t exist)</li>
+<li>Illegal activity or unsafe structure</li>
+<li>Policy violation (discriminatory language, prohibited use)</li>
+<li>Duplicate (same property already listed)</li>
+<li>Not available (property sold/unavailable)</li>
+<li>Wrong platform (commercial on residential platform)</li>
+</ul></li>
+<li><strong>What You Do:</strong> Fix the issues and resubmit immediately, or appeal via chat if you believe it was a mistake</li>
+</ul></li>
+</ol>
+<hr />
+<h4 id="editing-active-listings-two-tier-review-system">5.3.3 Editing Active Listings: Two-Tier Review System</h4>
+<p>Once your listing is active, edits are categorized into two types. This balances your autonomy with quality control.</p>
+<p><strong>🔴 Critical Changes (Requires Curator Re-Approval)</strong></p>
+<p>These fundamentally define what guests are booking. Changes require curator approval before going live.</p>
+<p><strong>Examples:</strong> - Property type (House → Apartment) - Number of bedrooms - Number of bathrooms - Max guest capacity - Location/Address - Major amenities (Pool, Hot tub, Parking, AC/Heating, Kitchen, Washer/Dryer, Accessibility features)</p>
+<p><strong>What Happens:</strong> 1. You make the change and save 2. Your listing <strong>stays Active</strong> and <strong>stays bookable</strong> 3. <strong>Guests see:</strong> Old approved information (e.g., “2 bedrooms”) 4. <strong>You see:</strong> “Active ⏳ 1 pending edit (Critical)” with details 5. Curator reviews within 24 hours 6. <strong>If approved:</strong> Changes go live immediately, guests now see new information 7. <strong>If rejected:</strong> Listing stays with old information, you see rejection reason and can resubmit immediately</p>
+<p><strong>Important:</strong> If a guest books during the pending period, they book based on the old approved information (e.g., 2 bedrooms). You must honor what the guest booked.</p>
+<hr />
+<p><strong>✅ Auto-Approved Changes (Goes Live Immediately)</strong></p>
+<p>All other changes that don’t fundamentally change what guests are booking. Updates go live immediately with no curator review needed.</p>
+<p><strong>Examples:</strong> - Photos/Videos - Title changes - Description changes - Price changes (any amount) - Cleaning fee adjustments - Cancellation policy changes - Minimum/maximum stay requirements - Minor amenity additions/removals - WiFi password - Door codes/check-in instructions - Local recommendations - Neighborhood guide - Parking instructions - Trash/recycling info - Calendar availability blocking/unblocking</p>
+<p><strong>What Happens:</strong> 1. You make the change and save 2. Change goes live <strong>immediately</strong> 3. Listing stays <strong>Active</strong> 4. <strong>Guests see:</strong> New information right away 5. No curator review needed</p>
+<hr />
+<h4 id="what-youll-see-in-your-listings-tab">5.3.4 What You’ll See in Your Listings Tab</h4>
+<p><strong>Active listing (no pending edits):</strong></p>
+<pre><code>Beach House
+$200/night · San Diego, CA
+⭐ 4.9 (12)                    [Active] ✅</code></pre>
+<p><strong>Active listing WITH pending critical edits:</strong></p>
+<pre><code>Downtown Loft
+$250/night · San Diego, CA
+⭐ 5.0 (8)                     [Active] ✅
+
+⏳ 1 pending edit awaiting review
+• Critical: Bedrooms change (2 → 3)</code></pre>
+<p><strong>New listing awaiting approval:</strong></p>
+<pre><code>New Lake House
+$300/night · Lake Tahoe, CA
+No reviews yet      [Pending Review] ⏳
+
+Submitted Nov 8 · Est. review in 24-48h</code></pre>
+<p><strong>Listing sent back for edits:</strong></p>
+<pre><code>City Apartment
+$180/night · San Diego, CA
+No reviews yet      [Request Edits] ✏️
+
+⚠️ Curator requested changes:
+• Add more photos (min 5 required)
+• Fix description (too short)
+[Fix &amp; Resubmit]</code></pre>
+<hr />
+<h4 id="managing-active-listings">5.3.5 Managing Active Listings</h4>
+<p>Once approved, you have full control:</p>
+<p><strong>Pause Yourself:</strong> - Need a break? Tap “Pause Listing” to temporarily disable it - Listing becomes invisible to guests and unbookable - Status: <strong>Paused by You</strong> - Unpause anytime without re-review</p>
+<p><strong>Curator Pause:</strong> - If curator finds an issue with your live listing, they’ll pause it and message you - Status: <strong>Paused by Curator</strong> - Fix the issue and resubmit for quick re-review - Curator re-reviews within 24 hours</p>
+<p><strong>Archive:</strong> - Permanently remove the listing - Status: <strong>Archived</strong> - Cannot be undone or restored - Booking history is preserved for tax records</p>
+<h3 id="handle-booking-requests">5.4 Handle Booking Requests</h3>
+<p>Both hosts and co-hosts can approve or decline booking requests.</p>
+<h4 id="receive-booking-notifications">5.4.1 Receive Booking Notifications</h4>
+<p><strong>Instant Book:</strong></p>
+<p>If Instant Book is enabled, guests can book without your approval: - Payment authorized automatically - Booking confirmed immediately - No 24-hour response window needed - You still control pricing and calendar</p>
+<p><strong>Configuration:</strong> Instant Book is configured during listing creation (see 5.2.7 Booking Rules) or can be edited later in Listing Editor → “Booking Settings”</p>
+<p><strong>Non-Instant Book (Request to Book):</strong></p>
+<p>When a guest requests to book (Instant Book disabled): 1. Push notification sent to your device 2. Email notification sent 3. Booking appears in “Bookings” tab as “Pending” 4. You have 24 hours to respond</p>
+<h4 id="view-bookings">5.4.2 View Bookings</h4>
+<p>Access all bookings, including those awaiting your approval in the Bookings tab. Filter by status to focus on what needs attention.</p>
+<p><strong>Search &amp; Filter:</strong> - Search bar: “Search bookings…” - Find by guest name, property, or confirmation number - Filter tabs: - <strong>Pending</strong> - Requests awaiting your approval (requires action within 24 hours) - <strong>Upcoming</strong> - Future confirmed reservations - <strong>Today</strong> - Check-ins or check-outs happening today - <strong>All</strong> - Complete booking history across all statuses</p>
+<p><strong>Booking Cards Display:</strong> - Property photo thumbnail (left) - Property title (bold, e.g., “Charming Beach Cottage Steps from Ocean” or “Waterfront Condo on Mission Bay”) - Guest name (gray text, e.g., “Guest: John Peapod”) - Status badges: - Orange “Pending” - Awaiting your approval (action required within 24 hours) - Orange “Payment Pending” - Guest payment not yet authorized - Green “Confirmed” - Booking confirmed and payment received - <strong>Check-in</strong> date (e.g., “Nov 20” or “Nov 11”) - <strong>Check-out</strong> date (e.g., “Nov 22” or “Nov 14”) - <strong>Guests</strong> count (e.g., “1”) - <strong>Payout</strong> amount you’ll receive (green, e.g., “$486” or “$661”) - <strong>Confirmation #</strong> (booking ID, e.g., “8ca66d49” or “47102220”) - Three-dot menu (⋯) - Actions (View Details, Message Guest, Accept/Decline for Pending, or Modify/Cancel for Confirmed)</p>
+<p><strong>Who Sees What:</strong> - <strong>Hosts:</strong> All bookings for all owned properties - <strong>Co-Hosts:</strong> Bookings only for assigned properties</p>
+<p align="center">
+<img src="../screens/en/Host/host_bookings_pending.png" width="300"> <img src="../screens/en/Host/host_bookings_upcoming.png" width="300">
+</p>
+<h4 id="approve-or-decline-booking-requests">5.4.3 Approve or Decline Booking Requests</h4>
+<p><strong>When a Guest Requests to Book:</strong> 1. Guest submits booking request 2. You receive notification 3. Review guest profile, reviews, and message 4. You have 24 hours to respond</p>
+<p><strong>Two Ways to Accept or Decline:</strong></p>
+<p><strong>Method 1: From Booking List</strong> - Tap three-dot menu (⋯) on the booking card - Select “Accept” or “Decline” from menu</p>
+<p><strong>Method 2: From Booking Details (Recommended)</strong> 1. Tap the booking card to open full details 2. Review all information: - <strong>Guest Information:</strong> Name, profile photo, guest count - <strong>Payment Details:</strong> Nightly rate breakdown, cleaning fee, service fee, taxes, total - <strong>Your Payout:</strong> Amount you’ll receive (shown in green) - <strong>Payment Status:</strong> Paid indicator (checkmark) - <strong>Cancellation Policy:</strong> Policy type and refund terms 3. Tap “Approve” (green button) or “Decline” (red button) at bottom</p>
+<p><strong>After Approval:</strong> - Guest charged immediately - Booking confirmed - You receive payout after check-in - Calendar updated automatically</p>
+<p><strong>After Decline:</strong> - Guest notified (no charge) - Booking request canceled - Calendar dates released for new bookings</p>
+<p align="center">
+<img src="../screens/en/Host/host_pending_booking_details.png" width="300">
+</p>
+<p><strong>Note:</strong> For advanced booking modification features including Auto-Reschedule, see <a href="#appendix-h-auto-reschedule-details">Appendix H: Auto-Reschedule Details</a>.</p>
+<h3 id="team-management-host-only">5.5 Team Management [Host Only]</h3>
+<p><strong>Team Roles:</strong> - <strong>Host</strong> - Full control including pricing and payouts (property owner) - <strong>Co-Host</strong> - Day-to-day operations, guest messaging, booking management (cannot access payouts) - <strong>Cleaner</strong> - View/complete cleaning tasks, manage availability</p>
+<p><strong>MVP Limit:</strong> Each listing can have <strong>at most one co-host</strong>. This ensures clear responsibility and simple operations.</p>
+<p><strong>Features:</strong> Email invites, role-based permissions, message attribution, auto-assigned cleaning tasks, analytics filtering, activity log</p>
+<p align="center">
+<img src="../screens/en/Host/host_listings_team_members.png" width="300">
+</p>
+<h4 id="invite-team-members-host-only">5.5.1 Invite Team Members [Host Only]</h4>
+<ol type="1">
+<li>Listing → “Team Members” tab → “Invite Member”</li>
+<li>Enter email (must have Peapod account), select role (Co-Host/Cleaner), add optional message</li>
+<li>Tap “Send Invite” - Invitee receives email, status shows “Pending” until accepted</li>
+<li>Track in Team tab - resend or cancel if needed</li>
+</ol>
+<p align="center">
+<img src="../screens/en/Host/host_listings_invite_member.png" width="300">
+</p>
+<h4 id="view-team-members-host-only">5.5.2 View Team Members [Host Only]</h4>
+<p><strong>Team List displays:</strong> - <strong>Host:</strong> Crown (👑), Gold badge - <strong>Co-Hosts:</strong> Person (👤), Blue badge - <strong>Cleaners:</strong> Sparkles (✨), Green badge</p>
+<p>Shows name, photo, email, date added, status (Active/Pending). Filter by role, sort by date or name.</p>
+<h4 id="edit-or-remove-team-members-host-only">5.5.3 Edit or Remove Team Members [Host Only]</h4>
+<p><strong>Edit:</strong> Tap member → “Edit Role” → Change Co-Host/Cleaner → “Save” → Member notified</p>
+<p><strong>Remove:</strong> Tap member → “Remove from Team” → Confirm → Immediate access loss, member notified</p>
+<p><strong>Notes:</strong> Hosts only can remove members. You cannot remove yourself. Removing cleaner cancels tasks, removing co-host removes message attribution.</p>
+<h4 id="being-a-co-host-co-host">5.5.4 Being a Co-Host [Co-Host]</h4>
+<ol type="1">
+<li>Check email (subject: “You’ve been invited to co-host on Peapod”) - includes property details and link</li>
+<li>Click “Accept Invitation” → Opens app (must have account with same email)</li>
+<li>Property appears in “Listings” tab with Co-Host badge (👤 blue) - editing access granted (except pricing)</li>
+</ol>
+<h4 id="cleaner-role-task-management-host-only">5.5.5 Cleaner Role &amp; Task Management [Host Only]</h4>
+<p><strong>Can Do:</strong> View/complete tasks, upload photos, report issues, view property details, set unavailable dates</p>
+<p><strong>Task Dashboard:</strong> Upcoming, Today, Past - filter by property</p>
+<p><strong>Cannot Access:</strong> Guest messages, booking details, pricing, payout info, listing editor</p>
+<p align="center">
+<img src="../screens/en/Host/host_listings_invite_member.png" width="300">
+</p>
+<h4 id="analytics-performance-by-team-member-host-only">5.5.6 Analytics &amp; Performance by Team Member [Host Only]</h4>
+<p>Track team member performance: Response time, message count, booking conversions, guest satisfaction, activity log (all filterable by team member)</p>
+<h4 id="role-badges-visual-indicators">5.5.7 Role Badges &amp; Visual Indicators</h4>
+<ul>
+<li><strong>Host:</strong> Crown (👑), Gold - Full control, receives payouts</li>
+<li><strong>Co-Host:</strong> Person (👤), Blue - Manages property, no pricing access</li>
+<li><strong>Cleaner:</strong> Sparkles (✨), Green - Task management only</li>
+</ul>
+<p><strong>Appear in:</strong> Team list, messages (“Sent by [Co-Host] 👤”), activity log, properties list, analytics dashboard</p>
+<h4 id="property-activity-log">5.5.8 Property Activity Log</h4>
+<p><strong>Logs:</strong> Listing edits, calendar changes, messages sent, booking status, team changes, tasks completed, review responses, settings updates</p>
+<p>See <a href="#appendix-b-co-hosting-advanced-topics">Appendix B: Co-Hosting Advanced Topics</a> for best practices.</p>
+<h3 id="guest-communication-reviews">5.6 Guest Communication &amp; Reviews</h3>
+<h4 id="message-templates">5.6.1 Message Templates</h4>
+<p><strong>[Co-Host Note]:</strong> Full access to templates, messages show “Sent by [Your Name]”</p>
+<p>Pre-written templates with variable substitution (<code>{{guest_name}}</code>, <code>{{listing_title}}</code>, etc.) for check-in instructions, house rules, recommendations, pricing, common questions.</p>
+<p><strong>Features:</strong> 10 default templates, usage tracking, one-tap quick-send, customizable, organized by category</p>
+<p align="center">
+<img src="../screens/en/Host/host_messages_view.png" width="300">
+</p>
+<p>See <a href="#appendix-i-message-templates-reference">Appendix I: Message Templates Reference</a> for full documentation.</p>
+<h4 id="reviews-ratings">5.6.2 Reviews &amp; Ratings</h4>
+<p><strong>Receive Guest Reviews:</strong></p>
+<p align="center">
+<img src="../screens/en/Host/host_reviews.png" width="300">
+</p>
+<p><strong>Respond to Reviews [Host Only]:</strong> - <strong>Do:</strong> Thank guests, address issues constructively, be professional - <strong>Don’t:</strong> Argue, ask to change review, share personal contact info</p>
+<p><strong>Review Guests [Host Only]:</strong> Opens after checkout, closes 14 days later. Reviews published after both submit or 14 days pass.</p>
+<h4 id="co-host-messaging">5.6.3 Co-Host Messaging</h4>
+<p>Co-hosts are the <strong>primary point of contact</strong> for guest communication on their assigned properties.</p>
+<hr />
+<p><strong>How Co-Host Messaging Works:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Host</th>
+<th>Co-Host</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View conversations</td>
+<td>✅ All properties</td>
+<td>✅ Assigned properties only</td>
+</tr>
+<tr>
+<td>Read messages</td>
+<td>✅ All</td>
+<td>✅ Assigned properties only</td>
+</tr>
+<tr>
+<td>Send messages</td>
+<td>✅ All</td>
+<td>✅ Assigned properties only</td>
+</tr>
+<tr>
+<td>Receive notifications</td>
+<td>✅ Escalations only</td>
+<td>✅ All new messages</td>
+</tr>
+<tr>
+<td>Use templates</td>
+<td>✅ All</td>
+<td>✅ All</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>What Co-Hosts See in the Messages Tab:</strong></p>
+<p>Co-hosts see <strong>all conversations</strong> for their assigned listings: - Conversations between host and guest - Messages sent by any team member - Full conversation history</p>
+<p><strong>Message Identity Shown to Guest:</strong></p>
+<p>When a guest views messages, they see who sent each message: - <strong>“Alice (Host)”</strong> - Message from the property owner - <strong>“Bob (Co-Host)”</strong> - Message from the assigned co-host</p>
+<p>This keeps messaging transparent so guests know who they’re talking to.</p>
+<hr />
+<p><strong>Sending Messages as a Co-Host:</strong></p>
+<ol type="1">
+<li>Open <strong>Messages</strong> tab</li>
+<li>Select a conversation for an assigned property</li>
+<li>Type your message or use a template</li>
+<li>Tap <strong>Send</strong></li>
+</ol>
+<p><strong>Notes:</strong> - Messages are attributed to your account - Host can always see who sent each message - Your name and role are visible to the guest</p>
+<hr />
+<p><strong>Notification Routing:</strong></p>
+<p><strong>Co-Host receives notifications for:</strong> - All new guest messages (primary recipient) - Routine check-in questions - Issue reports from guests</p>
+<p><strong>Host receives notifications for:</strong> - Issues explicitly escalated by co-host - High-priority events (fraud, damage, emergency) - Messages not answered within SLA time</p>
+<p>This default routing means co-hosts handle day-to-day communication while hosts focus on strategic decisions.</p>
+<hr />
+<p><strong>Conversation Visibility Rules:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Host Sees</th>
+<th>Co-Host Sees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guest messages property</td>
+<td>✅</td>
+<td>✅ (if assigned)</td>
+</tr>
+<tr>
+<td>Host replies to guest</td>
+<td>✅</td>
+<td>✅ (if assigned)</td>
+</tr>
+<tr>
+<td>Co-host replies to guest</td>
+<td>✅</td>
+<td>✅ (if assigned)</td>
+</tr>
+<tr>
+<td>Conversation for unassigned property</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important:</strong> Host always has full visibility. Co-host visibility is limited to assigned listings only.</p>
+<hr />
+<p><strong>MVP Note: One Co-Host Per Listing</strong></p>
+<p>Currently, each listing has at most one assigned co-host. This ensures clear responsibility: - One co-host handles all day-to-day messaging - Host can step in anytime (e.g., for escalations, personal welcomes) - No confusion about who should respond</p>
+<hr />
+<p><strong>Best Practices for Co-Host Messaging:</strong></p>
+<ol type="1">
+<li><strong>Response Time:</strong> Aim for &lt;1 hour response during business hours</li>
+<li><strong>Consistency:</strong> Use templates to maintain consistent tone</li>
+<li><strong>Escalation:</strong> Contact host for pricing questions, special requests, or serious issues</li>
+<li><strong>Documentation:</strong> Important agreements should be confirmed in writing</li>
+<li><strong>Handoffs:</strong> If host needs to step in, brief them on the conversation context</li>
+</ol>
+<hr />
+<h3 id="earnings-loyalty-host-only">5.7 Earnings &amp; Loyalty [Host Only]</h3>
+<h4 id="how-earnings-work-cn-release-1.0">5.7.1 How Earnings Work (CN Release 1.0)</h4>
+<blockquote>
+<p><strong>CN Fee Model:</strong> See <a href="#appendix-j-host-fees--tier-program-cn-release-10">Appendix J: Host Fees &amp; Tier Program</a> for complete details.</p>
+</blockquote>
+<ul>
+<li><strong>Guest pays:</strong> Base + Cleaning + Taxes (NO service fee - 0% for guests)</li>
+<li><strong>You receive:</strong> Base + Cleaning - Host platform fee (tier-based: 11.5% - 13%)</li>
+<li><strong>Platform keeps:</strong> Host platform fee only</li>
+</ul>
+<p><strong>Host Platform Fee Formula:</strong></p>
+<pre><code>Host Fee = platform_fee_rate (15%) - tier_discount_rate (2% - 3.5%)</code></pre>
+<p><strong>Example (Gold Tier Host):</strong> $200/night × 3 nights = $600 + $50 cleaning = $650 subtotal - Guest pays: $650 + taxes (NO service fee) - Host fee: 12.5% (15% - 2.5%) = $81.25 - You receive: <strong>$568.75</strong></p>
+<h4 id="payout-schedule">5.7.2 Payout Schedule</h4>
+<p>Released 24hrs after check-in, 3-5 business days to bank. Methods: Bank deposit, PayPal, Stripe Connect (default).</p>
+<p align="center">
+<img src="../screens/en/Host/earnings_dashboard.png" width="300">
+</p>
+<h4 id="view-earnings">5.7.3 View Earnings</h4>
+<p align="center">
+<img src="../screens/en/Host/payout_details.png" width="300">
+</p>
+<h4 id="tax-information">5.7.4 Tax Information</h4>
+<p>You report income. US hosts &gt;$600/year receive 1099 form. Download: “Earnings” → “Tax Documents”</p>
+<h4 id="host-loyalty-program">5.7.5 Host Loyalty Program</h4>
+<p>Earn points on gross booking revenue (before fees), credited after check-in. Redeem for travel discounts. Never expire. 100 points = $1 USD.</p>
+<p><strong>Loyalty Tiers:</strong></p>
+<p align="center">
+<img src="../screens/en/Host/host_loyalty.png" width="300">
+</p>
+<p><strong>Tiers (Annual Revenue, resets yearly):</strong> | Tier | Annual Revenue | Points Rate | Platform Fee | |——|—————-|————-|————–| | Silver | $0+ | 2.0% | 13.0% (15% - 2%) | | Gold | $50k+ | 2.5% | 12.5% (15% - 2.5%) | | Platinum | $250k+ | 3.0% | 12.0% (15% - 3%) | | Diamond | $500k+ | 3.5% | 11.5% (15% - 3.5%) |</p>
+<p><strong>Key Benefits by Tier:</strong> - <strong>Silver:</strong> Standard support - <strong>Gold:</strong> Priority support, featured placement - <strong>Platinum:</strong> Premium support, webinars, early features - <strong>Diamond:</strong> VIP 24/7, dedicated account manager, custom marketing</p>
+<p><strong>Note:</strong> Higher tiers get <strong>both</strong> more points AND lower platform fees. The tier discount rate serves double duty.</p>
+<p><strong>Example:</strong> $1,000 booking, Gold tier: - Earn: 25 points (2.5% × $1,000) - Platform fee: 12.5% - Your payout: <strong>$875</strong> (after $125 fee)</p>
+<h3 id="host-resources">5.8 Host Resources</h3>
+<h4 id="cleaning-task-management">5.8.1 Cleaning Task Management</h4>
+<p>See <a href="USER_MANUAL_CLEANER_v2.md#6-for-cleaners">Cleaner Manual Section 6</a> for full documentation.</p>
+<p><strong>Host Quick Reference:</strong> Automatic tasks (checkout → next check-in), manual tasks (anytime), smart assignment, monitor progress/ratings in Team tab, track performance metrics</p>
+<h4 id="host-property-badges">5.8.2 Host &amp; Property Badges</h4>
+<p>Visual trust indicators on profiles, listings, search results, and messages.</p>
+<p><strong>Host Quality Badges (Automatic):</strong> - <strong>Superhost:</strong> 4.8+ rating, 90%+ response, &lt;1% cancel, 10+ bookings - <strong>Instant Reply:</strong> 95%+ response, &lt;1hr reply time - <strong>Experienced Host:</strong> 50+ bookings, 1+ year - <strong>Top Host:</strong> Top 10% in city, 4.9+ rating, 100+ bookings</p>
+<p><strong>Property Feature Badges (Admin Verified):</strong> - <strong>Sustainable Stay:</strong> Solar/renewable energy, EV charging, efficient appliances - <strong>Remote Work Ready:</strong> 50+ Mbps WiFi, dedicated workspace, good lighting - <strong>Pet-Friendly Certified:</strong> Pets allowed, outdoor space, pet amenities, 5+ positive pet reviews - <strong>Family-Friendly Certified:</strong> Kid amenities, safety features, spacious layout - <strong>Luxury Stay:</strong> Premium amenities, &gt;$300/night, 4.9+ rating</p>
+<p><strong>Apply:</strong> Listing Editor → Badges → Upload documentation → Submit → Admin review (3-5 days)</p>
+<p>See <a href="#appendix-c-badge-details">Appendix C: Badge Details</a> for full criteria.</p>
+<h4 id="host-performance-superhost-status">5.8.3 Host Performance &amp; Superhost Status</h4>
+<p><strong>Performance Metrics:</strong> Response rate (% within 24hrs), response time (avg hours), acceptance rate, overall rating, cancellation rate</p>
+<p><strong>Targets:</strong> 90%+ response (goal: 100%), &lt;1hr reply (goal: &lt;10min), 90%+ acceptance, 4.5+ stars (goal: 4.8+), &lt;1% cancellation</p>
+<p align="center">
+<img src="../screens/en/Host/host_badges.png" width="300">
+</p>
+<p align="center">
+<img src="../screens/en/Host/host_performance.png" width="300">
+</p>
+<p><strong>Superhost Status:</strong> Elite quarterly recognition with badge, better search rank, priority support</p>
+<p><strong>Requirements:</strong> 10+ bookings OR 100+ nights, 90%+ response/acceptance (or instant book), 4.8+ rating, &lt;1% cancellation</p>
+<p><strong>Evaluation:</strong> Quarterly (Jan/Apr/Jul/Oct), past 12 months, automatic</p>
+<p><strong>Benefits:</strong> Badge, higher search ranking, priority support, exclusive rewards, higher guest conversion</p>
+<h4 id="support-help">5.8.4 Support &amp; Help</h4>
+<p><strong>Help Center:</strong> Host Dashboard → “Help” OR in-app menu → “Help Center”</p>
+<p><strong>Contact Support:</strong> In-App Chat (24/7, fastest), Email (support@peapod.com), Phone (coming soon)</p>
+<p><strong>Host Community:</strong> (Coming soon)</p>
+<hr />
+<h2 id="appendices-1">Appendices</h2>
+<p>For detailed reference material, see the separate appendix document:</p>
+<p><strong>→ <a href="USER_MANUAL_HOST_APPENDIX.html">Host Manual Appendix</a></strong></p>
+<p>Contains: - <strong>Appendix A:</strong> Smart Pricing Details - <strong>Appendix B:</strong> Co-Hosting Advanced Topics - <strong>Appendix C:</strong> Badge Details - <strong>Appendix D:</strong> AI Listing Optimizer [Coming Soon] - <strong>Appendix E:</strong> Smart Assignment Algorithm - <strong>Appendix F:</strong> Troubleshooting - <strong>Appendix G:</strong> Best Practices - <strong>Appendix H:</strong> Auto-Reschedule Details - <strong>Appendix I:</strong> Message Templates Reference - <strong>Appendix J:</strong> Host Fees &amp; Tier Program (CN Release 1.0) - <strong>Appendix K:</strong> Multi-Unit Property Management (Hotels &amp; Hostels)</p>
+<hr />
+<p>← <a href="USER_MANUAL_TOP.html">Back to Index</a> | <a href="USER_MANUAL_CLEANER.html">Cleaner Guide →</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peapod Hotels. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../../terms.html">Terms</a>
+                <a href="../../privacy.html">Privacy</a>
+                <a href="../../sms-terms.html">SMS Terms</a>
+                <a href="../../manual/en/index.html">APP Manual</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

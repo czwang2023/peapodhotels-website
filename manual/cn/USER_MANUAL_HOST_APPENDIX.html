@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peapod 用户手册 - 房东指南附录 - Peapod Hotels</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manual.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍐 Peapod Hotels</div>
+            <ul class="nav-links">
+                <li><a href="../../index-zh.html">首页</a></li>
+                <li><a href="../../terms-zh.html">服务条款</a></li>
+                <li><a href="../../privacy-zh.html">隐私政策</a></li>
+                <li><a href="../../sms-terms-zh.html">短信条款</a></li>
+                <li><a href="../../manual/cn/index.html" class="active">APP手册</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <a href="../en/index.html" title="Switch language">
+                    <span class="lang-icon">🌐</span>
+                    <span>EN</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="manual-content">
+<h1 id="peapod-用户手册---房东指南附录">Peapod 用户手册 - 房东指南附录</h1>
+<p><strong>版本：</strong> 0.18.8 (Slice V - 多房型支持) <strong>最后更新：</strong> 2025年11月30日 <strong>平台：</strong> iOS (iPhone, iPad)</p>
+<p>← <a href="USER_MANUAL_HOST.html">返回房东指南</a> | <a href="USER_MANUAL_TOP.html">返回目录</a></p>
+<hr />
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#附录-a-智能定价详解">附录 A: 智能定价详解</a></li>
+<li><a href="#附录-b-联合托管高级主题">附录 B: 联合托管高级主题</a></li>
+<li><a href="#附录-c-徽章详解">附录 C: 徽章详解</a></li>
+<li><a href="#附录-d-ai-房源优化器即将推出">附录 D: AI 房源优化器</a></li>
+<li><a href="#附录-e-智能分配算法">附录 E: 智能分配算法</a></li>
+<li><a href="#附录-f-故障排除">附录 F: 故障排除</a></li>
+<li><a href="#附录-g-最佳实践">附录 G: 最佳实践</a></li>
+<li><a href="#附录-h-自动重排详解">附录 H: 自动重排详解</a></li>
+<li><a href="#附录-i-消息模板参考">附录 I: 消息模板参考</a></li>
+<li><a href="#附录-j-房东费用与等级计划cn-release-10">附录 J: 房东费用与等级计划</a></li>
+<li><a href="#附录-k-取消与退款政策cn-release-10">附录 K: 取消与退款政策</a></li>
+</ul>
+<hr />
+<h2 id="附录-a-智能定价详解">附录 A: 智能定价详解</h2>
+<p>本附录包含智能定价功能的详细收入示例、折扣策略和业务影响分析。</p>
+<h3 id="基于时长的折扣周折扣和月折扣">基于时长的折扣（周折扣和月折扣）</h3>
+<p>自动降低长住客人的每晚价格。客人可以看到折后总价，鼓励延长预订。</p>
+<p><strong>折扣类型：</strong> 1. <strong>周折扣</strong>（7-27 晚） - 基础价格的折扣百分比 - 范围：5% - 50% - 推荐：10-20% - 示例：$100/晚 → 7晚以上$90/晚 = 一周$630（原价$700）</p>
+<ol start="2" type="1">
+<li><strong>月折扣</strong>（28晚以上）
+<ul>
+<li>基础价格的折扣百分比</li>
+<li>范围：10% - 60%</li>
+<li>推荐：20-30%</li>
+<li>示例：$100/晚 → 28晚以上$75/晚 = 一月$2,100（原价$2,800）</li>
+</ul></li>
+</ol>
+<h3 id="即时优惠深度解析">即时优惠深度解析</h3>
+<p>当日预订（“今晚”）的特别折扣，用于填补原本收入为$0的空房。仅对高等级客人（白金/钻石）可见，作为忠诚度福利。</p>
+<p><strong>主要特点：</strong> - <strong>仅限今晚</strong>：预订必须是当天 - <strong>专属权益</strong>：仅白金/钻石等级客人可见 - <strong>房东控制</strong>：您设置折扣百分比 - <strong>自动过期</strong>：午夜过期（优惠结束，房间恢复正常价格） - <strong>可选功能</strong>：可按房源开启/关闭</p>
+<p><strong>资格要求：</strong> - 客人等级：白金（10次以上预订）或钻石（25次以上预订） - 预订时间：当日（今天入住） - 房源可用性：今晚必须可用 - 房东设置：该房源已启用即时优惠</p>
+<h3 id="折扣叠加规则重要">折扣叠加规则（重要！）</h3>
+<p><strong>黄金法则：</strong> 仅适用<strong>单个最优折扣</strong>。折扣不叠加。</p>
+<p><strong>为什么不叠加？</strong></p>
+<p>防止过度折扣损害收入。如果没有此规则： - 20%月折扣 + 30%即时优惠 = 50%折扣（太多了！） - 房东亏损比空置更严重</p>
+<p><strong>示例场景：</strong></p>
+<p><strong>场景 A：30晚住宿 + 即时优惠已启用</strong> - 基础价格：$100/晚 - 月折扣：25%折扣 → $75/晚 - 即时优惠：40%折扣 → $60/晚（但不符合条件 - 预订是30晚，不是今晚） - <strong>适用：</strong> 月折扣（$75/晚）✅</p>
+<p><strong>场景 B：7晚住宿 + 即时优惠已启用（今晚入住）</strong> - 基础价格：$100/晚 - 周折扣：15%折扣 → $85/晚 - 即时优惠：30%折扣 → $70/晚（符合条件！） - <strong>适用：</strong> 即时优惠（$70/晚）（优于15%周折扣）</p>
+<p><strong>场景 C：10晚住宿（无即时优惠）</strong> - 基础价格：$100/晚 - 周折扣：15%折扣 → $85/晚 - 月折扣：25%折扣 → （不符合条件，少于28晚） - <strong>适用：</strong> 周折扣（$85/晚）✅</p>
+<p><strong>系统如何决定：</strong></p>
+<p>系统计算预订的所有符合条件的折扣，并自动应用最优折扣（最低价格）。工作原理：</p>
+<ol type="1">
+<li>从基础价格开始（无折扣）</li>
+<li>检查周折扣是否适用（7晚以上且功能已启用）</li>
+<li>检查月折扣是否适用（28晚以上且功能已启用）</li>
+<li>检查即时优惠是否适用（今晚入住、白金/钻石客人、功能已启用）</li>
+<li>比较所有符合条件的价格，为客人选择最低价格</li>
+</ol>
+<h3 id="收入影响示例">收入影响示例</h3>
+<p><strong>示例 1：海滨别墅 - 智能定价前</strong> - 基础价格：$200/晚 - 平均预订：3晚 - 入住率：60%（18天/月） - 收入：18 × $200 = <strong>$3,600/月</strong></p>
+<p><strong>示例 1：海滨别墅 - 智能定价后</strong> - 基础价格：$200/晚 - 周折扣：15% → 7晚以上$170/晚 - 月折扣：25% → 28晚以上$150/晚 - 预订变化： - 10晚短住（每次3晚）：10 × $200 = $2,000 - 2次周住（每次7晚）：14 × $170 = $2,380 - 1次即时优惠今晚：1 × $140（30%折扣）= $140 - 入住率：83%（25天/月）← 因折扣而增加 - 收入：$2,000 + $2,380 + $140 = <strong>$4,520/月</strong> <strong>+26%收入！</strong></p>
+<p><strong>示例 2：山间小屋 - 季节性策略</strong> - 基础价格：$150/晚 - 冬季（旺季）：不启用折扣 - 夏季（淡季）：20%周折扣、30%月折扣 - 结果：夏季入住率从40%增加到65% - 年收入增长：<strong>+18%</strong></p>
+<p><strong>示例 3：城市公寓 - 即时优惠</strong> - 基础价格：$120/晚 - 即时优惠：40%折扣 → $72/晚 - 场景：本月5个空置夜晚原本收入$0 - 使用优惠后：5晚中3晚被白金客人预订 - 收入增益：3 × $72 = <strong>$216</strong>（vs $0）✅</p>
+<p><strong>示例 4：豪华别墅 - 策略性折扣</strong> - 基础价格：$500/晚 - 周折扣：10% → $450/晚 - 月折扣：20% → $400/晚 - 目标：长期远程工作者和搬迁家庭 - 结果：平均预订时长从3晚增加到12晚 - 年入住率从55%增加到75% - 总收入增长：<strong>+35%</strong></p>
+<hr />
+<h2 id="附录-b-联合托管高级主题">附录 B: 联合托管高级主题</h2>
+<p>本附录包含管理联合房东和清洁人员的最佳实践和故障排除技巧。</p>
+<h3 id="沟通最佳实践">沟通最佳实践</h3>
+<p><strong>团队沟通：</strong> - 使用应用内消息进行所有房产相关沟通 - 重要客人对话抄送房东 - 每周团队状态更新 - 分享当地知识（餐厅、景点） - 实时报告维护问题</p>
+<p><strong>客人沟通：</strong> - 在第一条消息中介绍您自己和角色 - 示例：“您好！我是Sarah，帮助管理这个房产的联合房东。” - 始终保持专业态度 - 切勿与房东的政策相矛盾 - 复杂问题上报房东</p>
+<h3 id="培训与入职">培训与入职</h3>
+<p><strong>新联合房东清单：</strong> - [ ] 完成房产参观 - [ ] 审核所有房屋规则和政策 - [ ] 练习使用消息模板 - [ ] 了解入住/退房流程 - [ ] 了解紧急联系人（水管工、电工、锁匠） - [ ] 查看过去的客人评价以了解常见问题 - [ ] 前3次预订跟随有经验的联合房东学习 - [ ] 了解定价策略和限制</p>
+<p><strong>新清洁人员清单：</strong> - [ ] 带详细清洁清单的房产参观 - [ ] 清洁用品和设备位置 - [ ] 门禁密码和钥匙位置 - [ ] 紧急联系人 - [ ] 任务完成的照片要求 - [ ] 损坏报告程序 - [ ] 补货程序 - [ ] 首选清洁产品/方法</p>
+<h3 id="分析与绩效跟踪">分析与绩效跟踪</h3>
+<p><strong>联合房东关键指标：</strong> - 平均响应时间（目标：&lt;1小时） - 每周消息量 - 客人满意度评价提及 - 预订转化率（咨询 → 确认） - 问题解决时间 - 主动客人互动</p>
+<p><strong>清洁人员关键指标：</strong> - 任务完成率（目标：100%） - 平均完成时间 - 照片上传合规性 - 问题报告提交 - 客人清洁度评分 - 重新清洁请求（目标：0%）</p>
+<p><strong>如何查看分析：</strong> 1. 访问房东仪表板 → 分析 2. 按团队成员筛选 3. 查看趋势（周、月、季度） 4. 与基准比较 5. 在定期检查中讨论 6. 根据需要调整角色/职责</p>
+<h3 id="法律与财务考虑">法律与财务考虑</h3>
+<p><strong>税务影响：</strong> - 联合房东可能被视为承包商（美国1099表格） - 清洁人员通常是税务目的的承包商 - 咨询税务专业人员以正确分类 - 保留所有团队成员付款记录</p>
+<p><strong>保险：</strong> - 验证房屋保险是否涵盖短期租赁 - 考虑联合托管的额外责任保险 - 清洁人员应有自己的责任保险 - 如有要求，在保险披露中包含团队成员</p>
+<p><strong>合同与协议：</strong> - 创建书面联合托管协议 - 定义职责、付款条款、终止条款 - 包含客人信息保密协议 - 处理财产损坏和责任 - 指定知识产权（照片、描述）</p>
+<p><strong>付款结构：</strong> - 联合房东：收入百分比（10-20%）或每次预订固定费用 - 清洁人员：每次清洁固定费用（根据房产大小而异） - 考虑高评分的绩效奖金 - 每周或每月付款计划 - 尽可能使用平台付款以便记录</p>
+<hr />
+<h2 id="附录-c-徽章详解">附录 C: 徽章详解</h2>
+<p>（徽章内容 - 保留用于未来文档）</p>
+<hr />
+<h2 id="附录-d-ai-房源优化器-即将推出">附录 D: AI 房源优化器 [即将推出]</h2>
+<p>AI 驱动的优化： - 照片选择和排序 - 标题/描述优化 - 定价建议 - 季节性建议</p>
+<hr />
+<h2 id="附录-e-智能分配算法">附录 E: 智能分配算法</h2>
+<h3 id="智能分配如何工作">智能分配如何工作</h3>
+<p><strong>第1步：资格检查</strong> - 筛选分配给此房产的清洁人员 - 检查清洁人员在截止时间的可用性 - 排除标记为不可用或超负荷的清洁人员</p>
+<p><strong>第2步：评分算法</strong></p>
+<p>每个符合条件的清洁人员根据以下因素获得评分：</p>
+<ol type="1">
+<li><strong>当前工作量（40%权重）</strong>
+<ul>
+<li>待处理任务的预估小时数总和</li>
+<li>工作量越低 = 分数越高</li>
+<li>公式：<code>100 - (pending_hours / max_hours_per_week * 100)</code></li>
+</ul></li>
+<li><strong>绩效评分（30%权重）</strong>
+<ul>
+<li>过去完成任务的平均评分</li>
+<li>评分：1-5星 → 20-100分</li>
+<li>公式：<code>rating * 20</code></li>
+</ul></li>
+<li><strong>截止日期可行性（20%权重）</strong>
+<ul>
+<li>能否在截止日期前完成？</li>
+<li>公式：<code>(deadline_hours - pending_hours) / task_duration * 100</code></li>
+<li>如果结果 &lt; 0（超负荷），该清洁人员分数 = 0</li>
+</ul></li>
+<li><strong>到房产的距离（10%权重）</strong>
+<ul>
+<li>从清洁人员位置的行程时间（如果可用）</li>
+<li>尚未实现 - 保留用于未来增强</li>
+<li>当前：所有人平等分数（50分）</li>
+</ul></li>
+</ol>
+<p><strong>第3步：选择</strong> - 总分最高的清洁人员被分配 - 平局：任务分配最少的清洁人员（终身） - 最终平局：按姓名字母顺序</p>
+<h3 id="示例场景">示例场景</h3>
+<p><strong>任务：</strong> 周五下午2点前需要手动深度清洁（预估3小时）</p>
+<p><strong>符合条件的清洁人员：</strong></p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 8%" />
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>清洁人员</th>
+<th>待处理小时</th>
+<th>评分</th>
+<th>截止小时</th>
+<th>工作量分数</th>
+<th>评分分数</th>
+<th>可行性分数</th>
+<th>总分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+<td>6小时</td>
+<td>4.8★</td>
+<td>48小时</td>
+<td>85 (40×0.4=34)</td>
+<td>96 (30×0.3=29)</td>
+<td>100 (20×0.2=20)</td>
+<td><strong>83分</strong></td>
+</tr>
+<tr>
+<td>Mike</td>
+<td>12小时</td>
+<td>4.5★</td>
+<td>48小时</td>
+<td>70 (40×0.4=28)</td>
+<td>90 (30×0.3=27)</td>
+<td>75 (20×0.2=15)</td>
+<td><strong>70分</strong></td>
+</tr>
+<tr>
+<td>Lisa</td>
+<td>3小时</td>
+<td>4.2★</td>
+<td>48小时</td>
+<td>93 (40×0.4=37)</td>
+<td>84 (30×0.3=25)</td>
+<td>100 (20×0.2=20)</td>
+<td><strong>82分</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果：</strong> Sarah被分配（最高分）</p>
+<h3 id="备用逻辑">备用逻辑</h3>
+<p>如果没有清洁人员在截止日期前可用： 1. 系统在所有清洁人员中找到最早可用时段 2. 向房东建议替代截止日期 3. 房东可以： - 接受新截止日期 - 手动分配并接受风险 - 取消任务创建</p>
+<h3 id="紧急通知系统">紧急通知系统</h3>
+<p><strong>警报风险级别：</strong></p>
+<ul>
+<li>🔴 <strong>紧急</strong> - 需要立即采取行动
+<ul>
+<li>任务未分配清洁人员</li>
+<li>距离客人入住不到3小时，任务未开始</li>
+</ul></li>
+<li>🟠 <strong>高</strong> - 需要尽快采取行动
+<ul>
+<li>距离入住不到6小时，任务未开始</li>
+</ul></li>
+<li>🟡 <strong>中</strong> - 注意，监控情况
+<ul>
+<li>距离入住不到12小时，任务未开始</li>
+</ul></li>
+<li>🟢 <strong>低</strong> - 正常监控
+<ul>
+<li>所有其他待处理任务</li>
+</ul></li>
+</ul>
+<p><strong>何时收到警报：</strong></p>
+<p>您将在手机上收到推送通知： - <strong>立即</strong>：客人退房但没有清洁人员可在下次入住前分配（即时发送） - <strong>立即</strong>：您创建手动任务但没有清洁人员在截止日期前可用 - 任务未分配清洁人员 - 入住即将到来但清洁尚未开始 - 系统检测到可能错过客人到达截止日期的风险</p>
+<p><strong>警报频率：</strong> - <strong>紧急故障</strong>：无法分配退房清洁时立即发送（&lt; 1分钟） - <strong>常规检查</strong>：每30分钟自动运行 - 同一任务在1小时内不会收到重复警报 - 紧急警报具有最高优先级（覆盖勿扰模式）</p>
+<p><strong>立即紧急 - 退房无可用清洁人员：</strong></p>
+<pre><code>🚨 紧急：无可用清洁人员
+房产&quot;Beachfront Coronado Home&quot;没有可用清洁人员
+进行退房清洁。客人将在6小时后入住。
+请立即分配清洁人员！
+[点击分配清洁人员]</code></pre>
+<p><strong>响应警报：</strong> 1. <strong>点击通知</strong>打开任务详情 2. <strong>查看清洁人员状态</strong> - 他们在处理吗？ 3. <strong>采取行动：</strong> - 如果未开始，直接致电/短信清洁人员 - 重新分配给另一个可用清洁人员 - 如有必要延迟客人入住（最后手段） - 实时监控进度</p>
+<p><strong>防止误报：</strong></p>
+<p>系统对警报很智能： - 仅对真正有风险的任务发出警报 - 考虑清洁人员工作量和容量 - 在截止日期计算中考虑任务持续时间 - 清洁人员开始任务后停止警报 - 不对有充足时间的任务发出警报</p>
+<hr />
+<h2 id="附录-f-故障排除">附录 F: 故障排除</h2>
+<p><strong>问：清洁人员拒绝了新时间表，怎么办？</strong> 答：系统自动找下一个可用清洁人员。如果没有可用清洁人员，您会看到”需要手动干预”，可以延迟入住或直接联系清洁人员。</p>
+<p><strong>问：我可以覆盖自动重排决定吗？</strong> 答：可以。在预检面板中，点击”手动模式”选择您自己的清洁人员或时间。</p>
+<p><strong>问：如果客人请求的变更超出我的政策怎么办？</strong> 答：自动重排遵守您的取消政策和最短住宿设置。违反政策的请求需要手动批准。</p>
+<p><strong>问：如何为特定房源禁用自动重排？</strong> 答：房源编辑器 → 设置 → 关闭”自动重排”（您将手动处理修改）。</p>
+<hr />
+<h2 id="附录-g-最佳实践">附录 G: 最佳实践</h2>
+<h3 id="任务管理最佳实践">任务管理最佳实践</h3>
+<p><strong>创建任务：</strong> - 🎯 <strong>设置现实的截止日期</strong> - 在下次入住前留出缓冲时间 - 🎯 <strong>提供清晰的备注</strong> - 具体任务，不是模糊的指示 - 🎯 <strong>使用正确的优先级</strong> - 将”紧急”保留给真正的紧急情况 - 🎯 <strong>准确估计持续时间</strong> - 防止清洁人员超负荷 - 🎯 <strong>信任自动分配</strong> - 算法考虑的因素比您更多</p>
+<p><strong>管理清洁人员：</strong> - 🎯 <strong>及时评分</strong> - 在完成后24小时内提供反馈 - 🎯 <strong>公平评分</strong> - 优秀工作5星，不是完美 - 🎯 <strong>直接沟通问题</strong> - 使用任务备注或私信 - 🎯 <strong>监控工作量</strong> - 确保团队成员之间均匀分配 - 🎯 <strong>认可表现优秀者</strong> - 奖金、感谢信、持续分配</p>
+<p><strong>质量控制：</strong> - 🎯 <strong>审核照片</strong> - 检查每个房间的前后照片 - 🎯 <strong>偶尔抽查</strong> - 不通知访问房产（提前通知） - 🎯 <strong>客人反馈</strong> - 跟踪评价中的清洁度评分 - 🎯 <strong>立即解决问题</strong> - 不要让质量下滑 - 🎯 <strong>更新清单</strong> - 为反复出现的问题添加项目</p>
+<p><strong>故障排除：</strong> - 🎯 <strong>完成延迟？</strong> - 检查清洁人员工作量，调整估计 - 🎯 <strong>质量下降？</strong> - 审核照片，提供具体反馈 - 🎯 <strong>清洁人员拒绝任务？</strong> - 讨论可用性，调整时间表 - 🎯 <strong>客人投诉？</strong> - 记录，与清洁人员分享，必要时重新培训</p>
+<h3 id="消息模板最佳实践">消息模板最佳实践</h3>
+<p><strong>模板创建：</strong> - 🎯 <strong>保持简短</strong>：理想150-300字 - 🎯 <strong>使用变量</strong>：个性化每条消息 - 🎯 <strong>测试变量</strong>：先发给自己验证替换 - 🎯 <strong>仔细校对</strong>：模板多次使用，错误会倍增 - 🎯 <strong>少量使用表情符号</strong>：一两个用于视觉分隔，不要过多</p>
+<p><strong>模板使用：</strong> - 🎯 <strong>需要时自定义</strong>：针对特定情况在发送前编辑模板 - 🎯 <strong>不要过度使用</strong>：平衡模板和个人消息 - 🎯 <strong>定期更新</strong>：随着房产变化刷新内容 - 🎯 <strong>跟踪效果</strong>：监控客人响应以了解什么有效</p>
+<p><strong>模板组织：</strong> - 🎯 <strong>命名一致</strong>：“入住 - [场景]”格式 - 🎯 <strong>正确分类</strong>：使查找模板更快 - 🎯 <strong>删除未使用的</strong>：保持列表可管理（最多10-15个模板） - 🎯 <strong>按频率排序</strong>：最常用的模板在顶部</p>
+<p><strong>变量使用：</strong> - 🎯 <strong>必需变量优先</strong>：{{guest_name}}、{{listing_title}} - 🎯 <strong>可选变量</strong>：在模板中添加优雅的备用方案 - 🎯 <strong>测试边缘情况</strong>：如果WiFi密码缺失怎么办？ - 🎯 <strong>保持变量更新</strong>：更改了门锁密码？更新模板！</p>
+<h3 id="智能定价最佳实践">智能定价最佳实践</h3>
+<p><strong>时长折扣：</strong> - 🎯 <strong>保守开始</strong>：10%周折扣、20%月折扣 - 🎯 <strong>监控入住率</strong>：如果&lt;70%，增加折扣 - 🎯 <strong>季节性调整</strong>：淡季更高折扣 - 🎯 <strong>竞争分析</strong>：检查附近房源的折扣 - 🎯 <strong>测试与迭代</strong>：尝试不同百分比，衡量结果 - 🎯 <strong>跟踪预订模式</strong>：了解客人何时预订更长住宿 - 🎯 <strong>计算盈亏平衡</strong>：了解盈利所需的最低入住率</p>
+<p><strong>即时优惠：</strong> - 🎯 <strong>低入住率期间启用</strong>：不在旺季 - 🎯 <strong>设置30-40%折扣</strong>：足够大以激励今晚预订 - 🎯 <strong>不要过度使用</strong>：培养客人等待优惠的习惯 - 🎯 <strong>结合即时预订</strong>：更快的预订流程 - 🎯 <strong>跟踪转化</strong>：多少优惠带来预订？ - 🎯 <strong>周末重点</strong>：周五/周六晚更有效 - 🎯 <strong>监控客人质量</strong>：确保即时优惠客人维持标准</p>
+<p><strong>一般策略：</strong> - 🎯 <strong>首先正确设置基础价格</strong>：折扣适用于基础价格 - 🎯 <strong>使用定价预览</strong>：保存前验证价格 - 🎯 <strong>季度审核</strong>：根据预订模式调整 - 🎯 <strong>不要过度折扣</strong>：50%以上折扣损害感知价值 - 🎯 <strong>传达价值</strong>：客人喜欢”获得优惠” - 🎯 <strong>A/B测试</strong>：尝试不同折扣级别30天 - 🎯 <strong>市场定位</strong>：相对于可比房产定价</p>
+<p><strong>业务策略：</strong></p>
+<p><strong>何时使用时长折扣：</strong> - 低入住率（&lt;70%） - 淡季月份 - 竞争激烈的市场 - 房产受益于长住（减少周转）</p>
+<p><strong>何时不使用时长折扣：</strong> - 旺季（需求已经很高） - 无竞争的独特房产 - 已达90%以上入住率</p>
+<p><strong>何时使用即时优惠：</strong> - 今晚日历空置 - 城市位置（商务旅行者） - 高清洁成本（通过一些收入抵消）</p>
+<p><strong>何时不使用即时优惠：</strong> - 旺季假期（无论如何都会预订） - 偏远位置（无法当天预订） - 房产需要提前准备时间</p>
+<p><strong>投资回报率计算：</strong></p>
+<p>确定智能定价是否有效：</p>
+<ol type="1">
+<li><strong>跟踪入住率</strong>（启用前后）</li>
+<li><strong>计算平均每晚收入</strong>（总收入 / 预订晚数）</li>
+<li><strong>衡量总月收入</strong>（入住率 × 平均价格 × 天数）</li>
+<li><strong>比较期间</strong>（前后3个月）</li>
+</ol>
+<p><strong>成功指标：</strong> - 入住率增长：+10-20% - 总收入增长：+15-30% - 平均预订时长：+50-100% - 客人满意度：保持或提高评分</p>
+<h3 id="联合托管最佳实践">联合托管最佳实践</h3>
+<p><strong>对于房东：</strong> - 🎯 <strong>仔细审核联合房东</strong>：检查推荐信、过往经验 - 🎯 <strong>设定明确期望</strong>：响应时间、沟通风格 - 🎯 <strong>定期审核活动日志</strong>：确保质量控制 - 🎯 <strong>提供培训</strong>：分享您的托管理念和标准 - 🎯 <strong>认可出色工作</strong>：感谢和奖励表现优秀者 - 🎯 <strong>使用分析</strong>：数据驱动的团队管理决策 - 🎯 <strong>清洁人员可用性</strong>：确保繁忙期间有备用清洁人员 - 🎯 <strong>记录流程</strong>：创建标准操作程序 - 🎯 <strong>定期检查</strong>：每周或每月团队会议 - 🎯 <strong>绩效评估</strong>：季度团队成员评估</p>
+<p><strong>对于联合房东：</strong> - 🎯 <strong>快速响应</strong>：清醒时间&lt;2小时 - 🎯 <strong>匹配房东风格</strong>：保持一致的品牌声音 - 🎯 <strong>记录所有变更</strong>：通过活动日志通知房东 - 🎯 <strong>不要越权</strong>：尊重定价/付款限制 - 🎯 <strong>沟通问题</strong>：立即向房东报告问题 - 🎯 <strong>主动出击</strong>：预见客人需求 - 🎯 <strong>了解房产细节</strong>：了解设施、特点、说明 - 🎯 <strong>明智使用模板</strong>：需要时个性化 - 🎯 <strong>跟踪您的指标</strong>：监控响应时间、客人满意度</p>
+<p><strong>对于清洁人员：</strong> - 🎯 <strong>更新可用性</strong>：不可用时阻止日期 - 🎯 <strong>及时完成任务</strong>：在下次入住前 - 🎯 <strong>上传照片</strong>：高质量工作的证明 - 🎯 <strong>立即报告问题</strong>：不要等到下一个任务 - 🎯 <strong>保持标准</strong>：遵循房东的清洁清单 - 🎯 <strong>补充用品</strong>：跟踪库存，请求补货 - 🎯 <strong>尊重客人隐私</strong>：如果客人在场不要进入 - 🎯 <strong>保护房产安全</strong>：锁门、关窗、设置警报</p>
+<hr />
+<h2 id="附录-h-自动重排详解">附录 H: 自动重排详解</h2>
+<h3 id="自动重排智能预订修改">自动重排：智能预订修改</h3>
+<p>自动重排在几秒钟内自动处理预订变更。</p>
+<p align="center">
+<img src="../screens/cn/Host/host_cancel_booking.png" width="300">
+</p>
+<p align="center">
+<img src="../screens/cn/Host/host_bookings_details.png" width="300">
+</p>
+<p align="center">
+<img src="../screens/cn/Host/host_cancel_booking_reason.png" width="300">
+</p>
+<h3 id="自动重排处理什么">自动重排处理什么</h3>
+<ol type="1">
+<li><strong>客人发起的变更：</strong>
+<ul>
+<li>日期延长或缩短</li>
+<li>入住/退房时间修改</li>
+<li>客人数量变更</li>
+<li>提前入住请求</li>
+<li>延迟退房请求</li>
+</ul></li>
+<li><strong>房东发起的变更：</strong>
+<ul>
+<li>批准提前入住/延迟退房</li>
+<li>手动调整预订日期</li>
+<li>修改客人数量</li>
+</ul></li>
+<li><strong>取消：</strong>
+<ul>
+<li>自动清理相关任务</li>
+<li>日历重新开放</li>
+<li>可选即时优惠触发</li>
+</ul></li>
+</ol>
+<h3 id="自动更新内容">自动更新内容</h3>
+<p><strong>1. 清洁任务</strong> - 根据新退房时间重新计算清洁开始/结束时间 - 如果原清洁人员有冲突则重新分配 - 保留前后照片要求 - 向清洁人员发送更新时间表的通知</p>
+<p><strong>2. 日历与缓冲</strong> - 立即阻止延长的晚上 - 释放取消的晚上供新预订 - 如果周转时间 &lt; 3小时则插入智能缓冲（可配置） - 如果SLA受威胁则标记”紧张周转”风险</p>
+<p><strong>3. 联合房东值班时段</strong> - 调整值班时间以匹配新日期 - 更新消息路由（客人看到正确的值班联合房东） - 协调联合房东之间的交接</p>
+<p><strong>4. 客人消息</strong> - 通过模板自动发送变更确认 - 更新新时间的入住/退房说明 - 包括任何新的入门密码或特殊说明</p>
+<p><strong>5. 即时定价（可选）</strong> - 如果72小时内释放晚上，建议启用即时优惠 - 提高可见度以填补意外空缺</p>
+<h3 id="示例场景-1">示例场景</h3>
+<p><strong>场景 1：客人请求日期延长</strong> - 客人要求延长2晚 - 系统检查可用性 - 自动重排更新清洁任务、日历和消息</p>
+<p><strong>场景 2：批准提前入住</strong></p>
+<p>预检面板显示： - <strong>清洁人员影响：</strong> “清洁必须在上午11:30前完成（原为下午2:30）” - <strong>风险徽章：</strong> “紧张周转”（如果前一个退房是上午11点） - <strong>替代方案：</strong> “建议下午1点入住以留出安全缓冲？”</p>
+<p>选择操作： - <strong>选项 A：</strong> 确认中午12点入住（清洁人员会赶时间） - <strong>选项 B：</strong> 反提议下午1点入住（更安全） - <strong>选项 C：</strong> 将前一位客人的退房延迟1小时</p>
+<p>自动重排执行： - 清洁任务调整为上午11:30前完成 - 清洁人员收到紧急通知 - 客人收到更新的说明 - 入门密码生成（如果是智能锁）</p>
+<p><strong>场景 3：客人数量增加</strong> - 更新清洁任务备注（“4位客人，需要额外床单”） - 向客人发送更新的定价 - 在活动日志中记录变更</p>
+<h3 id="冲突解决">冲突解决</h3>
+<p>如果原清洁人员无法适应新时间表：</p>
+<p><strong>系统逻辑：</strong> 1. 检查清洁人员新时段的可用性 2. 如果不可用，按以下条件找<strong>下一个最佳清洁人员</strong>： - 可用性（主要） - 到房产的行程时间（最小化） - 评分（质量） - 当前工作量（平衡）</p>
+<p><strong>备用选项：</strong> - <strong>没有清洁人员可用？</strong> - 建议插入缓冲（延迟客人入住1-2小时） - 提供将预订推迟到下一个可用时段 - 上报房东手动解决</p>
+<p><strong>房东通知：</strong> - “原清洁人员不可用。已分配备用清洁人员Mike（4.9★，5英里外）” - “风险：紧张周转。考虑1小时缓冲？”</p>
+<h3 id="风险徽章与警告">风险徽章与警告</h3>
+<p>自动重排标记潜在问题：</p>
+<ul>
+<li>🔴 <strong>紧张周转：</strong> 退房和入住之间&lt;3小时（SLA风险）</li>
+<li>🟡 <strong>清洁人员重新分配：</strong> 原清洁人员不可用，已分配备用</li>
+<li>🟡 <strong>无清洁人员：</strong> 未找到可用清洁人员（需要手动干预）</li>
+<li>🔴 <strong>SLA违规：</strong> 不可能按时清洁房产</li>
+</ul>
+<h3 id="活动日志集成">活动日志集成</h3>
+<p>所有自动重排操作都有完整归属记录：</p>
+<p><strong>查看活动日志：</strong> - 房源 → 活动 → 按”自动重排”筛选 - 查看所有自动调整的完整历史</p>
+<h3 id="客人沟通模板">客人沟通模板</h3>
+<p>通过模板自动生成发送给客人的消息：</p>
+<ul>
+<li><strong>模板 1：日期延长确认</strong></li>
+<li><strong>模板 2：提前入住批准</strong></li>
+</ul>
+<p><strong>模板可编辑：</strong> - 在设置 → 消息模板中自定义默认消息 - 变量自动填充（{客人姓名}、{日期}等）</p>
+<h3 id="最佳实践">最佳实践</h3>
+<ul>
+<li>确认变更前审核预检面板</li>
+<li>设置最小周转缓冲（建议3-4小时）</li>
+<li>启用清洁人员确认的推送通知</li>
+<li>每周检查活动日志以发现模式</li>
+<li>与清洁人员沟通他们的可用性偏好</li>
+<li>没有清洁人员确认不要批准紧张周转</li>
+<li>旺季延长预订前检查日历冲突</li>
+</ul>
+<h3 id="配置选项">配置选项</h3>
+<p><strong>可调设置：</strong> - <strong>最小周转缓冲：</strong> 2-6小时（默认：3小时） - <strong>自动分配备用清洁人员：</strong> 开/关（默认：开） - <strong>需要清洁人员确认：</strong> 清洁前&lt;2小时的变更（默认：开） - <strong>客人消息模板：</strong> 自定义确认消息 - <strong>风险阈值：</strong> 何时显示警告（保守 / 平衡 / 激进）</p>
+<h3 id="与团队管理的集成">与团队管理的集成</h3>
+<p><strong>联合房东权限：</strong> - 可以批准客人请求的修改 - 查看清洁人员分配和风险徽章 - 无法覆盖SLA警告（需要房东批准）</p>
+<p><strong>清洁人员通知：</strong> - 时间表变更时推送通知 - 深层链接到更新的任务详情 - 如果不可用可以拒绝的选项（触发重新分配）</p>
+<p><strong>活动归属：</strong> - 所有变更显示谁批准的（房东 vs 联合房东姓名） - 清洁人员可以查看其任务的修改历史</p>
+<h3 id="未来增强">未来增强</h3>
+<ul>
+<li><strong>多房产负载均衡：</strong> 在整个投资组合中自动分配清洁人员</li>
+<li><strong>外部日历同步：</strong> 与Airbnb/VRBO预订变更协调</li>
+<li><strong>价格优化：</strong> 自动建议释放晚上的最优定价</li>
+<li><strong>预测调度：</strong> AI预测可能的修改请求并预先规划替代方案</li>
+</ul>
+<hr />
+<h2 id="附录-i-消息模板参考">附录 I: 消息模板参考</h2>
+<h3 id="使用消息模板">使用消息模板</h3>
+<ol type="1">
+<li>在”消息”标签中打开客人对话</li>
+<li>点击消息字段中的模板图标（对话气泡）</li>
+<li>按类别浏览可用模板</li>
+<li>点击模板预览</li>
+<li>变量自动填充客人/预订数据</li>
+<li>如需自定义则编辑模板文本</li>
+<li>点击”发送”发送消息</li>
+</ol>
+<p><strong>变量替换：</strong> - 模板包含像 <code>{{guest_name}}</code> 这样的占位符 - 系统自动用真实数据替换 - 示例：<code>{{guest_name}}</code> → “John” - 示例：<code>{{check_in_time}}</code> → “下午3:00”</p>
+<p align="center">
+<img src="../screens/cn/Host/message_templates.png" width="300">
+</p>
+<h3 id="默认消息模板共10个">默认消息模板（共10个）</h3>
+<p><strong>入住模板（3个）：</strong></p>
+<p><strong>1. 入住说明（详细版）</strong> - <code>{{guest_name}}</code> - 客人名字 - <code>{{listing_title}}</code> - 房产名称 - <code>{{check_in_time}}</code> - 来自预订（例如”下午3:00”） - <code>{{property_address}}</code> - 完整地址 - <code>{{access_method}}</code> - “门锁密码1234”或”钥匙在垫子下” - <code>{{parking_instructions}}</code> - “街边停车”或”车道” - <code>{{wifi_password}}</code> - WiFi密码 - <code>{{host_name}}</code> - 您的姓名</p>
+<p><strong>2. 入住说明（简版）</strong></p>
+<p><strong>3. 提前入住请求</strong></p>
+<p><strong>房屋规则模板（2个）：</strong></p>
+<p><strong>4. 房屋规则提醒</strong> - <code>{{pets_allowed}}</code> - “允许，$50费用”或”不允许” - <code>{{parties_allowed}}</code> - “不允许”或”小型聚会可以” - <code>{{quiet_hours}}</code> - “晚上10点 - 早上8点” - <code>{{trash_location}}</code> - “周三放到路边”或”室外垃圾桶”</p>
+<p><strong>5. 安静时间提醒</strong></p>
+<p><strong>本地提示模板（2个）：</strong></p>
+<p><strong>6. 本地推荐</strong></p>
+<p><strong>7. 交通提示</strong></p>
+<p><strong>通用模板（2个）：</strong></p>
+<p><strong>8. 退房感谢</strong></p>
+<p><strong>9. 问题解决</strong> - <code>{{issue_type}}</code> - “WiFi问题”或”暖气问题” - <code>{{response_time}}</code> - “30分钟”或”2小时”</p>
+<p><strong>定价模板（1个）：</strong></p>
+<p><strong>10. 定价明细说明</strong> - <code>{{nightly_rate}}</code> - 每晚基础价格 - <code>{{nights}}</code> - 晚数 - <code>{{subtotal}}</code> - 每晚价格 × 晚数 - <code>{{cleaning_fee}}</code> - 一次性清洁费 - <code>{{service_fee}}</code> - 平台费 - <code>{{total_price}}</code> - 总计 - <code>{{discount_info}}</code> - “已应用周折扣：-15%”（如适用）</p>
+<h3 id="变量替换系统">变量替换系统</h3>
+<p><strong>变量如何工作：</strong></p>
+<p>变量是模板中的占位符，自动填充预订和房产的真实数据。</p>
+<p><strong>语法：</strong> - 变量使用双花括号：<code>{{variable_name}}</code> - 不区分大小写：<code>{{Guest_Name}}</code> = <code>{{guest_name}}</code> - 未知变量保持不变：<code>{{unknown}}</code> 保持为 <code>{{unknown}}</code></p>
+<p><strong>可用变量：</strong></p>
+<p><strong>客人信息：</strong> - <code>{{guest_name}}</code> - 名字 - <code>{{guest_full_name}}</code> - 全名 - <code>{{guest_count}}</code> - 客人数量</p>
+<p><strong>房产信息：</strong> - <code>{{listing_title}}</code> - 房产名称 - <code>{{property_address}}</code> - 完整地址 - <code>{{wifi_password}}</code> - WiFi密码 - <code>{{lockbox_code}}</code> - 门禁密码 - <code>{{access_method}}</code> - 入门说明 - <code>{{parking_instructions}}</code> - 停车详情</p>
+<p><strong>预订信息：</strong> - <code>{{check_in_date}}</code> - 日期（例如”2025年12月15日”） - <code>{{check_in_time}}</code> - 时间（例如”下午3:00”） - <code>{{check_out_date}}</code> - 日期 - <code>{{check_out_time}}</code> - 时间（例如”上午11:00”） - <code>{{nights}}</code> - 晚数 - <code>{{total_price}}</code> - 预订总费用</p>
+<p><strong>房东信息：</strong> - <code>{{host_name}}</code> - 您的姓名 - <code>{{host_phone}}</code> - 您的电话号码</p>
+<p><strong>定价信息：</strong> - <code>{{nightly_rate}}</code> - 每晚基础价格 - <code>{{cleaning_fee}}</code> - 清洁费 - <code>{{service_fee}}</code> - 平台费 - <code>{{subtotal}}</code> - 每晚价格 × 晚数 - <code>{{discount_info}}</code> - 已应用的折扣</p>
+<hr />
+<h2 id="附录-j-房东费用与等级计划cn-release-1.0">附录 J: 房东费用与等级计划（CN Release 1.0）</h2>
+<h3 id="cn-release-1.0-费用模式">CN Release 1.0 费用模式</h3>
+<p><strong>重要：</strong> CN Release 1.0 的费用结构与之前版本不同。</p>
+<h3 id="费用结构">费用结构</h3>
+<table>
+<thead>
+<tr>
+<th>方</th>
+<th>费用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>客人</strong></td>
+<td><strong>0%服务费</strong> – 客人不支付任何平台费用</td>
+</tr>
+<tr>
+<td><strong>房东</strong></td>
+<td><strong>等级相关平台费</strong> – 见下表</td>
+</tr>
+</tbody>
+</table>
+<h3 id="房东等级与平台费">房东等级与平台费</h3>
+<p>更高等级的房东支付<strong>更低的平台费</strong>：</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>房东等级</th>
+<th>年收入</th>
+<th>平台费</th>
+<th>福利</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>银牌</strong></td>
+<td>$0+</td>
+<td><strong>13%</strong></td>
+<td>标准支持</td>
+</tr>
+<tr>
+<td><strong>金牌</strong></td>
+<td>$50,000+</td>
+<td><strong>12.5%</strong></td>
+<td>优先支持、精选展示</td>
+</tr>
+<tr>
+<td><strong>白金</strong></td>
+<td>$250,000+</td>
+<td><strong>12%</strong></td>
+<td>高级支持、网络研讨会、抢先体验功能</td>
+</tr>
+<tr>
+<td><strong>钻石</strong></td>
+<td>$500,000+</td>
+<td><strong>11.5%</strong></td>
+<td>VIP 24/7支持、专属客户经理、定制营销</td>
+</tr>
+</tbody>
+</table>
+<h3 id="各等级示例">各等级示例</h3>
+<p><strong>银牌等级（13%费用）：</strong> - 预订总额：$1,000 - 平台费：13% = $130 - 房东收款：<strong>$870</strong></p>
+<p><strong>金牌等级（12.5%费用）：</strong> - 预订总额：$1,000 - 平台费：12.5% = $125 - 房东收款：<strong>$875</strong></p>
+<p><strong>白金等级（12%费用）：</strong> - 预订总额：$1,000 - 平台费：12% = $120 - 房东收款：<strong>$880</strong></p>
+<p><strong>钻石等级（11.5%费用）：</strong> - 预订总额：$1,000 - 平台费：11.5% = $115 - 房东收款：<strong>$885</strong></p>
+<h3 id="等级晋升">等级晋升</h3>
+<p>您的等级基于<strong>年收入</strong>（每年重置）： - 银牌：$0+（默认） - 金牌：$50,000+ - 白金：$250,000+ - 钻石：$500,000+</p>
+<h3 id="重要说明">重要说明</h3>
+<ul>
+<li>更高等级 = 更低平台费 = 更高收款</li>
+<li>等级根据过去12个月收入自动计算</li>
+<li>费用变更仅适用于<strong>新预订</strong>（现有预订保持原费用）</li>
+<li>在<strong>个人资料 → 房东仪表板</strong>中查看您当前等级</li>
+</ul>
+<h3 id="技术平台费如何计算">技术：平台费如何计算</h3>
+<p>平台费使用简单公式，带有管理员可配置的值：</p>
+<pre><code>房东平台费 = platform_fee_rate - tier_discount_rate</code></pre>
+<table>
+<thead>
+<tr>
+<th>配置值</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>platform_fee_rate</code></td>
+<td>15%</td>
+<td>基础平台费（所有人相同）</td>
+</tr>
+<tr>
+<td><code>host_silver_rate</code></td>
+<td>2%</td>
+<td>银牌等级折扣</td>
+</tr>
+<tr>
+<td><code>host_gold_rate</code></td>
+<td>2.5%</td>
+<td>金牌等级折扣</td>
+</tr>
+<tr>
+<td><code>host_platinum_rate</code></td>
+<td>3%</td>
+<td>白金等级折扣</td>
+</tr>
+<tr>
+<td><code>host_diamond_rate</code></td>
+<td>3.5%</td>
+<td>钻石等级折扣</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果：</strong> - 银牌：15% - 2% = <strong>13%</strong> - 金牌：15% - 2.5% = <strong>12.5%</strong> - 白金：15% - 3% = <strong>12%</strong> - 钻石：15% - 3.5% = <strong>11.5%</strong></p>
+<blockquote>
+<p><strong>对于管理员：</strong> 这些值存储在 <code>unified_config</code> 数据库表中，可以通过管理员仪表板（LoyaltyConfigView）修改，无需代码更改。</p>
+</blockquote>
+<hr />
+<h2 id="附录-k-取消与退款政策cn-release-1.0">附录 K: 取消与退款政策（CN Release 1.0）</h2>
+<p>本附录解释您可以为房源设置的取消政策。</p>
+<h3 id="可用取消政策">可用取消政策</h3>
+<p>创建或编辑房源时，您选择以下政策之一：</p>
+<h3 id="灵活政策">灵活政策</h3>
+<p><strong>最适合：</strong> 竞争激烈市场中的房产，吸引更多预订</p>
+<table>
+<thead>
+<tr>
+<th>客人取消时间</th>
+<th>客人退款</th>
+<th>您的收款</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入住前24小时以上</td>
+<td>100%退款</td>
+<td>$0</td>
+</tr>
+<tr>
+<td>入住前不到24小时</td>
+<td>无退款</td>
+<td>全额收款</td>
+</tr>
+</tbody>
+</table>
+<h3 id="适中政策">适中政策</h3>
+<p><strong>最适合：</strong> 灵活性与承诺之间的平衡</p>
+<table>
+<thead>
+<tr>
+<th>客人取消时间</th>
+<th>客人退款</th>
+<th>您的收款</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入住前5天以上</td>
+<td>100%退款</td>
+<td>$0</td>
+</tr>
+<tr>
+<td>入住前2-5天</td>
+<td>50%退款</td>
+<td>50%收款</td>
+</tr>
+<tr>
+<td>入住前不到2天</td>
+<td>无退款</td>
+<td>全额收款</td>
+</tr>
+</tbody>
+</table>
+<h3 id="严格政策">严格政策</h3>
+<p><strong>最适合：</strong> 高需求房产、季节性租赁</p>
+<table>
+<thead>
+<tr>
+<th>客人取消时间</th>
+<th>客人退款</th>
+<th>您的收款</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入住前7天以上</td>
+<td>100%退款</td>
+<td>$0</td>
+</tr>
+<tr>
+<td>入住前7-30天</td>
+<td>50%退款</td>
+<td>50%收款</td>
+</tr>
+<tr>
+<td>入住前不到7天</td>
+<td>无退款</td>
+<td>全额收款</td>
+</tr>
+</tbody>
+</table>
+<h3 id="房东发起的取消">房东发起的取消</h3>
+<p><strong>警告：</strong> 作为房东取消预订有严重后果：</p>
+<ul>
+<li>客人获得<strong>全额退款</strong>包括所有费用</li>
+<li>您可能被收取<strong>取消费</strong></li>
+<li>您的<strong>取消率</strong>被跟踪和显示</li>
+<li>高取消率可能导致：
+<ul>
+<li>搜索排名下降</li>
+<li>失去超级房东身份</li>
+<li>账户暂停</li>
+</ul></li>
+</ul>
+<p><strong>您可以取消的情况：</strong> - 客人违反房屋规则 - 前一位客人造成的房产损坏 - 需要紧急维修 - 不可抗力事件</p>
+<p>取消前务必联系支持以记录合法原因。</p>
+<h3 id="设置您的取消政策">设置您的取消政策</h3>
+<ol type="1">
+<li>进入<strong>房源</strong>标签</li>
+<li>点击要编辑的房源</li>
+<li>滚动到<strong>政策</strong>部分</li>
+<li>选择<strong>取消政策</strong></li>
+<li>选择灵活、适中或严格</li>
+<li>点击<strong>保存</strong></li>
+</ol>
+<p>政策变更仅适用于新预订，不适用于现有预订。</p>
+<h3 id="房东提示">房东提示</h3>
+<ul>
+<li>✅ <strong>灵活</strong>吸引更多预订但也更多取消</li>
+<li>✅ <strong>严格</strong>提供收入保障但可能减少预订</li>
+<li>✅ <strong>适中</strong>推荐给大多数房东</li>
+<li>✅ 考虑季节性政策（高需求期更严格）</li>
+</ul>
+<hr />
+<p>← <a href="USER_MANUAL_HOST.html">返回房东指南</a> | <a href="USER_MANUAL_TOP.html">返回目录</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peapod Hotels. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../../terms-zh.html">服务条款</a>
+                <a href="../../privacy-zh.html">隐私政策</a>
+                <a href="../../sms-terms-zh.html">短信条款</a>
+                <a href="../../manual/cn/index.html">APP手册</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
