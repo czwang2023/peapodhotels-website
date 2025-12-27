@@ -31,16 +31,34 @@
         <div class="container">
             <article class="manual-content">
 <h1 id="peapod-用户手册---管理员指南">Peapod 用户手册 - 管理员指南</h1>
-<p><strong>版本：</strong> 1.0.0 (CN Release) <strong>最后更新：</strong> 2025年11月22日 <strong>平台：</strong> iOS (iPhone, iPad)</p>
+<p><strong>版本：</strong> v0.19.0 <strong>最后更新：</strong> 2025年12月17日 <strong>平台：</strong> iOS (iPhone, iPad)</p>
 <p><strong>CN Release 1.0 新功能：</strong> - ✅ <strong>更新的费用结构</strong> - 客人支付0%服务费，房东支付等级相关费用 - ✅ <strong>房东等级费用</strong> - 银牌13%、金牌12.5%、白金12%、钻石11.5% - ✅ <strong>审核员SLA上报</strong> - 审核员SLA违规时管理员收到警报 - ✅ <strong>忠诚度限制</strong> - CN Release：积分仅可用于折扣，不可提现</p>
 <p>← <a href="USER_MANUAL_TOP.html">返回目录</a></p>
 <hr />
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#管理员概述">8.1 管理员概述</a></li>
+<li><a href="#管理员导航与仪表板">8.2 管理员导航与仪表板</a></li>
+<li><a href="#工单bug报告和反馈">8.3 工单（Bug报告和反馈）</a></li>
+<li><a href="#用户管理">8.4 用户管理</a></li>
+<li><a href="#应用配置">8.5 应用配置</a></li>
+<li><a href="#分析">8.6 分析</a></li>
+<li><a href="#报告与平台健康">8.7 报告与平台健康</a></li>
+<li><a href="#徽章管理">8.8 徽章管理</a></li>
+<li><a href="#消息模板管理">8.9 消息模板管理</a></li>
+<li><a href="#评价审核">8.10 评价审核</a></li>
+<li><a href="#审核员sla上报cn-release-10">8.11 审核员SLA上报</a></li>
+<li><a href="#个人资料与设置">8.12 个人资料与设置</a></li>
+</ul>
+<hr />
 <h2 id="管理员指南">8. 管理员指南</h2>
 <h3 id="管理员概述">8.1 管理员概述</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p>作为管理员，您： - 👥 <strong>管理用户</strong> - 查看、搜索、消息、暂停或删除账户 - ⚙️ <strong>配置应用设置</strong> - 忠诚度计划、费用、功能开关 - 📊 <strong>查看分析</strong> - 平台范围的指标和趋势 - 📋 <strong>查看报告</strong> - 平台健康、API指标、数据库使用 - 🚨 <strong>处理问题</strong> - 争议、违规、紧急情况</p>
 <p><strong>重要：</strong> 管理员不创建或编辑房源。只有房东创建房源，审核员批准，管理员可以查看平台分析。</p>
 <hr />
 <h3 id="管理员导航与仪表板">8.2 管理员导航与仪表板</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>底部导航（5个标签）：</strong> 1. <strong>仪表板</strong>（📊 chart.bar.fill图标）- 平台概览和指标 2. <strong>用户</strong>（👥 person.2.fill图标）- 用户管理 3. <strong>工单</strong>（⚠️ exclamationmark.bubble.fill图标）- Bug报告和反馈 4. <strong>配置</strong>（⚙️ gearshape.fill图标）- 应用配置设置 5. <strong>个人资料</strong>（👤 person图标）- 管理员个人资料设置</p>
 <p><strong>仪表板概览：</strong></p>
 <p><strong>位置：</strong> 主标签 → “仪表板”（chart.bar.fill图标）</p>
@@ -50,6 +68,7 @@
 <p><strong>最近活动：</strong> - 新用户注册 - 新房源提交 - 新预订 - 报告的问题</p>
 <hr />
 <h3 id="工单bug报告和反馈">8.3 工单（Bug报告和反馈）</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>访问：</strong> 底部导航 → “工单”标签</p>
 <p><strong>两个类别：</strong> 1. <strong>Bugs</strong> - 用户报告的错误和问题 2. <strong>反馈</strong> - 用户建议和功能请求</p>
 <p><strong>Bug报告详情：</strong> - <strong>标题</strong> - 问题描述 - <strong>优先级</strong> - 低/中/高/紧急（带颜色指示器） - <strong>状态</strong> - 新/未分配/处理中/已解决/已关闭 - <strong>报告者</strong> - 报告的用户邮箱 - <strong>日期</strong> - “X天前” - <strong>徽章</strong> - 未读报告显示”新”</p>
@@ -57,6 +76,7 @@
 <p><strong>反馈管理：</strong> - 类似Bug报告 - 类别：功能请求、UX改进、其他 - 投票数（其他用户的赞成票） - 实施状态跟踪</p>
 <hr />
 <h3 id="用户管理">8.4 用户管理</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>访问：</strong> 管理员仪表板 → “用户”</p>
 <p><strong>用户列表显示：</strong> - 头像 - 全名 - 邮箱 - 用户角色（客人、房东、审核员、管理员） - 加入日期 - 账户状态（活跃、已暂停、已删除） - 验证状态</p>
 <p><strong>用户详情页面：</strong></p>
@@ -72,6 +92,7 @@
 <p>永久删除用户账户。此操作： - 无法撤销 - 需要邮箱确认以防止意外删除 - 归档所有用户数据 - 永久从平台删除用户</p>
 <hr />
 <h3 id="应用配置">8.5 应用配置</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>访问：</strong> 底部导航 → <strong>配置</strong>标签（⚙️ gearshape.fill图标）</p>
 <p><strong>配置类别（3个标签）：</strong> 1. <strong>忠诚度</strong> - 客人/房东忠诚度计划设置 2. <strong>推荐</strong> - 推荐计划设置 3. <strong>费用</strong> - 平台费用配置</p>
 <hr />
@@ -81,60 +102,60 @@
 <p><strong>客人等级配置表：</strong></p>
 <p>基于<strong>年消费</strong>（每年重置）：</p>
 <ul>
-<li><strong>银牌</strong>（$0+/年 - 默认）
+<li><strong>银牌</strong>（¥0+/年 - 默认）
 <ul>
-<li>年消费门槛：$0</li>
+<li>年消费门槛：¥0</li>
 <li>奖励率：预订价值的2%</li>
 <li>福利：标准支持</li>
 </ul></li>
-<li><strong>金牌</strong>（$2,500+/年）
+<li><strong>金牌</strong>（¥2,500+/年）
 <ul>
-<li>年消费门槛：$2,500</li>
+<li>年消费门槛：¥2,500</li>
 <li>奖励率：预订价值的3%</li>
 <li>福利：优先支持、提前获取促销</li>
 </ul></li>
-<li><strong>白金</strong>（$5,000+/年）
+<li><strong>白金</strong>（¥5,000+/年）
 <ul>
-<li>年消费门槛：$5,000</li>
+<li>年消费门槛：¥5,000</li>
 <li>奖励率：预订价值的4%</li>
 <li>福利：高级支持、专属优惠、延迟退房（如有空）</li>
 </ul></li>
-<li><strong>钻石</strong>（$10,000+/年）
+<li><strong>钻石</strong>（¥10,000+/年）
 <ul>
-<li>年消费门槛：$10,000</li>
+<li>年消费门槛：¥10,000</li>
 <li>奖励率：预订价值的5%</li>
 <li>福利：VIP 24/7支持、保证提前获取、免费升级、个人礼宾服务</li>
 </ul></li>
 </ul>
 <p><strong>可编辑字段：</strong> - 每个等级的年消费门槛 - 奖励率百分比（预订赚取的积分） - 等级名称 - 等级福利 - 最大兑换百分比（默认：预订费用的20%）</p>
-<p><strong>重要说明：</strong> - 等级基于年消费，不是总积分 - 积分 = 预订价值的1%（基础）× 等级乘数 - 示例：金牌客人消费$1,000 → 赚取3,000积分（$30价值） - 消费每年重置 - 所有等级平台费恒定15%</p>
+<p><strong>重要说明：</strong> - 等级基于年消费，不是总积分 - 积分 = 预订价值的1%（基础）× 等级乘数 - 示例：金牌客人消费¥1,000 → 赚取3,000积分（¥30价值） - 消费每年重置 - 所有等级平台费恒定15%</p>
 <p><strong>CN Release 1.0 忠诚度限制：</strong> &gt; ⚠️ <strong>重要：</strong> 对于CN Release 1.0，忠诚度积分有限制： &gt; - 积分<strong>仅可用于预订折扣</strong> &gt; - <strong>不可提现</strong>（无积分换现金转换） &gt; - 积分不可转让给其他用户 &gt; - 账户不活跃24个月后积分过期</p>
 <hr />
 <p><strong>房东忠诚度等级：</strong></p>
 <p><strong>房东等级配置表：</strong></p>
 <p>基于<strong>年收入</strong>（预订毛额，每年重置）：</p>
 <ul>
-<li><strong>银牌</strong>（$0+/年 - 默认）
+<li><strong>银牌</strong>（¥0+/年 - 默认）
 <ul>
-<li>年收入门槛：$0</li>
+<li>年收入门槛：¥0</li>
 <li>奖励率：预订毛额的2.0%</li>
 <li>福利：标准支持</li>
 </ul></li>
-<li><strong>金牌</strong>（$50,000+/年）
+<li><strong>金牌</strong>（¥50,000+/年）
 <ul>
-<li>年收入门槛：$50,000</li>
+<li>年收入门槛：¥50,000</li>
 <li>奖励率：预订毛额的2.5%</li>
 <li>福利：优先支持、精选房源展示</li>
 </ul></li>
-<li><strong>白金</strong>（$250,000+/年）
+<li><strong>白金</strong>（¥250,000+/年）
 <ul>
-<li>年收入门槛：$250,000</li>
+<li>年收入门槛：¥250,000</li>
 <li>奖励率：预订毛额的3.0%</li>
 <li>福利：高级支持、专属网络研讨会、提前获取功能</li>
 </ul></li>
-<li><strong>钻石</strong>（$500,000+/年）
+<li><strong>钻石</strong>（¥500,000+/年）
 <ul>
-<li>年收入门槛：$500,000</li>
+<li>年收入门槛：¥500,000</li>
 <li>奖励率：预订毛额的3.5%</li>
 <li>福利：VIP 24/7支持、专属客户经理、定制营销、保证精选展示</li>
 </ul></li>
@@ -152,9 +173,9 @@
 <p><strong>概述：</strong> 配置客人推荐系统 - 朋友预订时客人赚取多少佣金，以及自定义分享消息。</p>
 <p><strong>配置部分：</strong></p>
 <p><strong>A. 客人推荐设置</strong></p>
-<p><strong>佣金率：</strong> - <strong>标签：</strong> “佣金率” - <strong>默认：</strong> 预订金额的2.0% - <strong>范围：</strong> 0% - 10%（建议：1-3%） - <strong>示例：</strong> 2%意味着推荐人每$100预订赚取200积分</p>
+<p><strong>佣金率：</strong> - <strong>标签：</strong> “佣金率” - <strong>默认：</strong> 预订金额的2.0% - <strong>范围：</strong> 0% - 10%（建议：1-3%） - <strong>示例：</strong> 2%意味着推荐人每¥100预订赚取200积分</p>
 <p><strong>持续时间：</strong> - <strong>标签：</strong> “推荐持续时间” - <strong>默认：</strong> 12个月 - <strong>范围：</strong> 1-24个月 - <strong>描述：</strong> 推荐人从被推荐人预订中赚取佣金的时长</p>
-<p><strong>积分转换：</strong> - <strong>标签：</strong> “积分兑美元率” - <strong>默认：</strong> 100（100积分 = $1.00） - <strong>固定：</strong> 不可更改（保持一致性）</p>
+<p><strong>积分转换：</strong> - <strong>标签：</strong> “积分兑美元率” - <strong>默认：</strong> 100（100积分 = ¥1.00） - <strong>固定：</strong> 不可更改（保持一致性）</p>
 <p><strong>B. 分享消息模板</strong></p>
 <p><strong>分享链接模板：</strong> - <strong>标签：</strong> “分享链接模板” - <strong>默认：</strong> <code>https://peapodhotels.com/join?ref={CODE}</code> - <strong>占位符：</strong> <code>{CODE}</code> - 替换为推荐码 - <strong>示例：</strong> <code>https://peapodhotels.com/join?ref=JOHN1234</code></p>
 <p><strong>分享消息模板：</strong> - <strong>标签：</strong> “分享消息模板” - <strong>默认：</strong> ``` 嘿！我在用 Peapod 找超棒的住处。 用我的推荐码 {CODE} 加入我，开始探索吧！</p>
@@ -164,7 +185,7 @@
 <p><strong>激进活动（3%）：</strong></p>
 <pre><code>佣金率：3.0%
 持续时间：12个月
-消息：&quot;免费获得$30！使用我的推荐码 {CODE}，我们都省钱！&quot;</code></pre>
+消息：&quot;免费获得¥30！使用我的推荐码 {CODE}，我们都省钱！&quot;</code></pre>
 <p><strong>保守（1%）：</strong></p>
 <pre><code>佣金率：1.0%
 持续时间：6个月
@@ -198,12 +219,12 @@
 </tr>
 <tr>
 <td><strong>最低预订费</strong></td>
-<td>$5（固定）</td>
+<td>¥5（固定）</td>
 <td>适用于非常小的预订</td>
 </tr>
 <tr>
 <td><strong>支付处理</strong></td>
-<td>2.9% + $0.30</td>
+<td>2.9% + ¥0.30</td>
 <td>Stripe标准（平台吸收）</td>
 </tr>
 </tbody>
@@ -222,32 +243,32 @@
 <tbody>
 <tr>
 <td><strong>银牌</strong></td>
-<td>$0+</td>
+<td>¥0+</td>
 <td><strong>13%</strong></td>
 <td>标准支持</td>
 </tr>
 <tr>
 <td><strong>金牌</strong></td>
-<td>$50,000+</td>
+<td>¥50,000+</td>
 <td><strong>12.5%</strong></td>
 <td>优先支持、精选展示</td>
 </tr>
 <tr>
 <td><strong>白金</strong></td>
-<td>$250,000+</td>
+<td>¥250,000+</td>
 <td><strong>12%</strong></td>
 <td>高级支持、网络研讨会、提前获取功能</td>
 </tr>
 <tr>
 <td><strong>钻石</strong></td>
-<td>$500,000+</td>
+<td>¥500,000+</td>
 <td><strong>11.5%</strong></td>
 <td>VIP 24/7、客户经理、定制营销</td>
 </tr>
 </tbody>
 </table>
 <p><strong>房东等级费用如何工作：</strong> 1. 房东完成预订，赚取毛收入 2. 根据房东当前等级应用平台费 3. 房东收到收款（预订减去等级费用） 4. 等级根据过去12个月收入重新计算</p>
-<p><strong>各等级示例收款（$1,000预订）：</strong></p>
+<p><strong>各等级示例收款（¥1,000预订）：</strong></p>
 <table>
 <thead>
 <tr>
@@ -259,28 +280,28 @@
 <tbody>
 <tr>
 <td>银牌</td>
-<td>13%（$130）</td>
-<td><strong>$870</strong></td>
+<td>13%（¥130）</td>
+<td><strong>¥870</strong></td>
 </tr>
 <tr>
 <td>金牌</td>
-<td>12.5%（$125）</td>
-<td><strong>$875</strong></td>
+<td>12.5%（¥125）</td>
+<td><strong>¥875</strong></td>
 </tr>
 <tr>
 <td>白金</td>
-<td>12%（$120）</td>
-<td><strong>$880</strong></td>
+<td>12%（¥120）</td>
+<td><strong>¥880</strong></td>
 </tr>
 <tr>
 <td>钻石</td>
-<td>11.5%（$115）</td>
-<td><strong>$885</strong></td>
+<td>11.5%（¥115）</td>
+<td><strong>¥885</strong></td>
 </tr>
 </tbody>
 </table>
 <p><strong>区域定价：</strong> - <strong>美国市场：</strong> USD、Stripe支付 - <strong>中国市场：</strong> CNY、微信/支付宝（未来） - <strong>货币转换：</strong> 实时汇率 + 2%加成</p>
-<p><strong>可编辑字段：</strong> - 客人服务费百分比（目前CN Release为0%） - 每个等级的房东平台费（银牌13%、金牌12.5%、白金12%、钻石11.5%） - 等级收入门槛（$0、$50k、$250k、$500k） - 最低预订费金额 - 货币转换加成 - 区域定价规则</p>
+<p><strong>可编辑字段：</strong> - 客人服务费百分比（目前CN Release为0%） - 每个等级的房东平台费（银牌13%、金牌12.5%、白金12%、钻石11.5%） - 等级收入门槛（¥0、¥50k、¥250k、¥500k） - 最低预订费金额 - 货币转换加成 - 区域定价规则</p>
 <hr />
 <h4 id="功能开关">8.5.4 功能开关</h4>
 <p><strong>可用功能开关：</strong> - <strong>社交认证：</strong> - Apple登录：✅ 已启用 - 手机认证：✅ 已启用（等待免费热线批准） - Google登录：✅ 已启用 - 微信登录：❌ 2026年Q1推出 - WhatsApp登录：❌ 2026年Q2推出 - <strong>搜索与发现：</strong> - AI搜索：✅ 已启用 - 保存的搜索：✅ 已启用 - 价格警报：❌ 2026年Q1推出 - <strong>支付：</strong> - Apple Pay：✅ 已启用 - Stripe卡：✅ 已启用 - 微信支付：❌ 2026年推出 - 支付宝：❌ 2026年推出 - <strong>忠诚度：</strong> - 客人忠诚度：✅ 已启用 - 房东超级房东：✅ 已启用 - 推荐计划：✅ 已启用 - <strong>通知：</strong> - OneSignal推送：✅ 已启用 - 邮件通知：✅ 已启用 - 短信通知：❌ 2026年Q1推出</p>
@@ -290,12 +311,14 @@
 <p><strong>计划的配置部分：</strong> - <strong>邮件模板</strong> - 自定义通知邮件 - <strong>推送通知模板</strong> - 自定义推送消息 - <strong>评价审核</strong> - 自动标记关键词、脏话过滤 - <strong>搜索排名</strong> - 提升因素（评分、响应时间等） - <strong>取消政策</strong> - 自定义政策模板 - <strong>房屋规则模板</strong> - 房东的默认规则 - <strong>安全与验证</strong> - 身份验证要求 - <strong>区域设置</strong> - 语言、货币、支付方式</p>
 <hr />
 <h3 id="分析">8.6 分析</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>访问：</strong> 管理员仪表板 → “分析”</p>
 <p><strong>平台指标：</strong> - <strong>用户增长</strong> - 每天/周/月新用户 - <strong>房源增长</strong> - 新增房源 - <strong>预订量</strong> - 每天/周/月预订 - <strong>收入</strong> - 收取的平台费 - <strong>入住率</strong> - 预订晚数百分比 - <strong>平均预订价值</strong> - 平均预订总额 - <strong>转化率</strong> - 搜索转预订百分比</p>
 <p><strong>可用图表：</strong> - 用户增长趋势（折线图） - 月收入（柱状图） - 热门位置（地图） - 热门设施（饼图） - 预订来源（饼图）</p>
 <p><strong>如何使用：</strong> 选择日期范围，选择要查看的指标，可视化数据，导出为CSV进行进一步分析。</p>
 <hr />
 <h3 id="报告与平台健康">8.7 报告与平台健康</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>访问：</strong> 管理员仪表板 → “报告”</p>
 <p><strong>报告类别：</strong></p>
 <h4 id="平台健康指标">8.7.1 平台健康指标</h4>
@@ -326,6 +349,7 @@
 <p>通过”报告” → “数据库”查看数据库指标以监控存储和连接健康。</p>
 <hr />
 <h3 id="徽章管理">8.8 徽章管理</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>什么是徽章管理？</strong></p>
 <p>管理员界面用于创建、编辑、批准和撤销房东质量徽章和房产功能徽章。确保徽章完整性和质量标准。</p>
 <p><strong>访问：</strong> 配置标签 → “徽章”部分（或管理员仪表板 → 徽章管理）</p>
@@ -369,6 +393,7 @@
 <p><strong>导出选项：</strong> - CSV：带授予日期的徽章列表 - PDF：月度徽章报告 - JSON：用于外部分析的API数据</p>
 <hr />
 <h3 id="消息模板管理">8.9 消息模板管理</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>什么是模板管理？</strong></p>
 <p>管理员界面用于管理所有房东可用的默认消息模板。编辑内容、添加新模板或在平台范围删除模板。</p>
 <p><strong>访问：</strong> 配置标签 → “消息模板”部分</p>
@@ -401,6 +426,7 @@
 <p><strong>洞察：</strong> - 识别热门模板（保留和改进） - 识别未使用模板（考虑删除） - 衡量采用率（使用模板的房东百分比） - 计算节省时间（发送消息 × 平均节省时间）</p>
 <hr />
 <h3 id="评价审核">8.10 评价审核</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>什么是评价审核？</strong></p>
 <p>管理员工具用于审核标记的内容、审核照片评价和维护评价质量标准。</p>
 <p><strong>访问：</strong> 管理员仪表板 → “评价审核”或配置 → “评价”</p>
@@ -426,6 +452,7 @@
 <p><strong>照片违规类型：</strong> - 可识别的人（隐私） - 不当内容（裸体、暴力） - 与房产无关（垃圾） - 库存照片（虚假评价） - 低质量（模糊、暗）</p>
 <hr />
 <h3 id="审核员sla上报cn-release-1.0">8.11 审核员SLA上报（CN Release 1.0）</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p><strong>什么是SLA上报？</strong></p>
 <p>当审核员未能达到服务级别协议目标时，系统自动上报给管理员。这确保房东获得及时响应并维护平台质量。</p>
 <p><strong>访问：</strong> 管理员仪表板 → “SLA警报”或通知 → “审核员SLA”</p>
@@ -564,6 +591,7 @@
 <p><strong>文档：</strong> - 所有SLA违规自动记录 - 管理员行动记录在审计轨迹中 - 审核员收到任何正式行动的副本</p>
 <hr />
 <h3 id="个人资料与设置">8.12 个人资料与设置</h3>
+<p><a href="#目录">↑ 返回目录</a></p>
 <p>有关通用个人资料和账户功能，请参阅主索引中的<strong><a href="USER_MANUAL_TOP.md#通用功能所有角色">通用功能</a></strong>部分：</p>
 <ul>
 <li><strong><a href="USER_MANUAL_TOP.md#个人资料管理">个人资料管理</a></strong> - 查看和编辑您的个人资料、个人资料标签</li>
